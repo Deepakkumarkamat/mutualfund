@@ -1,0 +1,133 @@
+.table{
+width: 50%;
+}
+.th,td{
+    /* padding: 20px; */
+    border: 1px solid black;
+}
+tr > td{
+    padding: 1rem;
+}
+td:hover{
+    background-color: rgb(127, 255, 212);
+}
+
+.sip{
+    margin-left: 607px;
+    padding: 8px;
+    margin-top: -211px;
+}
+
+.card{
+    width: 22rem;
+    margin-left: 600px;
+    height: auto;
+}
+.card-title{
+    text-align: center;
+    color: rgb(127, 255, 212);
+    font-size: x-large;
+}
+.input1{
+    width: 70px;
+    margin-left: 230px;
+    margin-top: -23px;
+    background-color: rgb(127, 255, 212);
+    border: none;
+    outline: none;
+    text-align: right;
+}
+.sip_date{
+    width: 84px;
+    margin-left: 223px;
+    margin-top: -18px;
+    background-color: rgb(127, 255, 212);
+    border: 0px;
+}
+.para{
+    position: relative;
+    text-align: center;
+    margin-top: 71px;
+    
+}
+.sip_btn{
+    margin-left: 152px;
+}
+/* .cart{
+    margin-top: 20px;
+} */
+
+.bothbtn{
+    margin-top: 15px;
+    margin-left: 30px;
+}
+.one_amount{
+    width: 70px;
+    margin-left:230px; 
+    margin-top:-25px; 
+    outline: none;
+    border: none;
+    background-color: aquamarine;
+    text-align: right;
+    
+}
+.bothinvest{
+    margin-top: 15px;
+    margin-left: 30px;
+    padding-top: 150px;
+}
+.text-center{
+    margin-top: -21px;
+}
+.payvai{
+    margin-left: 160px;
+    background-color: rgb(198, 206, 214);
+    cursor: pointer;
+    padding-top: -10px;
+}
+.btn{
+    width: 9em;
+    height: 3em;
+    border-radius: 30em;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #c5c5c5,
+    -6px -6px 12px #ffffff
+    }
+    .btn:hover::before{
+        content: '';
+        width: 0;
+        height: 3em;
+        border-radius: 30em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to right, #0fd850 0%,#f9f047 100%);
+        transition: .5s ease;
+        display: block;
+        z-index: -1;
+    
+    }
+    .btn:hover::before{
+        width: 9em;
+    }
+    .upi{
+        /* text-align: right; */
+        width: 130px;
+        height: 40px;
+        margin-left: 100px;
+        margin-top: 30px;
+        border: none;
+        outline: none;
+        background-color: rgb(127, 255, 212);
+
+    }
+    .upibtn{
+        margin-top: 17px;
+        margin-left: 86px; 
+    }

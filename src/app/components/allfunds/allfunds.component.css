@@ -1,0 +1,89 @@
+.fund{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 20ch;
+}
+.card{
+    width: 203px;
+    height: 134px;
+    padding: 11px;
+    margin: 9px;
+    transition: 0.2s ease-in-out;
+    /* box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+
+}
+.card:hover{
+    /* transition: 0.3s ease-in-out; */
+    transform: scale(1.1);
+    background-color: #eee;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* table{
+    width: 50%;
+}
+
+td,th{
+    border: 1px solid#dad1d1;
+    padding: 8px;
+}
+
+.card{
+    transition: all;
+}
+.iciciImage{
+    width: -30;
+    height: -30;
+} */
+
+/* .card:hover{
+    width: 2px;
+    height: 2px;
+} */
+
+/* .col{
+    border: 1px solid black;
+} */
+/* .firstcol{
+    padding: 0px;
+} */
+/* .coln:hover{
+    width: 10px;
+} */
+/* .col{
+    box-shadow: 0 1px 7px 0;
+    transform: scale(1px);
+} */
+/* .coln:hover{
+    width: 10px;
+} */
+.btn{
+border-radius: 30em;
+font-size: 15px;
+font-family: inherit;
+border: none;
+position: relative;
+cursor: pointer;
+overflow: hidden;
+z-index: 1;
+box-shadow: 6px 6px 12px #c5c5c5,
+-6px -6px 12px #ffffff
+}
+.btn:hover{
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #0fd850 0%,#f9f047 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+
+}
+.btn:hover::before{
+    width: 9em;
+}

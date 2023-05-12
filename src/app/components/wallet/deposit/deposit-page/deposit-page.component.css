@@ -1,0 +1,29 @@
+.input-container{
+    margin-top:70px;
+}
+
+.card{
+    margin-left: 700px;
+    margin-top: -380px;
+    /* left: 500px; */
+    /* top: -470px; */
+    /* margin-bottom: 0px; */
+    box-shadow:10px 10px 5px lightblue;
+    
+   
+}
+.text-container{
+    margin-top: 80px;
+}
+
+.deposit_btn{
+    margin-top: 50px;
+    margin-left: 90px;
+}
+input{
+    background-color: rgb(127, 255, 212);
+}
+.card-title{
+    text-align: center;
+    color: aquamarine;
+}

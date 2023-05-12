@@ -1,0 +1,44 @@
+.arrow_icon{
+    text-align: right;
+}
+
+.row{
+    display: flex;
+    margin-right: 0px;
+    padding-left: 30px;
+    padding-right: 350px;
+    margin-top: 80px;
+}
+/* .btn{
+    margin-left: 500px
+} */
+
+/* .add_money{
+    display: flex;
+    margin-left: 500px;
+    text-align: left;
+    
+} */
+
+/* .fluid-container{
+    left: 10%;
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    align-items: top;
+
+} */
+
+.btn2{
+    position: relative;
+    margin-left: 550px;
+    margin-right: 0px;
+    margin-top: 30px;
+    /* left: 200px; */
+    top: -410px;
+
+    
+}
+.transaction_btn{
+    cursor: pointer;
+}

@@ -1,0 +1,33 @@
+.input-container{
+    margin-top:70px;
+}
+
+.card{
+    margin-top: -380px;
+    margin-left: 700px;
+    /* background-color: rgb(234, 247, 249); */
+    /* left: 500px; */
+    /* top: -470px; */
+    box-shadow: 10px 10px 5px lightblue;
+}
+.text-container{
+    margin-top: 80px;
+
+}
+
+.withdraw_btn{
+   margin-top: 50px;
+    margin-left: 90px;
+}
+/* body{
+    background-color: aqua;
+} */
+
+.card-title{
+    text-align: center;
+    color:aquamarine;
+}
+
+input{
+    background-color: aquamarine;
+}
