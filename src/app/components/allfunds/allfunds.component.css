@@ -4,8 +4,8 @@
     text-overflow: ellipsis;
     max-width: 20ch;
 }
-.card{
-    width: 203px;
+.cardform{
+    width: 149px;
     height: 134px;
     padding: 11px;
     margin: 9px;
@@ -13,7 +13,7 @@
     /* box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 
 }
-.card:hover{
+.cardform:hover{
     /* transition: 0.3s ease-in-out; */
     transform: scale(1.1);
     background-color: #eee;
@@ -67,10 +67,10 @@ position: relative;
 cursor: pointer;
 overflow: hidden;
 z-index: 1;
-box-shadow: 6px 6px 12px #c5c5c5,
--6px -6px 12px #ffffff
+/* box-shadow: 6px 6px 12px #c5c5c5,
+-6px -6px 12px #ffffff */
 }
-.btn:hover{
+.btn:hover::before{
     content: '';
     width: 0;
     height: 3em;
@@ -85,5 +85,13 @@ box-shadow: 6px 6px 12px #c5c5c5,
 
 }
 .btn:hover::before{
-    width: 9em;
+    width: 16em;
+}
+.cardform1{
+    width: 304px;
+    height: auto;
+    padding: 11px;
+    margin: 9px;
+    margin-left: 887px;
+    transition: 0.2s ease-in-out;
 }
