@@ -7,15 +7,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./allfunds.component.css'],
 })
 export class AllfundsComponent {
-  detsilList: any[] = [];
+  detailList: any[] = [];
   allBottomDetail: any[] = [];
   data: any;
   // selectedFund:fund;
   constructor(private api: ApiService, private router: Router) {}
   ngOnInit() {
     this.api.getTopDetail().subscribe((res) => {
-      this.detsilList = res;
-      console.log(this.detsilList);
+      this.detailList = res;
+      console.log(this.detailList);
     });
     this.api.getBottomDetail().subscribe((res) => {
       this.allBottomDetail = res;

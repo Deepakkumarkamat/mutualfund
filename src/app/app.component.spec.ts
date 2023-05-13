@@ -10,6 +10,7 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent
+        
       ],
     }).compileComponents();
   });

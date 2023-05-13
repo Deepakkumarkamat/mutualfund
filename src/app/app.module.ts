@@ -15,7 +15,8 @@ import { WishlistPageComponent } from './components/wishlist/wishlist-page/wishl
 import { WishlistpageService } from './services/wishlistpage.service';
 import { AllfundsComponent } from './components/allfunds/allfunds.component';
 import {HttpClientModule}  from '@angular/common/http';
-import { AllfundsdetailComponent } from './components/allfundsdetail/allfundsdetail.component'
+import { AllfundsdetailComponent } from './components/allfundsdetail/allfundsdetail.component';
+import { FooterComponent } from './components/footer/footer.component'
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { AllfundsdetailComponent } from './components/allfundsdetail/allfundsdet
     TransactionPageComponent,
     WishlistPageComponent,
     AllfundsComponent,
-    AllfundsdetailComponent
+    AllfundsdetailComponent,
+    FooterComponent
    
   ],
   imports: [
