@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { WalletService } from 'src/app/services/wallet.service';
 
 @Component({
   selector: 'app-wallet',
@@ -6,9 +7,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./wallet.component.css']
 })
 export class WalletComponent {
-showDepositCard:boolean=true;
+  showDepositCard:boolean=true;
 showWithdrawCard:boolean=false;
 showTransactionList:boolean=false;
+  walletAmount:any[]=[];
+  wallet={
+    balance:''
+  }
+  constructor(private api:WalletService){}
+  ngOnInit(){
+    // this.api.addMoney(1,1).subscribe((res:any)=>{
+    //   return this.walletAmount = res;
+
+    // })
+    
+      this.api.walletBalance(1).subscribe((res:any)=>{
+        return this.wallet.balance = Number(res).toFixed(2);
+      })
+    
+    
+  }
+
   showDeposit(){
    this.showDepositCard = true;
    this.showWithdrawCard = false;
@@ -24,5 +43,6 @@ showTransactionList:boolean=false;
     // this.showTransactionList = false;
 
   }
+
 
 }

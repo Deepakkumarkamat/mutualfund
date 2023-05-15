@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { WalletService } from 'src/app/services/wallet.service';
 import { WishlistpageService } from 'src/app/services/wishlistpage.service';
 
 @Component({
@@ -7,12 +8,13 @@ import { WishlistpageService } from 'src/app/services/wishlistpage.service';
   styleUrls: ['./wishlist-page.component.css']
 })
 export class WishlistPageComponent {
+ 
   // wishList:any[]=[]
   constructor(private _wishlistItem:WishlistpageService){}
   // ngOnInit(){
   //   this.wishList = this._wishlistItem.mutual;
   //   console.log(this.wishList)
   // }
-  
+ 
 
 }

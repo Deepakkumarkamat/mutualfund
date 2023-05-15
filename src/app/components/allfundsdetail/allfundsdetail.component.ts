@@ -16,7 +16,9 @@ export class AllfundsdetailComponent {
   oneTime:boolean=false;
   upi:boolean=false;
   inputAmount=''
+  name:any;
 
+  chartOptions ={}
   constructor(private apii: ApiService, private route: ActivatedRoute) {}
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
@@ -24,8 +26,68 @@ export class AllfundsdetailComponent {
       this.fundDetail = res[0];
       console.log(this.fundDetail);
       this.show = true;
+      let dataPoints=[]
+      let date=4
+      for(let i=1;i<=30;i++){
+        dataPoints.push({x: new Date(2023,date,i),y: ( 1000 +100*Math.random()) - (this.fundDetail.delta*100 )  })
+      }
+      date++
+      setInterval(()=>{
+        for(let i=1;i<=2;i++){
+          dataPoints.push({x: new Date(2023,date,i),y: ( 1000 +100*Math.random()) - (this.fundDetail.delta*100 )  })
+        }
+      },100)
+      this.chartOptions= {
+        animationEnabled:true,
+        theme:'dark1',
+        zoomeEnabled:true,
+        title: {
+          text: this.fundDetail.fundHouse 
+        },
+        axisX: {
+          valueFormatString: "MMM YYYY"
+        },
+        axisY2: {
+          title: "Price Value",
+          prefix: "$",
+          suffix: "K"
+        },
+        data: [{
+          type: "line",
+          color: "#80ffd4",
+          dataPoints: dataPoints
+        }]
+            
+      };
+
     });
+
+    this.apii.getTopDetail().subscribe((res:any)=>{
+      return this.allTopfundDetail = res;
+      // const deltas = this.allTopfundDetail[i].delta;
+      // for (let i =0;i<this.allTopfundDetail.length;i++){
+      //   const deltas = this.allTopfundDetail[i].delta;
+      //   console.log(deltas)
+  
+      // }
+      
+     
+    })
+    
   }
+  // showDelts(){
+  //   this.apii.getTopDetail().subscribe((res:any)=>{
+
+  //     return this.allTopfundDetail = res;
+  //   });
+  //     const deltas = this.allTopfundDetail.map(item=>item.delta);
+  //     console.log(deltas)
+  // }
+  
+  
+ 
+
+
   ngOnDistroy() {
     this.show = false;
   }
@@ -47,4 +109,6 @@ export class AllfundsdetailComponent {
     this.monthlysip=false;
     this.oneTime=false;
   }
+
+  
 }

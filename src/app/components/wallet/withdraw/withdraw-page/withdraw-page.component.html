@@ -13,32 +13,31 @@
         <div class="input-container">
           <label for="amount">Enter Money</label>
           <i
-            class="fa-solid fa-indian-rupee-sign"
             style="margin-left: 90px"
-          ></i>
+          >₹</i>
           <input
-            type="text"
+            type="number"
             class="input-icon"
             id="amount"
             name="amount"
             placeholder="0
-            
             "
             style="
-              margin-left: 200px;
+                  margin-left: 15px;
               width: 70px;
               border: 0px;
               margin-top: -22px;
               outline: none;
               text-align: right;
             "
+            [(ngModel)]="balancewithdraw"
           />
         </div>
         <div class="text-container">
           <span>Send To</span>
           <a style="margin-left: 100px">Acound Detail</a>
         </div>
-        <button class="btn btn-outline-primary withdraw_btn">
+        <button class="btn btn-outline-primary withdraw_btn" (click)="withdrawMoney()">
           Withdraw Money
         </button>
       </div>

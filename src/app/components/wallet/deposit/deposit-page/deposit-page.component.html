@@ -14,17 +14,16 @@
           <label for="amount">Add Money</label>
 
           <i
-            class="fa-solid fa-indian-rupee-sign"
-            style="margin-left: 90px"
-          ></i>
+            style="margin-left: 95px"
+          >₹</i>
           <input
-            type="text"
+            type="number"
             class="input-icon"
             id="amount"
             name="amount"
             placeholder="0"
             style="
-              margin-left: 200px;
+              margin-left: 30px;
               width: 70px;
               border: 0px;
               margin-top: -22px;
@@ -32,13 +31,14 @@
               text-align: right;
               
             "
+           [(ngModel)]="add_balance"
           />
         </div>
         <div class="text-container">
           <span>Pay Using</span>
           <a href="#" style="margin-left: 100px">More Options</a>
         </div>
-        <button class="btn btn-outline-primary deposit_btn">Add Money</button>
+        <button class="btn btn-outline-primary deposit_btn" (click)="addMoneyToWallet()">Add Money</button>
       </div>
     </div>
   </body>

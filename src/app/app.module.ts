@@ -17,7 +17,10 @@ import { AllfundsComponent } from './components/allfunds/allfunds.component';
 import {HttpClientModule}  from '@angular/common/http';
 import { AllfundsdetailComponent } from './components/allfundsdetail/allfundsdetail.component';
 import { FooterComponent } from './components/footer/footer.component'
-
+import { WalletService } from './services/wallet.service';
+import { ApiService } from './services/api.service';
+import * as CanvasJSAngularChart from '../assets/canvasjs.angular.component'
+var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +34,8 @@ import { FooterComponent } from './components/footer/footer.component'
     WishlistPageComponent,
     AllfundsComponent,
     AllfundsdetailComponent,
-    FooterComponent
+    FooterComponent,
+    CanvasJSChart,
    
   ],
   imports: [
@@ -41,7 +45,8 @@ import { FooterComponent } from './components/footer/footer.component'
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [WishlistpageService],
+  providers: [WishlistpageService,
+  WalletService,ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { WalletService } from 'src/app/services/wallet.service';
 
 @Component({
   selector: 'app-withdraw-page',
@@ -6,6 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./withdraw-page.component.css']
 })
 export class WithdrawPageComponent {
-  acount:number=233446766
+  balancewithdraw:number=0;
+ constructor(private api: WalletService){}
 
+ withdrawMoney(){
+  this.api.withdrawBalance(1,this.balancewithdraw).subscribe((res:any)=>{
+    alert(res)
+    window.location.reload();
+  })
+ }
 }

@@ -1,5 +1,5 @@
 .table{
-width: 50%;
+width: 100%;
 }
 .th,td{
     /* padding: 20px; */
@@ -18,11 +18,11 @@ td:hover{
     margin-top: -211px;
 }
 
-.card{
+ .card{
     width: 22rem;
-    margin-left: 600px;
+    /* margin-left: 600px; */
     height: auto;
-}
+} 
 .card-title{
     text-align: center;
     color: rgb(127, 255, 212);
@@ -30,8 +30,8 @@ td:hover{
 }
 .input1{
     width: 70px;
-    margin-left: 230px;
-    margin-top: -23px;
+    margin-left: -1px;
+    margin-top: 15px;
     background-color: rgb(127, 255, 212);
     border: none;
     outline: none;
@@ -39,10 +39,10 @@ td:hover{
 }
 .sip_date{
     width: 84px;
-    margin-left: 223px;
+    margin-left: 97px;
     margin-top: -18px;
     background-color: rgb(127, 255, 212);
-    border: 0px;
+    border: 0px
 }
 .para{
     position: relative;
@@ -57,13 +57,13 @@ td:hover{
     margin-top: 20px;
 } */
 
-.bothbtn{
+/* .bothbtn{
     margin-top: 15px;
     margin-left: 30px;
-}
+} */
 .one_amount{
     width: 70px;
-    margin-left:230px; 
+    margin-left:0px; 
     margin-top:-25px; 
     outline: none;
     border: none;
@@ -124,10 +124,11 @@ td:hover{
         margin-top: 30px;
         border: none;
         outline: none;
-        background-color: rgb(127, 255, 212);
+        background-color: #80ffd4;
 
     }
     .upibtn{
         margin-top: 17px;
         margin-left: 86px; 
     }
+    
