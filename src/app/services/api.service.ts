@@ -1,12 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
+import { WalletService } from './wallet.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ApiService {
-  constructor(private http: HttpClient) {}
+  cutomerid:any
+    transactype:any
+    amount:any
+    walletId:any
+  constructor(private http: HttpClient,private api:WalletService) {}
   getTopDetail() {
     return this.http
       .get('http://localhost:8090/mutualfunds/details/top?limit=5')
@@ -32,4 +37,11 @@ export class ApiService {
       `http://localhost:8090/mutualfunds/details/byid?id=${schemaId}`
     );
   }
-}
+  transactionHistory(){
+    this.api.addTransactionHistory(1,1,10,1).
+    subscribe((res=>{
+      
+      alert(res);
+    }))
+  }
+ }
