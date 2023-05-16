@@ -194,6 +194,10 @@ main {
     width: 200px;
     height:180px;
     margin-right: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 30rem;
 }
 
 .top-h{
