@@ -7,11 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-
 <body>
-
-  <!--this final testing purpose  -->
-
+<app-navbar></app-navbar>
 
   <div class="container-fluid-2">
     <div class="container-fluid-1">
@@ -42,6 +39,7 @@
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         <div class="card">
           <img src="assets/exemples.png" alt="Example Image">
           <h2>Mutual Fund.com</h2>
@@ -97,8 +95,43 @@
         </div>
       </section>
 
+=======
+      </div>
+       
+>>>>>>> edd4fd8d9374f9927acb2f3ab68169b0d9f570f0
     </div>
+      <!-- <div class="card">
+          <img src="assets\explore_mutual.jpg" alt="">
+          <div class="card-body">
+              <h3 class="card-title">New to Mutual fund</h3>
+              <div>Start exploring mutual funds to begin your investment journey</div>
+              <div>
+                  <button type="button" class="btn">Explore more about mutual fund</button>
+              </div>
+          </div>
+      </div> -->
   </div>
-</body>
 
+  <div class="container-fluid" style="width: 58rem;
+    margin-left: 10px;">
+      <h2>Top 5 Mutual fund</h2>
+      <div class="row">
+        <ng-container *ngFor="let detail of detailList; let i = index">
+        
+          <div
+            class="card cardform"
+            routerLink="allfundsdetail/{{ detail.schemaId }}"
+          >
+            <img src="assets\icici.webp" style="width: 32px;
+            height: 31px;" alt="" />
+           
+            <p class="fund">{{ detail.fundHouse }}</p>
+            <p>{{ detail.delta }}%</p>
+          </div>
+         
+        </ng-container>
+      </div>
+    </div>
+
+</body>
 </html>
