@@ -1,75 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <script src="https://kit.fontawesome.com/cabe0fdb4d.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/cabe0fdb4d.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Document</title>
-</head>
-<body>
-    <header class="navbar navbar-expand-lg navbar-light bg-light-subtle" style="height: 70px; ">
-        <div class="logo" >
-            Mutual Fund.com
-        </div>
-        <app-search-box></app-search-box>
-        <div class="authonticate">
-           <a href="#" routerLink="login"><b>Login</b></a> /
-           <a href="#" routerLink="register"> <b> Register</b></a>
-        </div>
-        
+  </head>
+  <body>
+    <header
+      class="navbar navbar-expand-lg navbar-light bg-light-subtle"
+      style="height: 70px"
+    >
+      <div class="logo">Mutual Fund.com</div>
+      <app-search-box></app-search-box>
+      <div class="authonticate">
+        <a href="#" routerLink="login"><b>Login</b></a> /
+        <a href="#" routerLink="register"> <b> Register</b></a>
+      </div>
     </header>
-
     <main class="main-container">
-        <div class="container-fluid" >
-            <h3 class="display-1" style="font-size: 60px; margin-left: 6%; margin-top: 3%;"><b> Welcome to Mutual Fund.com</b></h3>
-            <h4 class="display-6" style="font-family: monospace; margin-left: 6%; margin-top:20px;"> We provide the best investment options for your future.......</h4>
-            <h1 class="display-1" style=" font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 30px; margin-left: 20px; margin-top: 30px; color: rgba(59, 183, 50, 0.797);"><b> Create Your Account Now..</b></h1>
-            <h1 class="display-6" style="font-family:'Times New Roman', Times, serif; margin-left: 20px; margin-top: -10px;">And invest now with <b>EASY & SECURELY</b>.</h1>
-           
+      <div class="container-fluid">
+        <h1
+          class="display-1"
+          style="font-size: 60px; text-align: center; margin-top: 20px"
+        >
+          <b> Welcome to Mutual Fund.com</b>
+        </h1>
+        <h1
+          class="display-6"
+          style="font-family: monospace; text-align: center"
+        >
+          We provide the best investment options for your future.......
+        </h1>
+        <h1
+          class="display-1"
+          style="
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman',
+              serif;
+            font-size: 45px;
+            margin-left: 30px;
+            margin-top: 40px;
+            color: rgba(59, 183, 50, 0.797);
+          "
+        >
+          <b> Create Your Account Now..</b>
+        </h1>
+        <h1
+          class="display-6"
+          style="
+            font-family: 'Times New Roman', Times, serif;
+            margin-left: 30px;
+            margin-top: -10px;
+          "
+        >
+          And invest now with <b>EASY & SECURELY</b>.
+        </h1>
+      </div>
+      <!-- <img src="\assets\stock-pic.jpg" alt="My Image" class="rounded float-end" style="position: absolute; width: 350px; bottom: 390px; height: 250px;;right:10px;"> -->
+      <app-currency-converter></app-currency-converter>
+      <h1 class="top-h">Top 5 Mutual Funds</h1>
+      <div class="row">
+        <div class="col-sm-2" *ngFor="let data of allTopData">
+          <div class="card mb-3" style="left: 4px">
+            <a href="#" class="card btn">
+              <div class="card-body">
+                <h4
+                  class="card-title"
+                  style="
+                    max-width: 10ch;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  <b>{{ data.schemaName }}</b>
+                </h4>
+                <p class="card-text">
+                  <span class="text-muted">Current price :</span> ₹{{
+                    data.currentPrice
+                  }}
+                  <br />
+                  <span class="text-muted">Delta :</span> {{ data.delta }} %
+                </p>
+              </div>
+            </a>
+          </div>
         </div>
-
-           <img src="\assets\stock-pic.jpg" alt="My Image" class="rounded float-end" style="position: absolute; width: 350px; bottom: 390px; height: 250px; right: 10px; margin-top: 150px;">
-      
-           <app-currency-converter></app-currency-converter>
-
-           <h1 class="top-h">Top 5 Mutual Funds</h1>
-        <div class="row" > 
-             <div class="col-sm-2"  *ngFor="let data of allTopData"> 
-                <div class="card mb-3" style="left: 4px;">
-                <a href="#" class="card btn  ">
-                 <div class="card-body"> 
-                    <h4 class="card-title"><b>{{data.schemaName}}</b></h4>
-                   <p class="card-text"> 
-                     <span class="text-muted">Current price :</span> ₹{{data.currentPrice}} <br>
-                     <span class="text-muted">Delta :</span> {{data.delta}} %
-                   </p> 
-                   </div> 
-                </a>
-                </div>
-             </div>
+      </div>
+      <h1 class="bottom-h">Bottom 5 Mutual Funds</h1>
+      <div class="row">
+        <div class="col-sm-2" *ngFor="let data of allBottomData">
+          <div class="card md-3" style="left: 4px">
+            <a href="#" class="card btn">
+              <div class="card-body">
+                <h4
+                  class="card-title"
+                  style="
+                    max-width: 10ch;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  <b>{{ data.schemaName }}</b>
+                </h4>
+                <p class="card-text">
+                  <span class="text-muted">Current price :</span> ₹{{
+                    data.currentPrice
+                  }}
+                  <br />
+                  <span class="text-muted">Delta :</span> {{ data.delta }} %
+                </p>
+              </div>
+            </a>
+          </div>
         </div>
-
-           <h1 class="bottom-h">Bottom 5 Mutual Funds</h1>   
-        <div class="row"> 
-            <div class="col-sm-2" *ngFor="let data of allBottomData"> 
-              <div class="card md-3" style="left: 4px;">
-                <a href="#" class="card btn  "> 
-                <div class="card-body"> 
-                   <h4 class="card-title"><b>{{data.schemaName}}</b></h4>
-                  <p class="card-text"> 
-                    <span class="text-muted">Current price :</span> ₹{{data.currentPrice}} <br>
-                    <span class="text-muted">Delta :</span> {{data.delta}} %
-                  </p> 
-                </div> 
-                </a>
-              </div> 
-            </div>
-        </div>
-             
-       
+      </div>
     </main>
-    
-</body>
+  </body>
 </html>

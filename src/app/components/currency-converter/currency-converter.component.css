@@ -1,6 +1,7 @@
 .currency-converter {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 340px;
+  position: absolute;
+  bottom: 5px;
+  right: 20px;
+  width: 340px;
+  height: 350px;
 }
