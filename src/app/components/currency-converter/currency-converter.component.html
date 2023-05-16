@@ -1,0 +1,139 @@
+<div
+  class="card currency-converter border-0 shadow-lg"
+  style="background-color: rgb(89, 202, 194)"
+>
+  <div class="card-body">
+    <b> Currency Converter</b>
+    <div class="form-group row">
+      <label for="to" class="col-sm-4 col-form-label">From</label>
+      <div class="col-sm-10">
+        <select
+          name="codes"
+          id="to"
+          class="form-control"
+          [(ngModel)]="toCurrency"
+          (change)="resetData()"
+        >
+           
+          <option value="USD">United States Dollar</option>
+           
+          <option value="EUR">Euro</option>
+           
+          <option value="JPY">Japanese Yen</option>
+           
+          <option value="GBP">British Pound Sterling</option>
+           
+          <option value="AUD">Australian Dollar</option>
+           
+          <option value="CAD">Canadian Dollar</option>
+           
+          <option value="CHF">Swiss Franc</option>
+           
+          <option value="CNY">Chinese Yuan</option>
+           
+          <option value="HKD">Hong Kong Dollar</option>
+           
+          <option value="NZD">New Zealand Dollar</option>
+           
+          <option value="SEK">Swedish Krona</option>
+           
+          <option value="NOK">Norwegian Krone</option>
+           
+          <option value="DKK">Danish Krone</option>
+           
+          <option value="SGD">Singapore Dollar</option>
+           
+          <option value="MXN">Mexican Peso</option>
+           
+          <option value="INR">Indian Rupee</option>
+           
+          <option value="BRL">Brazilian Real</option>
+           
+          <option value="RUB">Russian Ruble</option>
+           
+          <option value="TRY">Turkish Lira</option>
+           
+          <option value="ZAR">South African Rand</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group-row">
+      <label for="from" class="col-sm-2 col-from-label" style="width: 255px"
+        >To</label
+      >
+      <div class="col-sm-10">
+        <select
+          name="codes"
+          id="from"
+          class="form-control"
+          [(ngModel)]="fromCurrency"
+          (change)="resetData()"
+        >
+             
+          <option value="USD">United States Dollar</option>
+             
+          <option value="EUR">Euro</option>
+             
+          <option value="JPY">Japanese Yen</option>
+             
+          <option value="GBP">British Pound Sterling</option>
+             
+          <option value="AUD">Australian Dollar</option>
+             
+          <option value="CAD">Canadian Dollar</option>
+             
+          <option value="CHF">Swiss Franc</option>
+           
+          <option value="CNY">Chinese Yuan</option>
+             
+          <option value="HKD">Hong Kong Dollar</option>
+             
+          <option value="NZD">New Zealand Dollar</option>
+             
+          <option value="SEK">Swedish Krona</option>
+             
+          <option value="NOK">Norwegian Krone</option>
+             
+          <option value="DKK">Danish Krone</option>
+             
+          <option value="SGD">Singapore Dollar</option>
+             
+          <option value="MXN">Mexican Peso</option>
+             
+          <option value="INR">Indian Rupee</option>
+             
+          <option value="BRL">Brazilian Real</option>
+             
+          <option value="RUB">Russian Ruble</option>
+             
+          <option value="TRY">Turkish Lira</option>
+             
+          <option value="ZAR">South African Rand</option>
+        </select>
+      </div>
+    </div>
+    <div class="mb-3" style="margin-top: 7px; width: 255px">
+      <label for="exampleFormControlInput1" class="form-label">Amount</label>
+      <input
+        type="number"
+        style="margin-top: 1px"
+        class="form-control"
+        [(ngModel)]="fromAmount"
+        placeholder="Amount"
+      />
+    </div>
+
+    <button
+      (click)="convert()"
+      type="button"
+      class="btn btn-outline-secondary"
+      style="margin-left: 85px"
+    >
+      <b>Convert</b>
+    </button>
+    <!-- <button (click)="convert()" type="button" class="btn btn-outline-success" style="margin-left: 85px;">Convert</button> -->
+    <div *ngIf="data" style="margin-top: 0.5cm; margin-left: 1.5cm">
+      <p>{{ fromAmount }} {{ toCurrency }} = {{ data }} {{ fromCurrency }}</p>
+    </div>
+  </div>
+</div>

@@ -12,20 +12,18 @@
       <h2>Top 5 Mutual fund</h2>
       <div class="row">
         <ng-container *ngFor="let detail of detailList; let i = index">
-          <!-- <div (click)="allDetail(fund.id)"> -->
-          <!-- <a href=""> -->
+        
           <div
             class="card cardform"
             routerLink="allfundsdetail/{{ detail.schemaId }}"
           >
             <img src="assets\icici.webp" style="width: 32px;
             height: 31px;" alt="" />
-            <!-- <img src="assets\sundaram.webp" style="width: 30; height: 30" alt="detail.schemaId[33]" /> -->
+           
             <p class="fund">{{ detail.fundHouse }}</p>
             <p>{{ detail.delta }}%</p>
           </div>
-          <!-- </a> -->
-          <!-- </div> -->
+         
         </ng-container>
       </div>
     </div>
@@ -34,8 +32,7 @@
       <h2>Bottom 5 Mutual fund</h2>
       <div class="row">
         <ng-container *ngFor="let detail of allBottomDetail">
-          <!-- <a href=""> -->
-
+        
           <div
             class="card cardform"
             [routerLink]="'allfundsdetail/' + detail.schemaId"
@@ -45,7 +42,7 @@
             <p class="fund">{{ detail.fundHouse }}</p>
             <p>{{ detail.delta }}%</p>
           </div>
-          <!-- </a> -->
+         
         </ng-container>
       </div>
     </div>
@@ -62,290 +59,6 @@
         </div>
     </div>
 
-    <!-- <h2>Top 5 Mutual Funds</h2>
-    <div class="container-fluid">
-        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-        
-                <a href="">
-                    <ng-container *ngFor="let detail of detsilList">
-          <div class="col">
-           <div class="p-3 border bg-light"> 
-            <div>
-            <img src="assets\icici.webp" style="width: 30; height: 30;" alt="">
-        </div>
-    <div>
-        <b>{{detail.fundHouse}}</b>
-    </div>
-<div>
-    {{detail.delta}}<br> <br>
-    <div>
-        <span class="text-muted">{{detail.price}}</span>
-        <span class="text-muted">(3Y)</span>
-    </div>
-</div>
-
-<br>
-
-</div>
-</div>
-</ng-container>
-</a> -->
-
-    <!-- <a href="">
-          <div class="col">
-            <div class="p-3 border bg-light">
-                <div>
-                    <img src="assets\tata.webp" style="width: 30; height: 30;" alt="">
-                </div>
-            <div>
-                <b>Tata Mutual Fund</b> 
-            </div>
-        <div>
-            Tata Digital India fund Direct- Growth <br> <br>
-            <div>
-                <span class="text-muted">34.78%</span>
-                <span class="text-muted">(3Y)</span>
-            </div>
-        </div>
-        <br>
-       
-            </div>
-          </div>
-        </a>
-        <a href="">
-          <div class="col">
-            <div class="p-3 border bg-light">
-                <div>
-                    <img src="assets\icici.webp" style="width: 30; height: 30;" alt="">
-                </div>
-            <div>
-                <b> ICICI</b>
-            </div>
-        <div>
-            ICICI Prudential Technology Dorect plan Growth <br> <br>
-            <div>
-                <span class="text-muted">34.78%</span>
-                <span class="text-muted">(3Y)</span>
-            </div>
-        </div>
-        <br>
-        
-            </div>
-          </div>
-        </a>
-    <a href="">
-          <div class="col">
-            <div class="p-3 border bg-light">
-                <div>
-                    <img src="assets\parag.webp" style="width: 30; height: 30;" alt="">
-                </div>
-            <div>
-               <b>Parag Mutual Fund</b> 
-            </div>
-        <div>
-            Parag Parikh Fleci Cap Fund Forect Growth <br> <br>
-            <div>
-                <span class="text-muted">34.78%</span>
-                <span class="text-muted">(3Y)</span>
-            </div>
-        </div>
-        <br>
-        
-            </div>
-          </div>
-        </a>
-        <a href="">
-          <div class="col">
-            <div class="p-3 border bg-light">
-                <div>
-                    <img src="assets\axis.png" style="width: 30; height: 30;" alt="">
-                </div>
-            <div>
-               <b>Axis</b> 
-            </div>
-        <div>
-            Axis Small Cap fund Direct Growth <br> <br>
-            <div>
-                <span class="text-muted">34.78%</span>
-                <span class="text-muted">(3Y)</span>
-            </div>
-        </div>
-        <br>
-        
-            </div>
-          </div>
-        </a>
-        <a href="">
-          <div class="col">
-            <div class="p-3 border bg-light">
-                <div>
-                    <img src="assets\icici.webp" style="width: 30; height: 30;" alt="">
-                </div>
-            <div>
-                ICICI
-            </div>
-        <div>
-            ICICI Prudential Commodities Fund Direct Growth <br> <br>
-            <div>
-                <span class="text-muted">34.78%</span>
-                <span class="text-muted">(3Y)</span>
-            </div>
-        </div>
-        <br>
-        
-            </div>
-          </div>
-        </a> -->
-    <!-- </div>
-          </div> -->
-    <!-- <div class="row">
-        <div class="col-3">
-            <div class="card" style="width:18rem; size: uniform;">
-        <div class="card-body">
-            <div>
-                <img src="assets\icici.webp" style="width: 30; height: 30;" alt="">
-            </div>
-            <h4 class="card-title">ICICI</h4>
-            <p>ICICI Prudential Commodities Fund Direct Growth</p>
-            <p class="card-subtitle text-muted">34.98%</p>
-            <span class="card-subtitle text-muted">(3Y)</span> -->
-    <!-- <p class="card-subtitle text-muted" style="text-align: right;">(3Y)</p> -->
-    <!-- <br>
-            <br>
-            <div class="row">
-                <div class="col"><button type="button" class="btn btn-outline-primary">Know more</button></div>
-                <div class="col"><button type="button" class="btn btn-outline-primary">Invest Know</button></div>
-            </div>
-        </div>
-    </div>
-</div>
-<br>
-<br>
-<div class="col-3">
-    <div class="card" style="width:18rem;">
-<div class="card-body">
-    <div>
-        <img src="assets\tata.webp" style="width: 30; height: 30;" alt="">
-    </div>
-    <h4 class="card-title">Tata Mutual Fund</h4>
-    <p>Tata Digital India fund Direct- Growth</p>
-    <div class="row">
-        <div class="col"><button type="button" class="btn btn-outline-primary">Know more</button></div>
-        <div class="col"><button type="button" class="btn btn-outline-primary">Invest Know</button></div>
-    </div>
-</div>
-</div>
-</div>
-<div class="col-3">
-    <div class="card" style="width:18rem;">
-<div class="card-body">
-    <div>
-        <img src="assets\icici.webp" style="width: 30; height: 30;" alt="">
-    </div>
-    <h4 class="card-title">ICICI</h4>
-    <p>ICICI Prudential Technology Dorect plan Growth</p>
-    <div class="row">
-        <div class="col"><button type="button" class="btn btn-outline-primary">Know more</button></div>
-        <div class="col"><button type="button" class="btn btn-outline-primary">Invest Know</button></div>
-    </div>
-</div>
-</div>
-</div>
-<div class="col-3">
-    <div class="card" style="width:18rem;">
-<div class="card-body">
-    <div>
-        <img src="assets\parag.webp" style="width: 30; height: 30;" alt="">
-    </div>
-    <h4 class="card-title">Parag Mutual Fund</h4>
-    <p>Parag Parikh Fleci Cap Fund Forect Growth</p>
-    <div class="row">
-        <div class="col"><button type="button" class="btn btn-outline-primary">Know more</button></div>
-        <div class="col"><button type="button" class="btn btn-outline-primary">Invest Know</button></div>
-    </div>
-    </div>
-</div>
-</div>
-<div class="col-3">
-    <div class="card" style="width:18rem;">
-        <div>
-            <img src="assets\axis.png" style="width: 30; height: 30;" alt="">
-        </div>
-<div class="card-body">
-    <h4 class="card-title">Axis</h4>
-    <p>Axis Small Cap fund Direct Growth</p>
-    <div class="row">
-        <div class="col"><button type="button" class="btn btn-outline-primary">Know more</button></div>
-        <div class="col"><button type="button" class="btn btn-outline-primary">Invest Know</button></div>
-    </div>
-</div>
-</div>
-</div>
-</div> -->
-    <!-- <br>
-<br>
-<h2>Bottom 5 Mutual Fund</h2>
-<div class="row">
-    <div class="col-3">
-        <div class="card" style="width:18rem;">
-    <div class="card-body">
-        <h4 class="card-title">Kotak</h4>
-        <p>Kotak Small Cap Fund Direct Growth</p>
-        <div class="row">
-            <div class="col"><button type="button" class="btn btn-outline-primary">Know more</button></div>
-            <div class="col"><button type="button" class="btn btn-outline-primary">Invest Know</button></div>
-        </div>
-    </div>
-</div>
-</div>
-<div class="col-3">
-    <div class="card" style="width:18rem;">
-<div class="card-body">
-    <h4 class="card-title">Mirae Asset</h4>
-    <p>Mirae Asset Tax Saver 2fund Direct Growth</p>
-    <div class="row">
-        <div class="col"><button type="button" class="btn btn-outline-primary">Know more</button></div>
-        <div class="col"><button type="button" class="btn btn-outline-primary">Invest Know</button></div>
-    </div>
-</div>
-</div>
-</div>
-<div class="col-3">
-    <div class="card" style="width:18rem;">
-<div class="card-body">
-    <h4 class="card-title">Quant Mid</h4>
-    <p>Quant Mid Cap Fund Direct Growth</p>
-    <div class="row">
-        <div class="col"><button type="button" class="btn btn-outline-primary">Know more</button></div>
-        <div class="col"><button type="button" class="btn btn-outline-primary">Invest Know</button></div>
-    </div>
-</div>
-</div>
-</div>
-<div class="col-3">
-    <div class="card" style="width:18rem;">
-<div class="card-body">
-    <h4 class="card-title">Motilal</h4>
-    <p>Motilal Oswal Midcap Fund Direct Growth</p>
-    <div class="row">
-        <div class="col"><button type="button" class="btn btn-outline-primary">Know more</button></div>
-        <div class="col"><button type="button" class="btn btn-outline-primary">Invest Know</button></div>
-    </div>
-</div>
-</div>
-</div>
-<div class="col-3">
-    <div class="card" style="width:18rem;">
-<div class="card-body">
-    <h4 class="card-title">ICICI</h4>
-    <p>ICICI Prudential NASDAQ 100 Index Fund Direct Growth</p>
-    <div class="row">
-        <div class="col"><button type="button" class="btn btn-outline-primary">Know more</button></div>
-        <div class="col"><button type="button" class="btn btn-outline-primary">Invest Know</button></div>
-    </div>
-</div>
-</div>
-</div> -->
-    <!-- </div> -->
+   
   </body>
 </html>

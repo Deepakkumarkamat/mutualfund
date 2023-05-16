@@ -1,0 +1,35 @@
+<div class="container mt-3" style="width: 600px">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="position-relative">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search..."
+          (keyup)="onKeyUp($event)"
+          #inputRef
+        />
+        <div
+          class="list-group mt-2 position-absolute w-100"
+          *ngIf="searchValue && results.length > 0"
+        >
+          <button
+            type="button"
+            class="list-group-item list-group-item-action"
+            *ngFor="let result of results.slice(0, 7)"
+          >
+            <a
+              class="text-decoration-none"
+              [href]="'http://localhost:9000/mutualfunds/' + result.schemaId"
+            >
+              {{ result.schemaName }} {{ result.schemaCategory }}
+              {{ result.fundHouse }}
+            </a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+ 

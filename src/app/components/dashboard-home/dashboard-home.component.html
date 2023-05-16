@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <!--this final testing purpose  -->
+
+
+  <div class="container-fluid-2">
+    <div class="container-fluid-1">
+      <div class="para">Didn't Invested yet?</div>
+      <div class="para">It's a good day to start financially independent....</div>
+    </div>
+
+    <div class="Mutualfundname">
+      <div class="collection">
+        <div class="container">
+          <h1>My Mutual Funds</h1>
+          <div class="table">
+            <div class="table-header">
+              <div class="header-item">Fund Name</div>
+              <div class="header-item">Units</div>
+              <div class="header-item">Current Price</div>
+              <div class="header-item">Total Value</div>
+              <div class="header-item">Gain/Loss</div>
+            </div>
+            <div class="table-body" *ngFor="let detail of detailList">
+              <div class="table-row">
+                <div class="table-cell">{{ detail.fundHouse }}</div>
+                <div class="table-cell">100</div>
+                <div class="table-cell">Rs.{{ detail.currentPrice}}</div>
+                <div class="table-cell">Rs.</div>
+                <div class="table-cell gain">+ Rs. 50000 (20%)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="card">
+          <img src="assets/exemples.png" alt="Example Image">
+          <h2>Mutual Fund.com</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi architecto expedita labore?</p>
+          <button class="explore-btn">Explore More Funds</button>
+        </div> -->
+        <!-- <div class="collec">Popular Fund..</div> -->
+      </div>
+      <!-- <div class="row">
+        <div class="col-sm-2" *ngFor="let detail of detailList">
+          <div class="card-mf">
+            <div class="h-25 d-inline-block" style="width: 121px;">
+              <p class="card-text">{{data.detailList}}</p>
+              <a href="#" class="btn-primary">{{data.currentPrice}}₹</a>&nbsp;
+              <a href="#" class="btn-primary">{{data.delta}}%</a>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+
+      <!-- <section>
+        <div class="collection">
+          <div class="collec">Collection..</div>
+          <div class="row">
+            <div class="col-sm-2">
+              <div class="highreturn">
+                Hight Return
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="highreturn">
+                Large Cap
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="highreturn">
+                Mid Cap
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="highreturn">
+                Small Cap
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="highreturn">
+                Tax Savings
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section> -->
+
+    </div>
+  </div>
+</body>
+
+</html>
