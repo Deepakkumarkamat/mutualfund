@@ -11,6 +11,7 @@ export class ApiService {
     transactype:any
     amount:any
     walletId:any
+    transaction:any
   constructor(private http: HttpClient,private api:WalletService) {}
   getTopDetail() {
     return this.http
@@ -37,11 +38,5 @@ export class ApiService {
       `http://localhost:8090/mutualfunds/details/byid?id=${schemaId}`
     );
   }
-  transactionHistory(){
-    this.api.addTransactionHistory(1,1,10,1).
-    subscribe((res=>{
-      
-      alert(res);
-    }))
-  }
+  
  }

@@ -16,4 +16,11 @@ export class WithdrawPageComponent {
     window.location.reload();
   })
  }
+ transactionHistory(){
+  this.api.addTransactionHistory(1,2,this.balancewithdraw,1).
+  subscribe((res=>{
+    // console.log(this.transaction)
+    alert(res);
+  }))
+}
 }

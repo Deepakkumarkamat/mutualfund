@@ -9,58 +9,24 @@
   <body>
     <div class="container-fluid">
       <h2>All Transaction</h2>
-      <table>
+
+      <table class="pt-3">
         <th>Date</th>
         <th>Description</th>
         <th>Status</th>
         <th>Amount</th>
-        <tr>
+
+        <tr *ngFor="let data of history">
+          <!-- <div"> -->
           <td>
-            14 <br />
-            May
+            {{ data.transactionDate }}
           </td>
           <td>
-            HDFC BANK <br />
-            Withdrw to bank account
-          </td>
-          <td>success</td>
-          <td>456</td>
-        </tr>
-        <tr>
-          <td>
-            20 <br />
-            May
-          </td>
-          <td>
-            ICICI pvt.Ltd <br />
-            Payment Received
+            <!-- HDFC BANK <br /> -->
+            {{data.transactionTypeId ===1 ? 'Payment received':'withdraw'}}
           </td>
           <td>success</td>
-          <td>1000</td>
-        </tr>
-        <tr>
-          <td>
-            20 <br />
-            May
-          </td>
-          <td>
-            ICICI pvt.Ltd <br />
-            Payment Received
-          </td>
-          <td>success</td>
-          <td>1000</td>
-        </tr>
-        <tr>
-          <td>
-            20 <br />
-            May
-          </td>
-          <td>
-            ICICI pvt.Ltd <br />
-            Payment Received
-          </td>
-          <td>success</td>
-          <td>1000</td>
+          <td>{{ data.walletAmount }}</td>
         </tr>
       </table>
     </div>

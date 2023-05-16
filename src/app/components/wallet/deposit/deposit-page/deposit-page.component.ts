@@ -26,10 +26,17 @@ export class DepositPageComponent {
   addMoneyToWallet(){
     this.api.addMoney(1,this.add_balance).subscribe((res:any)=>{
       alert(res);
-     this.apii.transactionHistory
+    
       window.location.reload();
     })
     
+  }
+  transactionHistory(){
+    this.api.addTransactionHistory(1,1,this.add_balance,1).
+    subscribe((res=>{
+      // console.log(this.transaction)
+      // alert(res);
+    }))
   }
 
 

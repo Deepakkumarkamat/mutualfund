@@ -9,16 +9,30 @@ import { WalletService } from 'src/app/services/wallet.service';
   styleUrls: ['./transaction-page.component.css']
 })
 export class TransactionPageComponent {
-  transaction:any
+  history:any;
+  
     
 
 constructor(private api:WalletService,private apii:ApiService){}
 ngOnInit(){
-  this.apii.transactionHistory = this.transaction
-  console.log(this.transaction)
+  this.api.walletHistory(1).subscribe((data)=>{
+    this.history=data
+    console.log(this.history);
+
+    // this.show=true
+  })
+
+  }
+  // showTransaction(){
+   
+  // }
+
+  // ngOnDistroy() {
+  //   this.show = false;
+  // }
 }
 
   
 
 
-}
+
