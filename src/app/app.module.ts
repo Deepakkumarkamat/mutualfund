@@ -33,7 +33,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { BuyingComponent } from './components/buying/buying.component';
 import { SipComponent } from './components/sip/sip.component';
-import { FaqComponent } from './components/faq/faq.component'
+import { FaqComponent } from './components/faq/faq.component';
 
 var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
 @NgModule({
