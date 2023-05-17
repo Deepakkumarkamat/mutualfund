@@ -137,19 +137,9 @@ main {
   color: #fff;
 }
 .card {
-<<<<<<< HEAD
   width: 164px;
   height: 160px;
   margin-right: 20px;
-=======
-    width: 200px;
-    height:180px;
-    margin-right: 50px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 30rem;
->>>>>>> edd4fd8d9374f9927acb2f3ab68169b0d9f570f0
 }
 .top-h {
   color: #ed116585;
@@ -158,4 +148,7 @@ main {
 .bottom-h {
   color: #0056b3;
   margin-left: 100px;
+}
+body{
+    background-color: #394867;
 }

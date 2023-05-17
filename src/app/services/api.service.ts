@@ -38,5 +38,12 @@ export class ApiService {
       `http://localhost:8090/mutualfunds/details/byid?id=${schemaId}`
     );
   }
+//signUp
+  private baseURL: string = 'http://localhost:8082';
+   checkUsernameAvailability(userName: String){
+
+      return this.http.get<any>(`${this.baseURL}/getUserName/${userName}`);
+    
+     }
   
  }

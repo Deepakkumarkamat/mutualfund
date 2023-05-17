@@ -44,26 +44,23 @@
           </div>
         </div>
         <div class="col-lg-4 col-md-4">
-          <!-- <div class="sip"> -->
-
-          <!-- </div> -->
           <div
             class="container-fluid justify-content-center align-items-center"
             style="padding: 1rem 0.5rem"
           >
             <div class="d-flex justify-content-between align-items-center mb-4">
-              <button type="button" class="btn" (click)="showMonthlySip()">
-                Monthly Sip
+              <button type="button" class="btn" (click)="showMonthlySip()" routerLink="sip">
+              SIP
               </button>
-              <button type="button" class="btn" (click)="showOneTime()">
-                One Time
+              <button type="button" class="btn" (click)="showOneTime()" routerLink="buying">
+              Lumsump
               </button>
             </div>
             <div
               class="container-fluid justify-content-center align-items-center"
               style="max-width: 30rem"
             >
-              <div *ngIf="oneTime">
+              <!-- <div *ngIf="oneTime">
                 <div class="card">
                   <div class="card-body" style="width: 300">
                     <p class="card-title">One Time</p>
@@ -91,35 +88,31 @@
 
                     <div class="row mt-3">
                       <div class="col" style="width: 100px">
-                        <!-- <div class="bothinvest"> -->
                         <div
-                          class="d-flex flex-row justify-content-between align-items-center" style="margin-top: 14px;"
+                          class="d-flex flex-row justify-content-between align-items-center"
+                          style="margin-top: 14px"
                         >
                           <button type="button" class="btn">
                             <span>Add To Cart</span>
                           </button>
-                          <!-- <div class="sip_btn"> -->
+
                           <button type="button" class="btn" (click)="showUpi()">
                             <span>Invest</span>
                           </button>
-                          <!-- </div> -->
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div *ngIf="monthlysip">
+              </div> -->
+              <!-- <div *ngIf="monthlysip">
                 <div class="card">
                   <div class="card-body">
                     <p class="card-title"><b> MONTHLY SIP</b></p>
                     <div input-container>
                       <div>
                         <label for="sip">SIP Amount</label>
-                        <!-- <i
-                    class="fa-solid fa-indian-rupee-sign"
-                    style="margin-left: 80px"
-                  ></i> -->
+
                         <span
                           style="
                             margin-left: 140px;
@@ -157,7 +150,7 @@
                             <button type="button" class="btn">
                               <span style="cursor: pointer">Add To Cart</span>
                             </button>
-                            <!-- <div class="sip_btn"> -->
+
                             <button
                               type="button"
                               class="btn"
@@ -165,15 +158,14 @@
                             >
                               <span>Start SIP</span>
                             </button>
-                            <!-- </div> -->
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div *ngIf="upi">
+              </div> -->
+              <!-- <div *ngIf="upi">
                 <div class="card">
                   <div class="card-body" style="width: 300">
                     <i
@@ -184,33 +176,31 @@
                       <span style="text-align: center; padding-bottom: -20px"
                         >Amount Payable:{{ inputAmount }}</span
                       >
-                    </div>
+                    </div> -->
 
-                    <div>
+                    <!-- <div>
                       <span>UPI</span>
                       <span class="payvai">Pay via a/c</span>
-                    </div>
-                    <label for="upi"></label>
+                    </div> -->
+                    <!-- <label for="upi"></label>
                     <input
                       type="text"
                       id="upi"
                       name="upi"
                       class="upi"
                       placeholder="Enter Upi Id"
-                    />
-                    <button type="button" class="btn upibtn">
+                    /> -->
+                    <!-- <button type="button" class="btn upibtn">
                       Pay Via....
-                    </button>
-                  </div>
-                </div>
-              </div>
+                    </button> -->
+                  <!-- </div> -->
+                <!-- </div>
+              </div> -->
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- <div *ngIf="showOneTime"> -->
   </body>
 </html>
 d

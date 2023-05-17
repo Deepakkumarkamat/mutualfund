@@ -1,1 +1,38 @@
-<p>login works!</p>
+<div class="container flex-row justify-content-center alignitems-center" style="height:100%;">
+  <div class="card">
+    <form action="" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Email address</label
+        >
+        <input
+          [(ngModel)]="credentials.username"
+          name="Username"
+          required
+          type="text"
+        />
+      </div>
+      <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <label for="inputPassword6" class="col-form-label">Password</label>
+        </div>
+        <div class="col-auto">
+          <input
+            [(ngModel)]="credentials.password"
+            name="Password"
+            required
+            type="password"
+          />
+        </div>
+        <div class="col-auto">
+          <span id="passwordHelpInline" class="form-text">
+            Must be 8-20 characters long.
+          </span>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-primary">Login</button>
+      <button type="button" class="btn btn-secondary">Reset</button>
+    </form>
+  </div>
+</div>
