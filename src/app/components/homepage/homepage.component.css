@@ -141,14 +141,30 @@ main {
   height: 160px;
   margin-right: 20px;
 }
-.top-h {
+/* .top-h {
   color: #ed116585;
   margin-left: 100px;
-}
-.bottom-h {
+} */
+/* .bottom-h {
   color: #0056b3;
   margin-left: 100px;
-}
+} */
 body{
     background-color: #394867;
+}
+.cool-card{
+  transform: scale(1);
+ transition: all 400ms ease-in-out;
+}
+
+.cool-card:hover{
+  transform: scale(1.12);
+  z-index: 500;
+}
+.cool-card:hover .card{
+ 
+  background-color: rgba(222, 222, 222, 0.7);
+  z-index: 500;
+  backdrop-filter: blur(4px);
+
 }

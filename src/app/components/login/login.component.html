@@ -37,68 +37,69 @@
   </div>
 </div> -->
 
-
-
-
 <div class="container">
+  <div class="d-flex flex-row justify-content-center align-items-center">
+    <!-- <div class="col-md-6"> -->
 
-  <div class="row justify-content-center">
-
-    <div class="col-md-6">
-
-      <div class="card mt-5">
-
-        <div class="card-body">
-
+      <div class="card mt-5" style="width: 20rem;">
+        
+          
+      
+        <div class="card-body d-flex flex-column">
           <h3 class="text-center mb-4">Login</h3>
-
-          <form>
-
-            <div class="form-group" (ngSubmit)="onSubmit()">
-
+          <img class="align-self-center" src="../../../assets/78126-secure-login.gif" />
+          <form
+            class="d-flex flex-column justify-content-center align-items-center"
+          >
+            <div class="form-group mb-3" (ngSubmit)="onSubmit()">
               <label for="username">Username:</label>
 
-              <input name="Username"
-              required
-              type="text" required [(ngModel)]="credentials.username">
-
+              <input
+                name="Username"
+                required
+                type="text"
+                required
+                class="form-control"
+                [(ngModel)]="credentials.username"
+              />
             </div>
 
-            <div class="form-group">
-
+            <div class="form-group mb-3">
               <label for="password">Password:</label>
 
-              <input name="Password"
-              required
-              type="password" [(ngModel)]="credentials.password">
-
+              <input
+                name="Password"
+                required
+                type="password"
+                class="form-control"
+                [(ngModel)]="credentials.password"
+              />
             </div>
-
-            <div class="form-group">
-
-              <button type="submit" class="btn btn-primary btn-block">Submit</button>
-
+            <div style="width: 75%;" class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary btn-block">
+                Submit
+              </button>
+              <button type="reset" class="btn btn-secondary btn-block">
+                Reset
+              </button>
             </div>
+            <!-- <div
+              class="d-flex flex-row justify-content-between align-items-center" style="width: 60%;">
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">
+                  Submit
+                </button>
+              </div>
 
-            <div class="form-group">
-
-              <button type="reset" class="btn btn-secondary btn-block">Reset</button>
-
-            </div>
-
+              <div class="form-group">
+                <button type="reset" class="btn btn-secondary btn-block">
+                  Reset
+                </button>
+              </div>
+            </div> -->
           </form>
-
         </div>
-
       </div>
-
-    </div>
-
+    <!-- </div> -->
   </div>
-
 </div>
-
-
-
-
-
