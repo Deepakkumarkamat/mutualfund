@@ -1,4 +1,4 @@
-<div class="container flex-row justify-content-center alignitems-center" style="height:100%;">
+<!-- <div class="container flex-row justify-content-center alignitems-center" style="height:100%;">
   <div class="card">
     <form action="" (ngSubmit)="onSubmit()">
       <div class="mb-3">
@@ -35,4 +35,70 @@
       <button type="button" class="btn btn-secondary">Reset</button>
     </form>
   </div>
+</div> -->
+
+
+
+
+<div class="container">
+
+  <div class="row justify-content-center">
+
+    <div class="col-md-6">
+
+      <div class="card mt-5">
+
+        <div class="card-body">
+
+          <h3 class="text-center mb-4">Login</h3>
+
+          <form>
+
+            <div class="form-group" (ngSubmit)="onSubmit()">
+
+              <label for="username">Username:</label>
+
+              <input name="Username"
+              required
+              type="text" required [(ngModel)]="credentials.username">
+
+            </div>
+
+            <div class="form-group">
+
+              <label for="password">Password:</label>
+
+              <input name="Password"
+              required
+              type="password" [(ngModel)]="credentials.password">
+
+            </div>
+
+            <div class="form-group">
+
+              <button type="submit" class="btn btn-primary btn-block">Submit</button>
+
+            </div>
+
+            <div class="form-group">
+
+              <button type="reset" class="btn btn-secondary btn-block">Reset</button>
+
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </div>
+
+
+
+
+
