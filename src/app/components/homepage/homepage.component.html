@@ -29,31 +29,45 @@
     </header>
     <main class="main-container">
       <div class="container-fluid">
-        <h1
-          class="display-1"
-          style="font-size: 60px; text-align: center; margin-top: 20px"
-        >
-          <b> Welcome Mutual Fund.com</b>
+        <div>
+        <h1 class="mt-5"
+        style="text-align: center;font-size: 5rem;text-shadow: #ccc 3px 3px 3px;"
+         >
+          All Mutual Finance,<br>
+          Right Here
         </h1>
-        <h1
-          class="display-6"
-          style="font-family: monospace; text-align: center"
+        <!-- <h1
+          style="text-align: center;"
         >
           We provide the best investment options for your future.......
-        </h1>
-        <div class="d-flex flex-row justify-content-between align-items-center " style="padding-inline: 1rem;">
-        
-            <img
-              class="justify-content-center align-items-center"
-              style=" max-width: 38rem;min-width: 20rem;"
-              src="../../../assets/animation_640_lhrz899t.gif"
-              alt=""
-            
-            />
-          
-            <!-- <div style="margin-top: 100px"> -->
-              <app-currency-converter></app-currency-converter>
-            <!-- </div> -->
+        </h1> -->
+        <p style="text-align: center; font-size: 2.2rem;" class="text-muted">Built for Growing India</p>
+      </div>
+        <div
+          class="d-flex flex-row justify-content-between align-items-center"
+          style="padding-inline: 1rem"
+        >
+          <img
+            data-aos="fade-right"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            class="justify-content-center align-items-center"
+            style="max-width: 38rem; min-width: 20rem"
+            src="../../../assets/animation_640_lhrz899t.gif"
+            alt=""
+          />
+
+          <!-- <div style="margin-top: 100px"> -->
+          <app-currency-converter
+            data-aos="fade-left"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          ></app-currency-converter>
+          <!-- </div> -->
         </div>
 
         <h1
@@ -64,7 +78,6 @@
             font-size: 45px;
             margin-left: 30px;
             margin-top: 40px;
-            
           "
         >
           <b> Create Your Account Now..</b>
@@ -81,22 +94,51 @@
         </h1>
       </div>
       <!-- <img src="\assets\stock-pic.jpg" alt="My Image" class="rounded float-end" style="position: absolute; width: 350px; bottom: 390px; height: 250px;;right:10px;"> -->
+      <div
+        class="d-flex flex-row-reverse justify-content-between"
+        style="width: 100%; padding-inline: 2rem"
+      >
+        <img
+          data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          src="assets\money.webp"
+          class="img-fluid rounded float-end"
+          alt=""
+          style="width: 50%; mix-blend-mode: hard-light"
+        />
+        <div
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          class="rounded float-start mb-5 d-flex justify-content-center align-items-center"
+        >
+          <h1 style="font-size: 5rem">
+            Credit, <br />
+            Where you need it!
+          </h1>
+        </div>
+      </div>
 
-      <h1 class="top-h">Top 5 Mutual Funds</h1>
-      <div class="row">
-        <div class="col-sm-2 cool-card ml-3" *ngFor="let data of allTopData">
+      <div class="row" style="padding-inline: 1.5rem">
+        <h1 class="top-h">Top 5 Mutual Funds</h1>
+        <div
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          class="col-sm-2 cool-card ml-3"
+          *ngFor="let data of allTopData"
+        >
           <div class="card mb-3" style="left: 4px">
             <a href="#" class="card btn">
               <div class="card-body">
-                <h4
-                  class="card-title"
-                  style="
-                    max-width: 10ch;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                  "
-                >
+                <h4 class="card-title">
                   <b>{{ data.schemaName }}</b>
                 </h4>
                 <p class="card-text">
@@ -111,21 +153,21 @@
           </div>
         </div>
       </div>
-      <h1 class="bottom-h">Bottom 5 Mutual Funds</h1>
-      <div class="row">
-        <div class="col-sm-2 cool-card ml-3" *ngFor="let data of allBottomData">
+
+      <div class="row" style="padding-inline: 1.5rem">
+        <h1 class="bottom-h">Bottom 5 Mutual Funds</h1>
+        <div
+          data-aos="fade-right"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          class="col-sm-2 cool-card ml-3"
+          *ngFor="let data of allBottomData"
+        >
           <div class="card md-3" style="left: 4px">
             <a href="#" class="card btn">
               <div class="card-body">
-                <h4
-                  class="card-title"
-                  style="
-                    max-width: 10ch;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                  "
-                >
+                <h4 class="card-title" [title]="data.schemaName">
                   <b>{{ data.schemaName }}</b>
                 </h4>
                 <p class="card-text">

@@ -26,7 +26,7 @@ export class SearchBoxComponent {
 
   public sendData(key: string): void {
     this.http
-      .get<any>('http://localhost:9000/mutualfunds/search?query=' + key)
+      .get<any>('http://34.229.81.74:4747/mutualfund/search?query=' + key)
       .subscribe((data) => {
         console.log('data: ', data);
         this.results = data;

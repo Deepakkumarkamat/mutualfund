@@ -154,17 +154,40 @@ body{
 }
 .cool-card{
   transform: scale(1);
- transition: all 400ms ease-in-out;
+ transition: all 300ms ease-in-out;
 }
 
 .cool-card:hover{
   transform: scale(1.12);
   z-index: 500;
+  width:  25%;
+  
+}
+.card{
+  transition: all 400ms ease-in-out;
 }
 .cool-card:hover .card{
  
   background-color: rgba(222, 222, 222, 0.7);
   z-index: 500;
   backdrop-filter: blur(4px);
-
+/* transform: scale(1.12); */
+  /* width: 20rem; */
+  /* height: 15rem; */
+  width: 100%;
 }
+ .card-title{
+  max-width: 10ch;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 400ms ease-in-out;
+}
+.cool-card:hover .card-title{
+  /* white-space: wrap; */
+  text-overflow: unset;
+ overflow: hidden;
+ font-size: medium;
+  max-width: 35ch;
+  margin-bottom: 4rem;
+} 
