@@ -34,6 +34,7 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { BuyingComponent } from './components/buying/buying.component';
 import { SipComponent } from './components/sip/sip.component';
 import { FaqComponent } from './components/faq/faq.component';
+import { MutualFundDetailsComponent } from './components/mutual-fund-details/mutual-fund-details.component';
 
 var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
 @NgModule({
@@ -64,6 +65,7 @@ var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
     BuyingComponent,
     SipComponent,
     FaqComponent,
+    MutualFundDetailsComponent,
   
    
   ],

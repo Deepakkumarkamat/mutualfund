@@ -18,6 +18,7 @@ import { AllfundsComponent } from './components/allfunds/allfunds.component';
 import { WishlistPageComponent } from './components/wishlist/wishlist-page/wishlist-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { MutualFundDetailsComponent } from './components/mutual-fund-details/mutual-fund-details.component';
 // import { combineLatest } from 'rxjs';
 
 const routes: Routes = [
@@ -52,7 +53,8 @@ const routes: Routes = [
   {path:'allfundsdetail',component:AllfundsdetailComponent},
   {path:'dashboard/allfundsdetail/:id',component:AllfundsdetailComponent},
   {path:'login',component:LoginComponent},
-  {path:'register',component:RegisterComponent}
+  {path:'register',component:RegisterComponent},
+  {path:'homepage/mutual-funds/:schemaId',component:MutualFundDetailsComponent}
   
  //SHubham
 //  {path: '', component: MfpageComponen},
