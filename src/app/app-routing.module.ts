@@ -54,8 +54,12 @@ const routes: Routes = [
   {path:'dashboard/allfundsdetail/:id',component:AllfundsdetailComponent},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
+  {path: 'dashboard/investnow', component: InvestNowComponent},  
+  {path: 'dashboard/portfolio', component: PortfolioComponent},
+  {path: 'dashboard/account-details', component: AccountDetailsComponent}
+
   {path:'homepage/mutual-funds/:schemaId',component:MutualFundDetailsComponent}
-  
+ 
  //SHubham
 //  {path: '', component: MfpageComponen},
 
