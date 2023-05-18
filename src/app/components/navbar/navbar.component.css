@@ -57,6 +57,11 @@ body {
      margin-right: 0;
     }
    .account {
-    order: 2;
+    order: 4;
     }
+}
+.material-symbols-outlined{
+    color: #fff;
+    margin-right: 20px;
+    font-size: 2.1rem;
 }
