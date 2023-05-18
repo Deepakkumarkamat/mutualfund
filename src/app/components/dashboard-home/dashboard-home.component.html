@@ -7,18 +7,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-<body>
-<app-navbar></app-navbar>
 
-  <div class="container-fluid-2">
-    <div class="container-fluid-1">
-      <div class="para">Didn't Invested yet?</div>
-      <div class="para">It's a good day to start financially independent....</div>
+<body>
+  <app-navbar></app-navbar>
+  <div class="container-fluid">
+    <div class="d-flex flex-row-reverse justify-content-between" style="width: 100%; padding-inline: 2rem">
+      <img data-aos="fade-left" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
+        data-aos-easing="ease-in-out" src="assets\growwwupp.gif" class="img-fluid rounded float-end" alt=""
+        style="width: 50%; mix-blend-mode: hard-light; margin-bottom: 10px; margin-top: 10px;" />
+
+
+
+      <div data-aos="fade-right" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
+        data-aos-easing="ease-in-out" class="rounded float-start mb-5 d-flex justify-content-center align-items-center">
+        <h1 style="font-size: 4.5rem; font-family: 'Noto Sans', sans-serif;">
+           Didn't Invest Yet?<br />
+          Invest Now!
+        </h1>
+      </div>
+
     </div>
 
-    <div class="Mutualfundname">
-      <div class="collection">
-        <div class="container">
+  </div>
+  <!-- <div class="Mutualfundname">
           <h1>My Mutual Funds</h1>
           <div class="table">
             <div class="table-header">
@@ -38,42 +49,12 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-       
-    </div>
-      <!-- <div class="card">
-          <img src="assets\explore_mutual.jpg" alt="">
-          <div class="card-body">
-              <h3 class="card-title">New to Mutual fund</h3>
-              <div>Start exploring mutual funds to begin your investment journey</div>
-              <div>
-                  <button type="button" class="btn">Explore more about mutual fund</button>
-              </div>
-          </div>
-      </div> -->
-  </div>
-
-  <!-- <div class="container-fluid" style="width: 58rem;
-    margin-left: 10px;">
-      <h2>Top 5 Mutual fund</h2>
-      <div class="row">
-        <ng-container *ngFor="let detail of detailList; let i = index">
-        
-          <div
-            class="card cardform"
-            routerLink="allfundsdetail/{{ detail.schemaId }}"
-          >
-            <img src="assets\icici.webp" style="width: 32px;
-            height: 31px;" alt="" />
-           
-            <p class="fund">{{ detail.fundHouse }}</p>
-            <p>{{ detail.delta }}%</p>
-          </div>
-         
-        </ng-container>
-      </div>
-    </div> -->
-    <app-allfunds></app-allfunds>
+        </div> -->
+  <app-allfunds></app-allfunds>
 </body>
+
 </html>
+
+
+
+
