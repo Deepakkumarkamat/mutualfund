@@ -18,6 +18,7 @@ import { AllfundsComponent } from './components/allfunds/allfunds.component';
 import { WishlistPageComponent } from './components/wishlist/wishlist-page/wishlist-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { MutualFundDetailsComponent } from './components/mutual-fund-details/mutual-fund-details.component';
 // import { combineLatest } from 'rxjs';
 
 const routes: Routes = [
@@ -56,6 +57,9 @@ const routes: Routes = [
   {path: 'dashboard/investnow', component: InvestNowComponent},  
   {path: 'dashboard/portfolio', component: PortfolioComponent},
   {path: 'dashboard/account-details', component: AccountDetailsComponent}
+
+  {path:'homepage/mutual-funds/:schemaId',component:MutualFundDetailsComponent}
+ 
  //SHubham
 //  {path: '', component: MfpageComponen},
 
