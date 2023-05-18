@@ -1,6 +1,5 @@
-@import '~@fortawesome/fontawesome-free/css/all.css';
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
-
+@import '~@fortawesome/fontawesome-free/css/all.css';
 body {
     font-family: 'Arial', sans-serif;
     margin: 0px;
