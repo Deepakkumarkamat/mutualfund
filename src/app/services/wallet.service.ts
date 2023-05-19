@@ -9,6 +9,7 @@ export class WalletService {
   
 
   constructor(private http:HttpClient) { }
+  
   addMoney(customerId: number, amount: number){
     const url = `http://${baseUrl}/mutualfunds/wallet/update/addMoney?customerId=${customerId}&amount=${amount}`; 
     // const body = { customerId, amount }; 
