@@ -16,13 +16,13 @@
           <button
             type="button"
             class="list-group-item list-group-item-action"
-            *ngFor="let result of results.slice(0, 7)"
+            *ngFor="let result of results"
           >
             <a
               class="text-decoration-none"
-              [href]="'http://localhost:9000/mutualfunds/' + result.schemaId"
+              [routerLink]="'/homepage/mutual-funds/' + result.schemaId"
             >
-              {{ result.schemaName }} {{ result.schemaCategory }}
+              {{ result.schemaName }}  {{ result.schemaCategory }}
               {{ result.fundHouse }}
             </a>
           </button>
@@ -30,4 +30,3 @@
       </div>
     </div>
   </div>
-</div>
