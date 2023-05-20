@@ -39,10 +39,6 @@ import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { ThankyouComponent } from './components/thankyou/thankyou.component';
 
-
-export function playerFactory() {
-  return player;
-}
 var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
 
 export function playerFactory() {
