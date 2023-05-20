@@ -74,11 +74,12 @@ export class RegisterComponent {
         (data) => {
           console.log(data);
           console.log('Registration successfully!');
-          alert('User Registration successfully!');
+          this.ro.navigate(['/thankyou'])
+          // alert('User Registration successfully!');
         },
         (error) => {
-          console.error('Registration failed!');
-          alert(error + '!');
+          alert('Registration failed!');
+          console.log(error);
         }
       );
   }

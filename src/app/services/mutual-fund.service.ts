@@ -7,10 +7,10 @@ import { baseUrl } from '../config';
 })
 export class MutualFundService {
 
-  private bottomUrl=`http://${baseUrl}/mutualfunds/details/bottom?limit=5`
-  private topUrl = `http://${baseUrl}/mutualfunds/details/top?limit=5` 
-  constructor(private http: HttpClient) { } 
-    getData(){ 
+  private bottomUrl=`${baseUrl}/mutualfunds/details/bottom?limit=5`
+  private topUrl = `${baseUrl}/mutualfunds/details/top?limit=5`
+  constructor(private http: HttpClient) { }
+    getData(){
        return this.http.get(this.topUrl).pipe(map((res:any)=>
        {
         return res;

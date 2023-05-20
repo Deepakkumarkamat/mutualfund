@@ -19,20 +19,22 @@ import { WishlistPageComponent } from './components/wishlist/wishlist-page/wishl
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { MutualFundDetailsComponent } from './components/mutual-fund-details/mutual-fund-details.component';
+import { ThankyouComponent } from './components/thankyou/thankyou.component';
+import { AuthGuard } from './services/auth.guard';
 // import { combineLatest } from 'rxjs';
 
 const routes: Routes = [
   // {path:'',component:AllfundsComponent},
-  
+
   // {path:'wallet',
   // children:[
   //   {path:'',component:WalletComponent,},
-   
+
   // ]},
   // {path:'wishlist',component:WishlistPageComponent},
   // {path:'allfundsdetail',component:AllfundsdetailComponent},
   // {path:'allfundsdetail/:id',component:AllfundsdetailComponent}
-  
+
   //Balaran
   // {path:'',component:HomepageComponent},
   // {path:'login',component:LoginComponent},
@@ -41,12 +43,12 @@ const routes: Routes = [
   //  {path:'search-box',component:SearchBoxComponent}
 
   // //Shivam
-  {path:'',component:HomepageComponent},
-  {path:'dashboard', component: DashboardHomeComponent},
-  {path: 'dashboard/wallet', component: WalletComponent},
-  {path: 'portfolio', component: PortfolioComponent},
-  {path: 'InvestNow', component: InvestNowComponent},
-  {path: 'account-details', component: AccountDetailsComponent},
+
+  {path:'dashboard', component: DashboardHomeComponent,canActivate:[AuthGuard]},
+  {path: 'dashboard/wallet', component: WalletComponent,canActivate:[AuthGuard]},
+  {path: 'portfolio', component: PortfolioComponent,canActivate:[AuthGuard]},
+  {path: 'investNow', component: InvestNowComponent,canActivate:[AuthGuard]},
+  {path: 'account-details', component: AccountDetailsComponent,canActivate:[AuthGuard]},
   {path: 'navbar', component: NavbarComponent},
   {path:'dashboard/allfundsdetail/:id/sip',component:SipComponent},
   {path:'dashboard/allfundsdetail/:id/buying', component:BuyingComponent},
@@ -54,12 +56,13 @@ const routes: Routes = [
   {path:'dashboard/allfundsdetail/:id',component:AllfundsdetailComponent},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
-  {path: 'dashboard/investnow', component: InvestNowComponent},  
+  {path: 'dashboard/investnow', component: InvestNowComponent},
   {path: 'dashboard/portfolio', component: PortfolioComponent},
   {path: 'dashboard/account-details', component: AccountDetailsComponent},
   {path:'wishlist',component:WishlistPageComponent},
-  {path:'homepage/mutual-funds/:schemaId',component:MutualFundDetailsComponent}
- 
+  {path:'homepage/mutual-funds/:schemaId',component:MutualFundDetailsComponent},
+  {path:'thankyou',component:ThankyouComponent},
+  {path:'',component:HomepageComponent},
  //SHubham
 //  {path: '', component: MfpageComponen},
 
@@ -69,10 +72,10 @@ const routes: Routes = [
 //   {path: 'wishlist', component: WishlistComponent},
 
 //   {path: 'redeem', component: RedeemComponent}
-  
-  
 
-  
+
+
+
 ];
 
 @NgModule({

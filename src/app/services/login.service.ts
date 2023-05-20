@@ -21,6 +21,7 @@ export class LoginService {
   //for login user
   loginUser(token:any){
     localStorage.setItem("token",token)
+    // localStorage.setItem("expire": Date.now()+1000)
     return true;
   }
 
