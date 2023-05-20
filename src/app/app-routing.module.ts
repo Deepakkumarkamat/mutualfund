@@ -19,6 +19,7 @@ import { WishlistPageComponent } from './components/wishlist/wishlist-page/wishl
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { MutualFundDetailsComponent } from './components/mutual-fund-details/mutual-fund-details.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { ThankyouComponent } from './components/thankyou/thankyou.component';
 import { AuthGuard } from './services/auth.guard';
 // import { combineLatest } from 'rxjs';
@@ -59,6 +60,8 @@ const routes: Routes = [
   {path: 'dashboard/investnow', component: InvestNowComponent},
   {path: 'dashboard/portfolio', component: PortfolioComponent},
   {path: 'dashboard/account-details', component: AccountDetailsComponent},
+  {path:'homepage/mutual-funds/:schemaId',component:MutualFundDetailsComponent},
+  {path: '**', pathMatch: 'full', component: ErrorPageComponent}
   {path:'wishlist',component:WishlistPageComponent},
   {path:'homepage/mutual-funds/:schemaId',component:MutualFundDetailsComponent},
   {path:'thankyou',component:ThankyouComponent},

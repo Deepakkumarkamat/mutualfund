@@ -44,6 +44,10 @@ export function playerFactory() {
   return player;
 }
 var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
+
+export function playerFactory() {
+  return player;
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,7 +87,7 @@ var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    LottieModule.forRoot({player:playerFactory})
+    LottieModule.forRoot({ player: playerFactory })
   ],
   providers: [WishlistpageService,
   WalletService,ApiService],
