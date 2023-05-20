@@ -1,4 +1,4 @@
-.arrow_icon{
+/* .arrow_icon{
     text-align: right;
 }
 
@@ -8,7 +8,7 @@
     padding-left: 30px;
     padding-right: 350px;
     margin-top: 80px;
-}
+} */
 /* .btn{
     margin-left: 500px
 } */
@@ -17,7 +17,7 @@
     display: flex;
     margin-left: 500px;
     text-align: left;
-    
+
 } */
 
 /* .fluid-container{
@@ -37,11 +37,12 @@
     /* left: 200px; */
     top: -410px;
 
-    
+
 }
 .transaction_btn{
     cursor: pointer;
 }
+
 
 
 
@@ -51,7 +52,7 @@
     margin-top: 30px; */
     /* left: 200px; */
     /* top: -410px; */
-    
+
 
 
 

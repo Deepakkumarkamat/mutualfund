@@ -7,6 +7,7 @@
     <title>Document</title>
   </head>
   <body>
+    <div class="d-flex justify-content-between">
     <div class="card" style="width: 20rem">
       <div class="card-body">
         <h3 class="card-title">Deposit</h3>
@@ -29,7 +30,7 @@
               margin-top: -22px;
               outline: none;
               text-align: right;
-              
+
             "
            [(ngModel)]="add_balance"
           />
@@ -41,5 +42,6 @@
         <button class="btn btn-outline-primary deposit_btn" (click)="addMoneyToWallet()" (click)="transactionHistory()">Add Money</button>
       </div>
     </div>
+  </div>
   </body>
 </html>

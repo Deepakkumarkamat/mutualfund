@@ -43,7 +43,7 @@ const routes: Routes = [
   //  {path:'search-box',component:SearchBoxComponent}
 
   // //Shivam
-
+  {path:'',component:HomepageComponent},
   {path:'dashboard', component: DashboardHomeComponent,canActivate:[AuthGuard]},
   {path: 'dashboard/wallet', component: WalletComponent,canActivate:[AuthGuard]},
   {path: 'portfolio', component: PortfolioComponent,canActivate:[AuthGuard]},
@@ -62,7 +62,7 @@ const routes: Routes = [
   {path:'wishlist',component:WishlistPageComponent},
   {path:'homepage/mutual-funds/:schemaId',component:MutualFundDetailsComponent},
   {path:'thankyou',component:ThankyouComponent},
-  {path:'',component:HomepageComponent},
+
  //SHubham
 //  {path: '', component: MfpageComponen},
 

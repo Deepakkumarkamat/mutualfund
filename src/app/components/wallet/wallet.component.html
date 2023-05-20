@@ -9,31 +9,31 @@
   <body>
     <app-navbar></app-navbar>
     <div class="container-fluid">
-      <div class="row">
-        <p>INR BALANCE</p>
+      <!-- <div class="row justify-content-start"> -->
+        <div class="d-flex p-2 mt-5">INR BALANCE</div>
 
-        <div class="col-sm-9 bg-light p-5 border">
+        <div class="col-6 bg-light p-5  border">
           Balance Available
           <br />
           <i>₹</i>
           {{ wallet.balance }}
         </div>
-        <div class="col-md-9 bg-white p-4 border" position:absoulute>
+        <div class="col-6 bg-white p-4 border d-flex flex-row justify-content-between">
           Used for stock
-          <i style="margin-left: 400px">₹</i>
-          <span style="margin-left: 10px; margin-top: -50px">0.00</span>
+          <i class="icon" style="text-align: left;">₹0.00</i>
+
         </div>
 
-        <div class="col-md-9 bg-white p-4 border transaction_btn">
+        <div class="col-6 bg-white p-4 border transaction_btn">
           <div (click)="showTransaction()">All Transaction</div>
 
           <div class="arrow_icon"><i>→</i></div>
         </div>
-      </div>
+      <!-- </div> -->
       <div class="col-lg-4 col-md-4">
       <div class="container-fluid justify-content-center align-items-center">
         <div class="row btn2">
-          
+
             <div
               class="d-flex flex-row justify-content-between align-items-center"
             >
@@ -46,7 +46,7 @@
               >
                 Deposit
               </button>
-            
+
             <!-- <div class="col"> -->
               <button
                 type="button"
@@ -63,12 +63,12 @@
       </div>
 
       <div *ngIf="showDepositCard">
-        <div class="container-fluid">
-          <app-deposit-page></app-deposit-page>
-        </div>
+        <!-- <div class="container-fluid"> -->
+          <app-deposit-page class="d-flex flex-row justify-content-center"></app-deposit-page>
+        <!-- </div> -->
       </div>
       <div *ngIf="showWithdrawCard">
-        <app-withdraw-page></app-withdraw-page>
+        <app-withdraw-page class=" d-flex flex-row justify-content-center"></app-withdraw-page>
       </div>
     </div>
 
