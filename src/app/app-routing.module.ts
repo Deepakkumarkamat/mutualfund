@@ -19,12 +19,43 @@ import { WishlistPageComponent } from './components/wishlist/wishlist-page/wishl
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { MutualFundDetailsComponent } from './components/mutual-fund-details/mutual-fund-details.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { ThankyouComponent } from './components/thankyou/thankyou.component';
 import { AuthGuard } from './services/auth.guard';
 // import { combineLatest } from 'rxjs';
 
 const routes: Routes = [
-  // {path:'',component:AllfundsComponent},
+  {path:'',component:HomepageComponent},
+  {path:'dashboard', component: DashboardHomeComponent,canActivate:[AuthGuard]},
+  {path: 'dashboard/wallet', component: WalletComponent,canActivate:[AuthGuard]},
+  {path: 'portfolio', component: PortfolioComponent,canActivate:[AuthGuard]},
+  {path: 'investNow', component: InvestNowComponent,canActivate:[AuthGuard]},
+  {path: 'account-details', component: AccountDetailsComponent,canActivate:[AuthGuard]},
+  {path: 'navbar', component: NavbarComponent},
+  {path:'dashboard/allfundsdetail/:id/sip',component:SipComponent},
+  {path:'dashboard/allfundsdetail/:id/buying', component:BuyingComponent},
+  {path:'allfundsdetail',component:AllfundsdetailComponent},
+  {path:'dashboard/allfundsdetail/:id',component:AllfundsdetailComponent},
+  {path:'login',component:LoginComponent},
+  {path:'register',component:RegisterComponent},
+  {path: 'dashboard/investnow', component: InvestNowComponent},
+  {path: 'dashboard/portfolio', component: PortfolioComponent},
+  {path: 'dashboard/account-details', component: AccountDetailsComponent},
+  {path:'homepage/mutual-funds/:schemaId',component:MutualFundDetailsComponent},
+{path:'wishlist',component:WishlistPageComponent},
+  {path:'thankyou',component:ThankyouComponent},
+  {path: '**', pathMatch: 'full', component: ErrorPageComponent},
+  //SHubham
+  //  {path: '', component: MfpageComponen},
+  // {path:'homepage/mutual-funds/:schemaId',component:MutualFundDetailsComponent},
+
+// {path: 'buying', component: BuyingComponent},
+// {path:'sip',component:SipComponent},
+
+//   {path: 'wishlist', component: WishlistComponent},
+
+//   {path: 'redeem', component: RedeemComponent}
+// {path:'',component:AllfundsComponent},
 
   // {path:'wallet',
   // children:[
@@ -43,7 +74,7 @@ const routes: Routes = [
   //  {path:'search-box',component:SearchBoxComponent}
 
   // //Shivam
-  {path:'',component:HomepageComponent},
+
   {path:'dashboard', component: DashboardHomeComponent,canActivate:[AuthGuard]},
   {path: 'dashboard/wallet', component: WalletComponent,canActivate:[AuthGuard]},
   {path: 'portfolio', component: PortfolioComponent,canActivate:[AuthGuard]},
@@ -62,7 +93,7 @@ const routes: Routes = [
   {path:'wishlist',component:WishlistPageComponent},
   {path:'homepage/mutual-funds/:schemaId',component:MutualFundDetailsComponent},
   {path:'thankyou',component:ThankyouComponent},
-
+  {path:'',component:HomepageComponent},
  //SHubham
 //  {path: '', component: MfpageComponen},
 

@@ -39,11 +39,11 @@ import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { ThankyouComponent } from './components/thankyou/thankyou.component';
 
+var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
 
 export function playerFactory() {
   return player;
 }
-var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,7 +83,7 @@ var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    LottieModule.forRoot({player:playerFactory})
+    LottieModule.forRoot({ player: playerFactory })
   ],
   providers: [WishlistpageService,
   WalletService,ApiService],
