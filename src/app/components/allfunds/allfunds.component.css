@@ -1,3 +1,8 @@
+.container-fluid-3{
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-right: 10px; */
+}
 .fund{
     white-space: nowrap;
     overflow: hidden;
@@ -19,45 +24,6 @@
     background-color: #eee;
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
-/* table{
-    width: 50%;
-}
-
-td,th{
-    border: 1px solid#dad1d1;
-    padding: 8px;
-}
-
-.card{
-    transition: all;
-}
-.iciciImage{
-    width: -30;
-    height: -30;
-} */
-
-/* .card:hover{
-    width: 2px;
-    height: 2px;
-} */
-
-/* .col{
-    border: 1px solid black;
-} */
-/* .firstcol{
-    padding: 0px;
-} */
-/* .coln:hover{
-    width: 10px;
-} */
-/* .col{
-    box-shadow: 0 1px 7px 0;
-    transform: scale(1px);
-} */
-/* .coln:hover{
-    width: 10px;
-} */
 .btn{
 border-radius: 30em;
 font-size: 15px;
@@ -67,8 +33,6 @@ position: relative;
 cursor: pointer;
 overflow: hidden;
 z-index: 1;
-/* box-shadow: 6px 6px 12px #c5c5c5,
--6px -6px 12px #ffffff */
 }
 .btn:hover::before{
     content: '';
@@ -92,6 +56,7 @@ z-index: 1;
     height: auto;
     padding: 11px;
     margin: 9px;
-    margin-left: 887px;
+    margin-left: 830px;
+    margin-top: 5px;
     transition: 0.2s ease-in-out;
 }
