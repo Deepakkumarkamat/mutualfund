@@ -15,17 +15,17 @@ export class ApiService {
   constructor(private http: HttpClient,private api:WalletService) {}
   getTopDetail() {
     return this.http
-      .get(`http://${baseUrl}/mutualfunds/details/top?limit=5`)
+      .get(`${baseUrl}/mutualfunds/details/top?limit=5`)
       .pipe(
         map((res: any) => {
           return res;
-          
+
         })
       );
   }
   getBottomDetail() {
     return this.http
-      .get(`http://${baseUrl}/mutualfunds/details/bottom?limit=5`)
+      .get(`${baseUrl}/mutualfunds/details/bottom?limit=5`)
       .pipe(
         map((res: any) => {
           return res;
@@ -35,25 +35,25 @@ export class ApiService {
 
   detailById(schemaId: number): Observable<any> {
     return this.http.get<any>(
-      `http://${baseUrl}/mutualfund/${schemaId}`
+      `${baseUrl}/mutualfund/${schemaId}`
     );
   }
 //signUp
 
-registrationUser(firstName:string,lastName:string,userName:string,password:string){
+registrationUser(firstName:string,lastName:string,email:string,password:string){
   const data={
     first_name:firstName,
     last_name:lastName,
-    username:userName,
+    email:email,
     password:password
   };
-  return this.http.post("http://3.88.66.189:9191/register",data);
+  return this.http.post(`http://localhost:9191/register`,data);
 }
   // private baseURL: string = `http://${baseUrl}`;
   //  checkUsernameAvailability(userName: String){
 
   //     return this.http.get<any>(`${this.baseURL}/getUserName/${userName}`);
-    
+
   //    }
-  
+
  }

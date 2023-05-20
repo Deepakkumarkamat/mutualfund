@@ -57,7 +57,7 @@ const routes: Routes = [
   {path: 'dashboard/investnow', component: InvestNowComponent},  
   {path: 'dashboard/portfolio', component: PortfolioComponent},
   {path: 'dashboard/account-details', component: AccountDetailsComponent},
-
+  {path:'wishlist',component:WishlistPageComponent},
   {path:'homepage/mutual-funds/:schemaId',component:MutualFundDetailsComponent}
  
  //SHubham

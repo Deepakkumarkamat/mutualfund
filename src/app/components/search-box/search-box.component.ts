@@ -23,7 +23,7 @@ search() {
   }
   public sendData(key: string): void {
     this.http
-    .get<any>(`http://${baseUrl}/mutualfund/search?query=${key}`)
+    .get<any>(`${baseUrl}/mutualfund/search?query=${key}`)
       .subscribe((data) => {
         console.log('data: ', data);
         this.results = data;
