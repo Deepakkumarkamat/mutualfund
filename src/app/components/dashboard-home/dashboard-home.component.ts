@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard-home.component.css']
 })
 export class DashboardHomeComponent {
-  flag:any; 
-  error:any; 
+  flag:any;
+  error:any;
   detailList: any[] = [];
   allBottomDetail: any[] = [];
   data: any;
@@ -18,11 +18,11 @@ export class DashboardHomeComponent {
     this.api.getTopDetail().subscribe((res) => {
       this.detailList = res;
       console.log(this.detailList);
-     
+
     });
     this.api.getBottomDetail().subscribe((res) => {
       this.allBottomDetail = res;
-      
+
     });
   }
   fetchById(schemaId: number): void {
@@ -32,16 +32,16 @@ export class DashboardHomeComponent {
     });
   }
 
-    
-    // console.log('Constructor Called'); 
-    // this.mutualfund.getData().subscribe(data => { 
-    //   this.flag=data; 
-    //   console.log(data) 
+
+    // console.log('Constructor Called');
+    // this.mutualfund.getData().subscribe(data => {
+    //   this.flag=data;
+    //   console.log(data)
 
     // },
     //   (error)=>
-    //   { 
-    //     console.error('Error 404 Not Found'); this.error=error; }) 
-      
+    //   {
+    //     console.error('Error 404 Not Found'); this.error=error; })
+
     //   }
 }

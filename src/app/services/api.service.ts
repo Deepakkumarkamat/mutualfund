@@ -2,58 +2,64 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { WalletService } from './wallet.service';
-import {baseUrl} from '../config'
+import { baseUrl } from '../config';
 @Injectable({
   providedIn: 'root',
 })
 export class ApiService {
-  cutomerid:any
-    transactype:any
-    amount:any
-    walletId:any
-    transaction:any
-  constructor(private http: HttpClient,private api:WalletService) {}
+  cutomerid: any;
+  transactype: any;
+  amount: any;
+  walletId: any;
+  transaction: any;
+  constructor(private http: HttpClient, private api: WalletService) {}
   getTopDetail() {
-    return this.http
-      .get(`http://${baseUrl}/mutualfunds/details/top?limit=5`)
-      .pipe(
-        map((res: any) => {
-          return res;
-          
-        })
-      );
+    return this.http.get(`${baseUrl}/mutualfunds/details/top?limit=5`).pipe(
+      map((res: any) => {
+        return res;
+      })
+    );
   }
   getBottomDetail() {
-    return this.http
-      .get(`http://${baseUrl}/mutualfunds/details/bottom?limit=5`)
-      .pipe(
-        map((res: any) => {
-          return res;
-        })
-      );
+    return this.http.get(`${baseUrl}/mutualfunds/details/bottom?limit=5`).pipe(
+      map((res: any) => {
+        return res;
+      })
+    );
   }
 
   detailById(schemaId: number): Observable<any> {
-    return this.http.get<any>(
-      `http://${baseUrl}/mutualfund/${schemaId}`
-    );
+    return this.http.get<any>(`${baseUrl}/mutualfund/${schemaId}`);
   }
-//signUp
+  //signUp
 
-registrationUser(firstName:string,lastName:string,userName:string,password:string){
-  const data={
-    first_name:firstName,
-    last_name:lastName,
-    username:userName,
-    password:password
-  };
-  return this.http.post("http://3.88.66.189:9191/register",data);
-}
+  registrationUser(
+    firstName: string,
+    lastName: string,
+    email: string,
+    password: string
+  ) {
+    const data = {
+      firstName,
+      lastName,
+      username: email,
+      password,
+    };
+    return this.http.post(`http://34.234.150.41:9191/register`, data, {
+      responseType: 'text',
+      headers: {
+        'Content-Type': 'application/text',
+        'Access-Control-Allow-Origin': 'http://localhost:4200',
+        'Access-Control-Allow-Methods':
+          'OPTIONS, DELETE, POST, GET, PATCH, PUT',
+        'Access-Control-Allow-Headers': 'Content-Type',
+      },
+    });
+  }
   // private baseURL: string = `http://${baseUrl}`;
   //  checkUsernameAvailability(userName: String){
 
   //     return this.http.get<any>(`${this.baseURL}/getUserName/${userName}`);
-    
+
   //    }
-  
- }
+}

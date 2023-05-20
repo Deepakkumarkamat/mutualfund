@@ -37,7 +37,12 @@ import { FaqComponent } from './components/faq/faq.component';
 import { MutualFundDetailsComponent } from './components/mutual-fund-details/mutual-fund-details.component';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
+import { ThankyouComponent } from './components/thankyou/thankyou.component';
 
+
+export function playerFactory() {
+  return player;
+}
 var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
 
 export function playerFactory() {
@@ -72,7 +77,7 @@ export function playerFactory() {
     SipComponent,
     FaqComponent,
     MutualFundDetailsComponent,
-   
+    ThankyouComponent,
   
    
   ],
@@ -83,7 +88,6 @@ export function playerFactory() {
     ReactiveFormsModule,
     HttpClientModule,
     LottieModule.forRoot({ player: playerFactory })
-
   ],
   providers: [WishlistpageService,
   WalletService,ApiService],

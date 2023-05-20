@@ -1,64 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  
-<link
-rel="stylesheet"
-href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-/>
-</head>
-<body>
-  <div class="container">
-    <h1>{{ data[0]?.schemaName }}</h1>
-    <div class="card">
-      <table class="table table-bordered table stripped">
-        <tbody>
-          <tr>
-            <td>
-              <h2 class="heading">Fund House</h2>
-              <span class="data fund-house"> {{ data[0]?.fundHouse }} </span>
-            </td>
-            <td>
-              <h2 class="heading">Current Price</h2>
-              <span class="data current-price">
-                {{ data[0]?.currentPrice }}
-              </span>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <h2 class="heading">Delta</h2>
-              <span class="data delta"> {{ data[0]?.delta }} </span>
-            </td>
-            <td colspan="2">
-              <h2 class="heading">Schema Name</h2>
-              <span class="data schema-name">
-                {{ data[0]?.schemaName }}
-              </span>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <h2 class="heading">Schema Category</h2>
-              <span class="data schema-category">
-                {{ data[0]?.schemaCategory }}
-              </span>
-            </td>
-            <td colspan="2">
-              <h2 class="heading">Description</h2>
-              <span class="data description">
-                {{ data[0]?.description }}
-              </span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+<div class="container">
+  <h1>{{ data[0]?.schemaName }}</h1>
+  <div class="card">
+    <table class="table table-bordered table-stripped">
+      <tbody>
+        <tr>
+          <td>
+            <h2 class="heading">Fund House</h2>
+            <span class="data fund-house">{{ data[0]?.fundHouse }}</span>
+          </td>
+          <td>
+            <h2 class="heading">Current Price</h2>
+            <span class="data current-price">{{ data[0]?.currentPrice }}</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <h2 class="heading">Delta</h2>
+            <span class="data delta">{{ data[0]?.delta }}</span>
+          </td>
+          <td colspan="2">
+            <h2 class="heading">Schema Name</h2>
+            <span class="data schema-name">{{ data[0]?.schemaName }}</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <h2 class="heading">Schema Category</h2>
+            <span class="data schema-category">{{
+              data[0]?.schemaCategory
+            }}</span>
+          </td>
+          <td colspan="2">
+            <h2 class="heading">Description</h2>
+            <span class="data description">{{ data[0]?.description }}</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn btn-outline-primary">Buy Now</button>
   </div>
-
-</body>
-</html>
+</div>
