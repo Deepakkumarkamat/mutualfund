@@ -8,24 +8,27 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <script src="https://kit.fontawesome.com/85edb2fd4f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
   </head>
 
   <body>
-    <!-- <header> -->
     <div class="container-fluid">
       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">MFU</a>
+          <a class="navbar-brand" href="#">FundFusion</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" routerLink="wallet">Wallet Details</a>
+                <a class="nav-link" routerLink="/dashboard/wallet">Wallet Details</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="portfolio">Portfolio</a>
+                <a class="nav-link" routerLink="/dashboard/portfolio">Portfolio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="investnow"
+                <a class="nav-link" routerLink="/dashboard/investnow"
                   >Invest now &nbsp;<i
                     class="fa-sharp fa-regular fa-handshake fa-beat"
                   ></i
@@ -33,24 +36,83 @@
               </li>
             </ul>
           </div>
-          <div class="account">
+          <div class="account" style="position: relative;">
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <a class="nav-link" routerLink="account-details">
             <div class="material-symbols-outlined" id="account-icon">
              account_circle
             </div>
+            <div class="dropdown-menu" style="position: absolute; left: -5rem" id="account-menu">
+              <a class="dropdown-item" href="#">Setting</a>
+              <a class="dropdown-item" href="#">Logout</a>
+           
+              </div>
             </a>
-            <div class="dropdown-menu" id="account-menu">
-            <!-- Dropdown menu items -->
-            <a class="dropdown-item" href="#">Item 1</a>
-            <a class="dropdown-item" href="#">Item 2</a>
-            <a class="dropdown-item" href="#">Item 3</a>
-            </div>
             </div>
             </div>
         </div>
       </nav>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
 
+ <!-- <!DOCTYPE html>
+ <html lang="en" ng-app>
+ <head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Dashboard</title>
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+ <script src="https://kit.fontawesome.com/85edb2fd4f.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+ </head>
+ <body>
+ <div class="container-fluid">
+ <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+ <div class="container-fluid">
+ <a class="navbar-brand" href="#">FundFusion</a>
+ <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+ <span class="navbar-toggler-icon"></span>
+ </button>
+ <div class="collapse navbar-collapse" id="navbarNav">
+ <ul class="navbar-nav ml-auto">
+ <li class="nav-item active">
+ <a class="nav-link" routerLink="wallet">Wallet Details</a>
+ </li>
+ <li class="nav-item">
+ <a class="nav-link" routerLink="portfolio">Portfolio</a>
+ </li>
+ <li class="nav-item">
+ <a class="nav-link" routerLink="investnow">
+ Invest now &nbsp;<i class="fa-sharp fa-regular fa-handshake fa-beat"></i>
+ </a>
+ </li>
+ <li class="nav-item dropdown">
+ <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+ <div class="material-symbols-outlined" id="account-icon">
+ account_circle
+ </div>
+ </a>
+ <div class="dropdown-menu dropdown-menu-right" aria-labelledby="accountDropdown">
+ <a class="dropdown-item" href="#">Logout</a>
+ <a class="dropdown-item" href="#">Settings</a>
+ </div>
+ </li>
+ </ul>
+ </div>
+ </div>
+ </nav>
+ </div>
+ 
+ 
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ </body>
+ </html> -->

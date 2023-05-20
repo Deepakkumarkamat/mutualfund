@@ -35,8 +35,14 @@ import { BuyingComponent } from './components/buying/buying.component';
 import { SipComponent } from './components/sip/sip.component';
 import { FaqComponent } from './components/faq/faq.component';
 import { MutualFundDetailsComponent } from './components/mutual-fund-details/mutual-fund-details.component';
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
 
 var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
+
+export function playerFactory() {
+  return player;
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,6 +72,7 @@ var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
     SipComponent,
     FaqComponent,
     MutualFundDetailsComponent,
+   
   
    
   ],
@@ -74,7 +81,9 @@ var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    LottieModule.forRoot({ player: playerFactory })
+
   ],
   providers: [WishlistpageService,
   WalletService,ApiService],

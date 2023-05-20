@@ -22,6 +22,8 @@
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.5",
     "jquery": "^3.6.4",
+    "lottie-web": "^5.11.0",
+    "ngx-lottie": "^10.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
