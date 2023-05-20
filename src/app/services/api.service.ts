@@ -39,11 +39,21 @@ export class ApiService {
     );
   }
 //signUp
-  private baseURL: string = `http://${baseUrl}`;
-   checkUsernameAvailability(userName: String){
 
-      return this.http.get<any>(`${this.baseURL}/getUserName/${userName}`);
+registrationUser(firstName:string,lastName:string,userName:string,password:string){
+  const data={
+    first_name:firstName,
+    last_name:lastName,
+    username:userName,
+    password:password
+  };
+  return this.http.post("http://3.88.66.189:9191/register",data);
+}
+  // private baseURL: string = `http://${baseUrl}`;
+  //  checkUsernameAvailability(userName: String){
+
+  //     return this.http.get<any>(`${this.baseURL}/getUserName/${userName}`);
     
-     }
+  //    }
   
  }

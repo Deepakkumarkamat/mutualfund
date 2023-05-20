@@ -18,7 +18,7 @@ export class DashboardHomeComponent {
     this.api.getTopDetail().subscribe((res) => {
       this.detailList = res;
       console.log(this.detailList);
-      
+     
     });
     this.api.getBottomDetail().subscribe((res) => {
       this.allBottomDetail = res;

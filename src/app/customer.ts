@@ -1,9 +1,9 @@
 export class Customer {
-    userFirstName: String | undefined;
-    userLastName: String | undefined; 
-    userName: String | undefined; 
-    email: String | undefined; 
-    userPhone: Number | undefined;
-    userPassword: String | undefined; 
+    userFirstName: String =''
+    userLastName: String =''
+    userName: String =''
+    email: String =''
+    userPhone:String=''
+    userPassword:any
     
     }
