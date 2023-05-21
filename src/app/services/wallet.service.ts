@@ -38,12 +38,12 @@ export class WalletService {
   }
   
     addTransactionHistory(customerId:number,transactionTypeId:number,amount:number,walletId:number){
-      const url=`http://54.89.221.138:9090/mutualfunds/wallet/updateTransactionHistory?customerId=${customerId}&transactionTypeId=${transactionTypeId}&walletAmount=${amount}&walletId=${walletId}`
+      const url=`http://34.234.150.41:1111/mutualfunds/wallet/updateTransactionHistory?customerId=${customerId}&transactionTypeId=${transactionTypeId}&walletAmount=${amount}&walletId=${walletId}`
       const headers = {'Content-Type':'application/text'}
       return this.http.patch(url,{},{headers:headers,responseType:'text'})
     }
     walletHistory(customerId:number){
-      const url=`http://54.89.221.138:9090/mutualfunds/wallet/history?customerId=${customerId}`
+      const url=`http://34.234.150.41:1111/mutualfunds/wallet/history?customerId=${customerId}`
       return this.http.get(url)
     }
 
