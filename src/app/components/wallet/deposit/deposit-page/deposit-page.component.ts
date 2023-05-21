@@ -8,28 +8,28 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./deposit-page.component.css']
 })
 export class DepositPageComponent {
-  
-  
+
+
   moneyToWallet:any[]=[]
-  add_balance:number = 0;
+  add_balance:number | any;
   constructor(private api:WalletService,private apii:ApiService){}
   ngOnInit() {
-    
+
     // this.api.addMoney(1,this.add_balance).subscribe((res:any)=>{
     //   this.moneyToWallet = res;
     //   console.log(this.moneyToWallet);
 
     // })
     // console.log(this.add_balance)
-    
+
   }
   addMoneyToWallet(){
     this.api.addMoney(1,this.add_balance).subscribe((res:any)=>{
       alert(res);
-    
+
       window.location.reload();
     })
-    
+
   }
   transactionHistory(){
     this.api.addTransactionHistory(1,1,this.add_balance,1).

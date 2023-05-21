@@ -29,18 +29,21 @@
 
 } */
 
-.btn2{
+/* .btn2{
     position: relative;
     margin-left: 550px;
     margin-right: 0px;
     margin-top: 30px;
-    /* left: 200px; */
+
     top: -410px;
 
 
-}
+} */
 .transaction_btn{
     cursor: pointer;
+}
+.icon .mt-n1 {
+  margin-left: -0.25rem !important;
 }
 
 

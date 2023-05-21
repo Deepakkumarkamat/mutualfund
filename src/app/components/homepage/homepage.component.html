@@ -22,7 +22,7 @@
     >
     <!-- <img src="https://th.bing.com/th/id/OIP.nbT0zbCRwEta03C7AAP45gHaHa?pid=ImgDet&rs=1" alt=""> -->
       <div class="logo" >FundFusion</div>
-      
+
       <app-search-box></app-search-box>
       <div class="authonticate">
         <a href="#" routerLink="login"><b>Login</b></a> /
@@ -124,7 +124,8 @@
           class="col-sm-2 cool-card ml-3"
           *ngFor="let data of allTopData"
         >
-          <div class="card mb-3" style="left: 4px">
+        <div class="container-fluid">
+          <div class="card mb-3">
             <a href="/login" class="card btn">
               <div class="card-body">
                 <h4 class="card-title">
@@ -140,6 +141,7 @@
               </div>
             </a>
           </div>
+        </div>
         </div>
       </div>
 
