@@ -21,7 +21,7 @@ export class MutualFundDetailsComponent {
         this.show = false 
        }
        fullData(id: any) { 
-        this.http.get(`http://${baseUrl}/mutualfund/` + id).subscribe((response) => {
+        this.http.get(`${baseUrl}/mutualfund/` + id).subscribe((response) => {
          this.data = response 
          this.show = true
           console.log(this.data)
