@@ -38,6 +38,8 @@ import { MutualFundDetailsComponent } from './components/mutual-fund-details/mut
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { ThankyouComponent } from './components/thankyou/thankyou.component';
+import { Searchbox2Component } from './components/searchbox2/searchbox2.component';
+
 
 var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
 
@@ -74,8 +76,10 @@ export function playerFactory() {
     FaqComponent,
     MutualFundDetailsComponent,
     ThankyouComponent,
-  
-   
+    Searchbox2Component,
+
+
+
   ],
   imports: [
     BrowserModule,

@@ -44,7 +44,9 @@ const routes: Routes = [
   {path:'homepage/mutual-funds/:schemaId',component:MutualFundDetailsComponent},
 {path:'wishlist',component:WishlistPageComponent},
   {path:'thankyou',component:ThankyouComponent},
+  {path:"dashboard/allfundsdetail/:schemaId",component:AllfundsdetailComponent},
   {path: '**', pathMatch: 'full', component: ErrorPageComponent},
+
   //SHubham
   //  {path: '', component: MfpageComponen},
   // {path:'homepage/mutual-funds/:schemaId',component:MutualFundDetailsComponent},

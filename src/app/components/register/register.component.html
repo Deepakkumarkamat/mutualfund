@@ -42,7 +42,7 @@
                   name="name"
                   placeholder="firstname"
                   required
-                  pattern="{2}"
+
                   formControlName="firstname"
                   [ngClass]="{'is-invalid':submitted && form['firstname'].errors}"
                 />
@@ -82,12 +82,12 @@
                 />
                 <div *ngIf="submitted && form['email']?.errors?.['required']" class="text-danger"> email is required</div>
                 <!-- (input)="checkAvailability()" -->
-                <div *ngIf="userAvailable === false" class="text-danger">
+                <!-- <div *ngIf="userAvailable === false" class="text-danger">
                   UserName is already taken
                 </div>
                 <div *ngIf="userAvailable === true" class="text-success">
                   UserName is available
-                </div>
+                </div> -->
               </div>
               <br />
               <div class="form-group">
