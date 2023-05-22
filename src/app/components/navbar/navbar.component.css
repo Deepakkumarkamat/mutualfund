@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
 @import '~@fortawesome/fontawesome-free/css/all.css';
+
+*{
+    margin: -3px;
+}
 body {
     font-family: 'Arial', sans-serif;
     margin: 0px;
@@ -41,8 +45,11 @@ body {
     }
 
 .container-fluid {
+    display: flex;
+    justify-content: between;
     margin: 0px;
     max-width: 1400px;
+    width:97vw;
     padding: 0px;
     font-family: 'Noto Sans', sans-serif;
     }
@@ -82,4 +89,10 @@ body {
     padding-left: 2px;
     padding-right: 2px;
     margin-left: 462px;
+}
+.container-fluid-4{
+    display: flex;
+    justify-content: center;
+    margin-left: 60px;
+    margin-bottom: 10px;
 }

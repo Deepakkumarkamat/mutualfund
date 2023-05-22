@@ -2,6 +2,9 @@ import { Component ,OnInit } from '@angular/core';
 import { MutualFundService } from 'src/app/services/mutual-fund.service';
 import { ApiService } from 'src/app/services/api.service';
 import { Router } from '@angular/router';
+import { AnimationOptions } from 'ngx-lottie';
+import { AnimationItem } from 'lottie-web';
+
 import { AllfundService } from 'src/app/services/allfund.service';
 
 
@@ -39,7 +42,13 @@ export class DashboardHomeComponent implements OnInit{
 
   }
 
+  options: AnimationOptions = {
+    path: '../../../assets/135363-mutual-funds-investment.json',
+  };
 
+
+  animationCreated(animationItem: AnimationItem): void {
+    console.log(animationItem);
 
 
 
@@ -60,5 +69,5 @@ export class DashboardHomeComponent implements OnInit{
     //   {
     //     console.error('Error 404 Not Found'); this.error=error; })
 
-    //   }
+}
 }

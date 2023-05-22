@@ -54,8 +54,8 @@ z-index: 1;
 .cardform1{
     width: 304px;
     height: auto;
-    padding: 11px;
-    margin: 9px;
+    padding: 0px;
+    margin: -3px;
     margin-left: 830px;
     margin-top: 5px;
     transition: 0.2s ease-in-out;
