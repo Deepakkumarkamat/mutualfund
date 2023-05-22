@@ -45,7 +45,7 @@ export class ApiService {
       username: email,
       password,
     };
-    return this.http.post(`http://34.234.150.41:9191/register`, data, {
+    return this.http.put(`http://34.234.150.41:9191/register`, data, {
       responseType: 'text',
       headers: {
         'Accept':'*/*',

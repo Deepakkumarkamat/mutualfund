@@ -26,7 +26,7 @@ export class DashboardHomeComponent implements OnInit{
     this.api.getTopDetail().subscribe((res) => {
       this.detailList = res;
       console.log(this.detailList);
-      this.loadMutualFunds();
+      this.mutualFunds();
 
     });
     this.api.getBottomDetail().subscribe((res) => {
@@ -50,24 +50,21 @@ export class DashboardHomeComponent implements OnInit{
   animationCreated(animationItem: AnimationItem): void {
     console.log(animationItem);
 
-
-
-  loadMutualFunds() {
-    this.fund.getMutualFunds()
-      .subscribe((data: any[]) => {
-        this.mutualFunds = data;
-      });
   }
 
-    // console.log('Constructor Called');
-    // this.mutualfund.getData().subscribe(data => {
-    //   this.flag=data;
-    //   console.log(data)
+    loadMutualFunds() {
+      this.fund.getMutualFunds().subscribe((data: any[]) => {
+        this.mutualFunds = data;
+      });
 
-    // },
-    //   (error)=>
-    //   {
-    //     console.error('Error 404 Not Found'); this.error=error; })
+       }
+
+
+
+
 
 }
-}
+// function loadMutualFunds() {
+//   throw new Error('Function not implemented.');
+// }
+

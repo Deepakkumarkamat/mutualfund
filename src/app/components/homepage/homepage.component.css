@@ -136,12 +136,11 @@ main {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serifs;
   color: #fff;
 }
-/* .card {
+.card {
   width: 164px;
   height: 160px;
   margin-right: 20px;
-
-} */
+}
 /* .top-h {
   color: #ed116585;
   margin-left: 100px;
@@ -157,7 +156,6 @@ body{
   transform: scale(1);
  transition: all 300ms ease-in-out;
 }
-
 .cool-card:hover{
   transform: scale(1.12);
   z-index: 500;
@@ -166,13 +164,7 @@ body{
 }
 .card{
   transition: all 400ms ease-in-out;
-  overflow-block: hidden;
-  width: 164px;
-  height:160px
-
 }
-
-
 .cool-card:hover .card{
 
   background-color: rgba(222, 222, 222, 0.7);
@@ -191,7 +183,7 @@ body{
   transition: all 400ms ease-in-out;
 }
 .cool-card:hover .card-title{
-  /* white-space: wrap; */
+  white-space: nowrap;
   text-overflow: unset;
  overflow: hidden;
  font-size: medium;
@@ -202,13 +194,3 @@ body{
 a{
   text-decoration: none;
 }
-.container-fluid{
-  display: block;
-  flex-wrap: nowrap;
-}
-
-
-
-
-
-

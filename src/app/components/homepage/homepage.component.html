@@ -16,38 +16,26 @@
     <title>Document</title>
   </head>
   <body>
-    
-    <app-navbar></app-navbar>
 
-    <header
-      class="navbar navbar-expand-lg navbar-light bg-light-subtle"
-      style="height: 70px"
-    >
-    <!-- <img src="https://th.bing.com/th/id/OIP.nbT0zbCRwEta03C7AAP45gHaHa?pid=ImgDet&rs=1" alt=""> -->
-      <div class="logo" >FundFusion</div>
-
-      <app-search-box></app-search-box>
-      <div class="authonticate">
-        <a href="#" routerLink="login"><b>Login</b></a> /
-        <a href="#" routerLink="register"> <b> Register</b></a>
-      </div>
-    </header>
     <main class="main-container">
       <div class="container-fluid">
         <div>
-        <h1 class="mt-5"
-        style="text-align: center;font-size: 5rem;text-shadow: #ccc 3px 3px 3px;"
-         >
-          All Mutual Finance,<br>
-          Right Here
-        </h1>
-        <!-- <h1
-          style="text-align: center;"
-        >
-          We provide the best investment options for your future.......
-        </h1> -->
-        <p style="text-align: center; font-size: 2.2rem;" class="text-muted">Built for Growing India</p>
-      </div>
+          <h1
+            class="mt-5"
+            style="
+              text-align: center;
+              font-size: 5rem;
+              text-shadow: #ccc 3px 3px 3px;
+            "
+          >
+            All Mutual Finance,<br />
+            Right Here
+          </h1>
+          <!-- <h1 style="text-align: center;" > We provide the best investment options for your future....... </h1> -->
+          <p style="text-align: center; font-size: 2.2rem" class="text-muted">
+            Built for Growing India
+          </p>
+        </div>
         <div
           class="d-flex flex-row justify-content-between align-items-center"
           style="padding-inline: 1rem"
@@ -63,7 +51,6 @@
             src="../../../assets/animation_640_lhrz899t.gif"
             alt=""
           />
-
           <!-- <div style="margin-top: 100px"> -->
           <app-currency-converter
             data-aos="fade-left"
@@ -74,16 +61,19 @@
           ></app-currency-converter>
           <!-- </div> -->
         </div>
-
-        <div class="d-flex justify-content-between" >
-        <h1 class="rounded float-start">
-          Create Your Account Now..
-         <p> And invest now with <b>EASY & SECURELY</b>.</p>
-        </h1>
-        <div class="d-flex justify-content-center mb-3">
-        <img src="assets\animation_640_lhtelm5f.gif" alt="" style="width:50%">
-      </div>
-      </div>
+        <div class="d-flex justify-content-between">
+          <h1 class="rounded float-start">
+            Create Your Account Now..
+            <p>And invest now with <b>EASY & SECURELY</b>.</p>
+          </h1>
+          <div class="d-flex justify-content-center mb-3">
+            <img
+              src="assets\animation_640_lhtelm5f.gif"
+              alt=""
+              style="width: 50%"
+            />
+          </div>
+        </div>
       </div>
       <!-- <img src="\assets\stock-pic.jpg" alt="My Image" class="rounded float-end" style="position: absolute; width: 350px; bottom: 390px; height: 250px;;right:10px;"> -->
       <div
@@ -115,7 +105,6 @@
           </h1>
         </div>
       </div>
-
       <div class="row" style="padding-inline: 1.5rem">
         <h1 class="top-h">Top 5 Mutual Funds</h1>
         <div
@@ -127,27 +116,26 @@
           class="col-sm-2 cool-card ml-3"
           *ngFor="let data of allTopData"
         >
-        <div class="container-fluid">
-          <div class="card mb-3">
-            <a href="/login" class="card btn">
-              <div class="card-body">
-                <h4 class="card-title">
-                  <b>{{ data.schemaName }}</b>
-                </h4>
-                <p class="card-text">
-                  <span class="text-muted">Current price :</span> ₹{{
-                    data.currentPrice
-                  }}
-                  <br />
-                  <span class="text-muted">Delta :</span> {{ data.delta }} %
-                </p>
-              </div>
-            </a>
+          <!-- <div class="container-fluid"> -->
+            <div class="card mb-3">
+              <a href="/login" class="card btn">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <b>{{ data.schemaName }}</b>
+                  </h4>
+                  <p class="card-text">
+                    <span class="text-muted">Current price :</span> ₹{{
+                      data.currentPrice
+                    }}
+                    <br />
+                    <span class="text-muted">Delta :</span> {{ data.delta }} %
+                  </p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
-        </div>
-      </div>
-
+      <!-- </div> -->
       <div class="row" style="padding-inline: 1.5rem">
         <h1 class="bottom-h">Bottom 5 Mutual Funds</h1>
         <div
