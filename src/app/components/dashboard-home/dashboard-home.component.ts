@@ -39,9 +39,7 @@ export class DashboardHomeComponent implements OnInit{
 
   }
 
-  toggleDetails(fund: any) {
-    fund.showDetails = !fund.showDetails;
-  }
+
 
 
 
