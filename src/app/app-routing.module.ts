@@ -34,7 +34,7 @@ const routes: Routes = [
   {path: 'navbar', component: NavbarComponent},
   {path:'dashboard/allfundsdetail/:id/sip',component:SipComponent},
   {path:'dashboard/allfundsdetail/:id/buying', component:BuyingComponent},
-  {path:'allfundsdetail',component:AllfundsdetailComponent},
+  {path:'allfundsdetail/:schemaId',component:AllfundsdetailComponent},
   {path:'dashboard/allfundsdetail/:id',component:AllfundsdetailComponent},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
