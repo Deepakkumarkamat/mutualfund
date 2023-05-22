@@ -1,80 +1,43 @@
-.table{
-width: 100%;
-}
-.th,td{
-    /* padding: 20px; */
-    border: 1px solid black;
-}
-tr > td{
-    padding: 1rem;
-}
-td:hover{
-    background-color: rgb(127, 255, 212);
+.container {
+  width: 50rem;
 }
 
-.sip{
-    margin-left: 607px;
-    padding: 8px;
-    margin-top: -211px;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
 }
 
- .card{
-    width: 22rem;
-    /* margin-left: 600px; */
-    height: auto;
-} 
-.card-title{
-    text-align: center;
-    color: rgb(127, 255, 212);
-    font-size: x-large;
+th,
+td {
+  padding: 0.5rem;
+  text-align: left;
 }
-.input1{
-    width: 70px;
-    margin-left: -1px;
-    margin-top: 15px;
-    background-color: rgb(127, 255, 212);
-    border: none;
-    outline: none;
-    text-align: right;
-}
-.sip_date{
-    width: 84px;
-    margin-left: 97px;
-    margin-top: -18px;
-    background-color: rgb(127, 255, 212);
-    border: 0px
-}
-.para{
-    position: relative;
-    text-align: center;
-    margin-top: 71px;
-    
-}
-.sip_btn{
-    margin-left: 152px;
-}
-/* .cart{
-    margin-top: 20px;
-} */
 
-/* .bothbtn{
-    margin-top: 15px;
-    margin-left: 30px;
-} */
-.one_amount{
-    width: 70px;
-    margin-left:0px; 
-    margin-top:-25px; 
-    outline: none;
-    border: none;
-    background-color: aquamarine;
-    text-align: right;
-    
+th {
+  background-color: #f2f2f2;
 }
-.bothinvest{
-    margin-top: 15px;
-    margin-left: 30px;
-    padding-top: 150px;
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
 .text-center{
     margin-top: -21px;
@@ -96,7 +59,6 @@ td:hover{
     cursor: pointer;
     overflow: hidden;
     z-index: 1;
-    margin-left: 50px;
     box-shadow: 6px 6px 12px #c5c5c5,
     -6px -6px 12px #ffffff
     }
@@ -112,7 +74,7 @@ td:hover{
         transition: .5s ease;
         display: block;
         z-index: -1;
-    
+
     }
     .btn:hover::before{
         width: 9em;
@@ -130,15 +92,5 @@ td:hover{
     }
     .upibtn{
         margin-top: 17px;
-        margin-left: 86px; 
+        margin-left: 86px;
     }
-.fav{
-    display: flex;
-    justify-content: flex-end;
-    /* margin-left: 20px; */
-    margin-bottom: 300px;
-}
-.bi{
-    color: #ff0000;
-    margin-right: 100px;
-}
