@@ -42,9 +42,9 @@ const routes: Routes = [
   {path: 'dashboard/portfolio', component: PortfolioComponent},
   {path: 'dashboard/account-details', component: AccountDetailsComponent},
   {path:'homepage/mutual-funds/:schemaId',component:MutualFundDetailsComponent},
-  {path: '**', pathMatch: 'full', component: ErrorPageComponent},
-  {path:'wishlist',component:WishlistPageComponent},
+  {path:'dashboard/allfundsdetail/:id/wishlist/wishlist-page',component:WishlistPageComponent},
   {path:'thankyou',component:ThankyouComponent},
+  {path: '**', pathMatch: 'full', component: ErrorPageComponent},
   //SHubham
   //  {path: '', component: MfpageComponen},
   // {path:'homepage/mutual-funds/:schemaId',component:MutualFundDetailsComponent},

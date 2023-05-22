@@ -10,25 +10,17 @@
 
 <body>
   <app-navbar></app-navbar>
-  <div class="container-fluid">
-    <div class="d-flex flex-row-reverse justify-content-between" style="width: 100%; padding-inline: 2rem">
-      <img data-aos="fade-left" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
-        data-aos-easing="ease-in-out" src="assets\growwwupp.gif" class="img-fluid rounded float-end" alt=""
-        style="width: 50%; mix-blend-mode: hard-light; margin-bottom: 10px; margin-top: 10px;" />
-
-
-
-      <div data-aos="fade-right" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
+  <div class="d-flex flex-row-reverse justify-content-between" style="width: 100%; padding-inline: 2rem">
+    <ng-lottie [options]="options" (animationCreated)="animationCreated($event)" width="500px"></ng-lottie>
+    <div data-aos="fade-right" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
         data-aos-easing="ease-in-out" class="rounded float-start mb-5 d-flex justify-content-center align-items-center">
         <h1 style="font-size: 4.5rem; font-family: 'Noto Sans', sans-serif; text-shadow: #ccc 3px 3px 3px;">
           Didn't Invest Yet?<br/>
           Invest Now!
         </h1>
       </div>
-
-    </div>
-
   </div>
+
   <!-- <div class="Mutualfundname">
           <h1>My Mutual Funds</h1>
           <div class="table">
@@ -53,4 +45,4 @@
   <app-allfunds></app-allfunds>
 </body>
 
-</html> 
+</html>
