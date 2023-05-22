@@ -21,17 +21,24 @@
 
 
 
+
+
+
+
+
       <div data-aos="fade-right" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
         data-aos-easing="ease-in-out" class="rounded float-start mb-5 d-flex justify-content-center align-items-center">
-        <h1 style="font-size: 4.5rem; font-family: 'Noto Sans', sans-serif; text-shadow: #ccc 3px 3px 3px;">
+        <h1 style="font-size: 2rem; font-family: 'Noto Sans', sans-serif; text-shadow: #ccc 3px 3px 3px;">
           Didn't Invest Yet?<br/>
           Invest Now!
         </h1>
+
       </div>
 
     </div>
 
   </div>
+
   <!-- <div class="Mutualfundname">
           <h1>My Mutual Funds</h1>
           <div class="table">
@@ -54,6 +61,26 @@
           </div>
         </div> -->
   <app-allfunds></app-allfunds>
+
+  <div *ngIf="mutualFunds" class="container-fluid">
+    <!-- <h2>Explore Funds</h2> -->
+    <ul class="horizontal-list">
+      <li *ngFor="let fund of mutualFunds" [ngClass]="{ 'positive': fund.delta > 0, 'negative': fund.delta < 0 }">
+        <button class="explore-button" [routerLink]="'allfundsdetail/' + fund.schemaId">
+          {{ fund.schemaName }}
+        </button>
+        <div class="details" [class.show]="true">
+          <p><strong>Fund House:</strong> {{ fund.fundHouse }}</p>
+          <p><strong>Category:</strong> {{ fund.schemaCategory }}</p>
+          <p><strong>Current Price:</strong> {{ fund.currentPrice }}</p>
+          <p><strong>Delta:</strong> <span [class.gain]="fund.delta > 0">{{ fund.delta > 0 ? '+' : '' }}{{ fund.delta }}</span></p>
+          <button class="view-details" [routerLink]="'allfundsdetail/' + fund.schemaId">View Details</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
 </body>
 
 </html>
