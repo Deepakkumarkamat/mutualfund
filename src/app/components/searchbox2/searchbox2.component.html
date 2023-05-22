@@ -1,9 +1,8 @@
-<div class="container mt-3" style="width: 600px;">
+<div class="container mt-3" style="width: 600px">
   <div class="row">
-    <div class="col-md-12 offset-md-3">
+    <div class="col-md-6 offset-md-3">
       <div class="position-relative">
         <input
-        style="width:100%;"
           type="text"
           class="form-control"
           placeholder="Search..."
@@ -13,7 +12,6 @@
         <div
           class="list-group mt-2 position-absolute w-100"
           *ngIf="searchValue && results.length > 0"
-          style="z-index: 1000;"
         >
           <button
             type="button"
@@ -21,11 +19,7 @@
             *ngFor="let result of results"
           >
             <a
-              class="text-decoration-none"
-              
-              [routerLink]="'/homepage/mutual-funds/' + result.schemaId"
-            >
-            [routerLink]="'dashboard/allfundsdetail/' + result.schemaId"
+            [routerLink]="'allfundsdetail/' + result.schemaId"
               class="text-decoration-none">
 
 

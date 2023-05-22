@@ -6,8 +6,15 @@ import { ApiService } from 'src/app/services/api.service';
 import { baseUrl } from 'src/app/config';
 import { AnimationOptions } from 'ngx-lottie';
 import { AnimationItem } from 'lottie-web';
-import { FormControl, FormGroup, FormsModule } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  FormsModule,
+  Validators,
+} from '@angular/forms';
 import { from, last } from 'rxjs';
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -23,14 +30,20 @@ export class RegisterComponent {
   // Password:any;
   // confirm_password:any;
   userAvailable: boolean | null = null;
+  registerForm!: FormGroup
+  submitted=false;
 
-  registerForm = new FormGroup({
-    firstname: new FormControl(''),
-    lastname: new FormControl(''),
-    email: new FormControl(''),
-    password: new FormControl(''),
-    confirmPassword: new FormControl(''),
-  });
+
+  // registerForm = new FormGroup({
+  //   firstname: new FormControl<string|null>(''),
+  //   lastname: new FormControl(''),
+  //   email: new FormControl(''),
+  //   password: new FormControl(''),
+  //   confirmPassword: new FormControl(''),
+  // });
+
+
+
 
   options: AnimationOptions = {
     path: '../../../assets/93385-login.json',
@@ -49,7 +62,8 @@ export class RegisterComponent {
   constructor(
     public ro: Router,
     public http: HttpClient,
-    private api: ApiService
+    private api: ApiService,
+    private formBuilder: FormBuilder
   ) {
     this.innerWidth = window.innerWidth;
 
@@ -58,9 +72,24 @@ export class RegisterComponent {
       this.innerWidth = window.innerWidth;
     });
   }
+  ngOnInit() {
+    this.registerForm =this.formBuilder.group({
+      firstname: ['', Validators.required],
+      lastname:['',Validators.required],
+      email:['',[Validators.required, Validators.pattern(/([a-zA-Z0-9]+)([\.{1}])?([a-zA-Z0-9]+)\@gmail([\.])com/g)]],
+      password:['',[Validators.required, Validators.minLength(6)]],
+      confirmPassword:['',Validators.required]
 
+    })
+  }
+  get form() { return this.registerForm.controls; }
   onSubmit(form?: any) {
     // if (this.registerForm.invalid) return;
+    this.submitted = true;
+    if(this.registerForm.invalid){
+      return
+    }
+    alert("success")
     console.log(this.registerForm);
     let { firstname, lastname, email, password } = this.registerForm.value;
     this.api
@@ -74,7 +103,7 @@ export class RegisterComponent {
         (data) => {
           console.log(data);
           console.log('Registration successfully!');
-          this.ro.navigate(['/thankyou'])
+          this.ro.navigate(['/thankyou']);
           // alert('User Registration successfully!');
         },
         (error) => {
@@ -100,12 +129,12 @@ export class RegisterComponent {
       );
   }
 
-  confirmpassword() {
-    return (
-      !(
-        this.registerForm.value.password ===
-        this.registerForm.value.confirmPassword
-      ) && this.registerForm.controls.confirmPassword.touched
-    );
-  }
+  // confirmpassword() {
+  //   return (
+  //     !(
+  //       this.registerForm.value.password ===
+  //       this.registerForm.value.confirmPassword
+  //     ) && this.registerForm.controls.confirmPassword.touched
+  //   );
+  // }
 }

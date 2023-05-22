@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
@@ -38,6 +37,9 @@ import { MutualFundDetailsComponent } from './components/mutual-fund-details/mut
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { ThankyouComponent } from './components/thankyou/thankyou.component';
+import { Searchbox2Component } from './components/searchbox2/searchbox2.component';
+import { PaymentoptionComponent } from './components/paymentoption/paymentoption.component';
+
 
 var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
 
@@ -74,8 +76,11 @@ export function playerFactory() {
     FaqComponent,
     MutualFundDetailsComponent,
     ThankyouComponent,
-  
-   
+    Searchbox2Component,
+    PaymentoptionComponent,
+
+
+
   ],
   imports: [
     BrowserModule,

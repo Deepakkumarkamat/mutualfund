@@ -1,4 +1,4 @@
-.arrow_icon{
+/* .arrow_icon{
     text-align: right;
 }
 
@@ -8,7 +8,7 @@
     padding-left: 30px;
     padding-right: 350px;
     margin-top: 80px;
-}
+} */
 /* .btn{
     margin-left: 500px
 } */
@@ -17,7 +17,7 @@
     display: flex;
     margin-left: 500px;
     text-align: left;
-    
+
 } */
 
 /* .fluid-container{
@@ -29,19 +29,23 @@
 
 } */
 
-.btn2{
+/* .btn2{
     position: relative;
     margin-left: 550px;
     margin-right: 0px;
     margin-top: 30px;
-    /* left: 200px; */
+
     top: -410px;
 
-    
-}
+
+} */
 .transaction_btn{
     cursor: pointer;
 }
+.icon .mt-n1 {
+  margin-left: -0.25rem !important;
+}
+
 
 
 
@@ -51,7 +55,7 @@
     margin-top: 30px; */
     /* left: 200px; */
     /* top: -410px; */
-    
+
 
 
 

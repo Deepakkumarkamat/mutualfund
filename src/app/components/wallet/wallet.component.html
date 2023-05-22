@@ -8,71 +8,68 @@
   </head>
   <body>
     <app-navbar></app-navbar>
-    <div class="container-fluid">
-      <div class="row">
-        <p>INR BALANCE</p>
-
-        <div class="col-sm-9 bg-light p-5 border">
+    <!-- <div class="container-fluid"> -->
+    <!-- <div class="row justify-content-start"> -->
+    <div class="d-flex p-2 mt-5">INR BALANCE</div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="col-8 bg-light p-5 border ml-3">
           Balance Available
           <br />
           <i>₹</i>
           {{ wallet.balance }}
         </div>
-        <div class="col-md-9 bg-white p-4 border" position:absoulute>
+        <div class="col-8 bg-white p-4 border d-flex flex-row  ml-3">
           Used for stock
-          <i style="margin-left: 400px">₹</i>
-          <span style="margin-left: 10px; margin-top: -50px">0.00</span>
+          <i class="icon " style="text-align: center; margin-left: 13rem;">₹0.00</i>
         </div>
 
-        <div class="col-md-9 bg-white p-4 border transaction_btn">
+        <div class="col-8 bg-white p-4 border transaction_btn  ml-3">
           <div (click)="showTransaction()">All Transaction</div>
 
           <div class="arrow_icon"><i>→</i></div>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-4">
-      <div class="container-fluid justify-content-center align-items-center">
-        <div class="row btn2">
-          
-            <div
-              class="d-flex flex-row justify-content-between align-items-center"
-            >
+
+        <div class="col-lg-4 col-md-4">
+          <div
+            class="container-fluid justify-content-center align-items-center"
+            style="padding: 1rem 0.5rem"
+          >
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
               <button
                 type="button"
                 class="btn btn-outline-primary"
                 (click)="showDeposit()"
-                style="margin-left: 74px;
-                margin-right: -124px;"
               >
                 Deposit
               </button>
-            
-            <!-- <div class="col"> -->
+
               <button
                 type="button"
                 class="btn btn-outline-primary"
                 (click)="showWithdraw()"
-                style="margin-left: 200px;"
               >
                 Withdraw
               </button>
             </div>
-            <!-- </div> -->
           </div>
         </div>
       </div>
-
-      <div *ngIf="showDepositCard">
-        <div class="container-fluid">
-          <app-deposit-page></app-deposit-page>
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <div *ngIf="showDepositCard">
+          <app-deposit-page
+            class="d-flex justify-content-end mr-5"
+          ></app-deposit-page>
         </div>
-      </div>
-      <div *ngIf="showWithdrawCard">
-        <app-withdraw-page></app-withdraw-page>
+        <div *ngIf="showWithdrawCard">
+          <app-withdraw-page
+            class="d-flex justify-content-end mr-5"
+          ></app-withdraw-page>
+        </div>
       </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid mt-5">
       <div *ngIf="showTransactionList">
         <app-transaction-page></app-transaction-page>
       </div>

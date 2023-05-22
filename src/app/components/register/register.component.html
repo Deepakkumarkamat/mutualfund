@@ -42,9 +42,12 @@
                   name="name"
                   placeholder="firstname"
                   required
-                  pattern="{2}"
+
                   formControlName="firstname"
+                  [ngClass]="{'is-invalid':submitted && form['firstname'].errors}"
                 />
+                <div *ngIf=" submitted && form['firstname']?.errors?.['required']" class="text-danger">firstname is required</div>
+                <!-- <div *ngIf="form['firstname'].errors.['firstname]'"></div> -->
               </div>
               <br />
               <div class="form-group">
@@ -58,7 +61,9 @@
                   id="lastname"
                   placeholder="lastname"
                   formControlName="lastname"
+                  [ngClass]="{'is-invalid':submitted && form['lastname'].errors}"
                 />
+                <div *ngIf="submitted && form['lastname']?.errors?.['required']" class="text-danger"> last name is required</div>
               </div>
               <br />
               <div class="form-group">
@@ -66,21 +71,23 @@
                 <input
                   type="text"
                   class="form-control"
-                  name="username"
-                  id="email"
-                  id="lastname"
-                  placeholder="email"
                   required
-                  pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
-                  (input)="checkAvailability()"
+
+
+                  name="email"
+                  id="email"
+                  placeholder="email"
                   formControlName="email"
+                  [ngClass]="{'is-invalid':submitted && form['email'].errors}"
                 />
-                <div *ngIf="userAvailable === false" class="text-danger">
+                <div *ngIf="submitted && form['email']?.errors?.['required']" class="text-danger"> email is required</div>
+                <!-- (input)="checkAvailability()" -->
+                <!-- <div *ngIf="userAvailable === false" class="text-danger">
                   UserName is already taken
                 </div>
                 <div *ngIf="userAvailable === true" class="text-success">
                   UserName is available
-                </div>
+                </div> -->
               </div>
               <br />
               <div class="form-group">
@@ -88,14 +95,15 @@
                 <input
                   type="password"
                   class="form-control"
-
                   name="password"
                   id="password"
                   placeholder="password"
-                  pattern="[a-zA-Z][123]{8}"
                   required
                   formControlName="password"
+                  [ngClass]="{'is-invalid':submitted && form['password'].errors}"
                 />
+                <div *ngIf="submitted && form['password']?.errors?.['minlength']" class="text-danger">Password must 6 character</div>
+                <div *ngIf="submitted && form['password']?.errors?.['required']" class="text-danger">password is required</div>
               </div>
               <br />
 
@@ -112,12 +120,11 @@
                   required
                   placeholder="confirm password"
                   formControlName="confirmPassword"
+                  [ngClass]="{'is-invalid':submitted && form['confirmPassword'].errors}"
+
 
                 />
-                <div *ngIf="confirmpassword()" class="text-danger">
-                  Password do not match
-                </div>
-                <!-- <div *ngIf="Password != confirm_password" class="text-danger">Password do not match</div> -->
+
               </div>
               <br />
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Mutualfund</title>
+  <title>FundFusion</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -12,16 +12,22 @@
   integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
   crossorigin="anonymous"
 />
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="
+nghttps://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
   <app-root></app-root>
+  <script src="https://js.stripe.com/v3/"></script>
+    <script type="text/javascript">
+      const stripe   = Stripe('use your test publishable key');
+      const elements = stripe.elements();
+    </script>
 </body>
 <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"

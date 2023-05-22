@@ -136,11 +136,12 @@ main {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serifs;
   color: #fff;
 }
-.card {
+/* .card {
   width: 164px;
   height: 160px;
   margin-right: 20px;
-}
+
+} */
 /* .top-h {
   color: #ed116585;
   margin-left: 100px;
@@ -161,13 +162,19 @@ body{
   transform: scale(1.12);
   z-index: 500;
   width:  25%;
-  
+
 }
 .card{
   transition: all 400ms ease-in-out;
+  overflow-block: hidden;
+  width: 164px;
+  height:160px
+
 }
+
+
 .cool-card:hover .card{
- 
+
   background-color: rgba(222, 222, 222, 0.7);
   z-index: 500;
   backdrop-filter: blur(4px);
@@ -190,10 +197,18 @@ body{
  font-size: medium;
   max-width: 35ch;
   margin-bottom: 4rem;
-} 
+}
 
 a{
   text-decoration: none;
 }
+.container-fluid{
+  display: block;
+  flex-wrap: nowrap;
+}
+
+
+
+
 
 

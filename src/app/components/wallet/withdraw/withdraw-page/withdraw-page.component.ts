@@ -7,7 +7,7 @@ import { WalletService } from 'src/app/services/wallet.service';
   styleUrls: ['./withdraw-page.component.css']
 })
 export class WithdrawPageComponent {
-  balancewithdraw:number=0;
+  balancewithdraw:number | any;
  constructor(private api: WalletService){}
 
  withdrawMoney(){
