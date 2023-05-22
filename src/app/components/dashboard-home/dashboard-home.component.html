@@ -11,6 +11,9 @@
 <body>
 
   <app-navbar></app-navbar>
+  <div class="d-flex flex-row-reverse justify-content-between" style="width: 100%; padding-inline: 2rem">
+    <ng-lottie [options]="options" (animationCreated)="animationCreated($event)" width="500px"></ng-lottie>
+    <div data-aos="fade-right" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
   <!-- <app-search-box></app-search-box> -->
   <app-searchbox2></app-searchbox2>
   <div class="container-fluid">
@@ -34,9 +37,6 @@
         </h1>
 
       </div>
-
-    </div>
-
   </div>
 
   <!-- <div class="Mutualfundname">
@@ -82,5 +82,5 @@
 
 
 </body>
-
 </html>
+
