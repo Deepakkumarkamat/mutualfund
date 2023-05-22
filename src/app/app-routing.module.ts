@@ -22,6 +22,7 @@ import { MutualFundDetailsComponent } from './components/mutual-fund-details/mut
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { ThankyouComponent } from './components/thankyou/thankyou.component';
 import { AuthGuard } from './services/auth.guard';
+import { PaymentoptionComponent } from './components/paymentoption/paymentoption.component';
 // import { combineLatest } from 'rxjs';
 
 const routes: Routes = [
@@ -45,6 +46,7 @@ const routes: Routes = [
 {path:'wishlist',component:WishlistPageComponent},
   {path:'thankyou',component:ThankyouComponent},
   {path:"dashboard/allfundsdetail/:schemaId",component:AllfundsdetailComponent},
+  {path:'paymentoption',component:PaymentoptionComponent},
   {path: '**', pathMatch: 'full', component: ErrorPageComponent},
 
   //SHubham
