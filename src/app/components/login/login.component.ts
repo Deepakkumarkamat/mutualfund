@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
 import { Router } from '@angular/router';
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+ errorMesage:string=''
+
 
   credentials={
     username:'',
@@ -15,7 +19,9 @@ export class LoginComponent {
 
   constructor(private loginService:LoginService,private router:Router){ }
 
+
   ngOnInit(): void {
+
 
   //  let user:HTMLInputElement|any = document.getElementById('user')
   //  this.credentials.username=user.value
@@ -35,6 +41,13 @@ export class LoginComponent {
         (response:any)=>{
           //success
           console.log(response.token);
+          // this.loginError
+          // this.respose.token
+
+
+
+
+
 
           this.loginService.loginUser(response.token)
           this.router.navigate(["/dashboard"])
@@ -45,6 +58,9 @@ export class LoginComponent {
         error=>{
           //error
           console.log(error);
+          this.errorMesage = 'Invalid Username and password'
+
+
 
 
         }
@@ -52,5 +68,10 @@ export class LoginComponent {
     }else{
       console.log("Fields are Empty")
     }
+  }
+  resButton(){
+    this.credentials.username=''
+    this.credentials.password=''
+    this.errorMesage = ''
   }
 }

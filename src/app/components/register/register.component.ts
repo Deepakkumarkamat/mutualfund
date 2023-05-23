@@ -77,7 +77,7 @@ export class RegisterComponent {
       firstname: ['', Validators.required],
       lastname:['',Validators.required],
       email:['',[Validators.required, Validators.pattern(/([a-zA-Z0-9]+)([\.{1}])?([a-zA-Z0-9]+)\@gmail([\.])com/g)]],
-      password:['',[Validators.required, Validators.minLength(6)]],
+      password:['',[Validators.required, Validators.pattern(/^(?=.*[.,?!$&@%^*])(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z]).{6,}/)]],
       confirmPassword:['',Validators.required]
 
     })
@@ -89,7 +89,7 @@ export class RegisterComponent {
     if(this.registerForm.invalid){
       return
     }
-    alert("success")
+    // alert("success")
     console.log(this.registerForm);
     let { firstname, lastname, email, password } = this.registerForm.value;
     this.api

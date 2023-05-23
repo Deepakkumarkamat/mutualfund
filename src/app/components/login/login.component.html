@@ -3,14 +3,14 @@
     <!-- <div class="col-md-6"> -->
 
       <div class="card mt-5" style="width: 20rem;">
-        
-          
-      
+
+
+
         <div class="card-body d-flex flex-column">
           <h3 class="text-center mb-4">Login</h3>
           <img class="align-self-center" src="../../../assets/78126-secure-login.gif" />
           <form
-          
+
             class="d-flex flex-column justify-content-center align-items-center"
           >
             <div class="form-group mb-3" (ngSubmit)="onSubmit()">
@@ -39,17 +39,19 @@
               />
             </div>
             <div style="width: 75%;" class="d-grid gap-2">
+              <div *ngIf="errorMesage" class="text-danger">{{errorMesage}}</div>
               <button type="submit" class="btn btn-primary btn-block" (click)="onSubmit()">
                 Submit
               </button>
-              <button type="reset" class="btn btn-secondary btn-block">
+              <button type="reset" class="btn btn-secondary btn-block" (click)="resButton()">
                 Reset
               </button>
             </div>
-           
+
+
           </form>
         </div>
       </div>
-    
+
   </div>
 </div>
