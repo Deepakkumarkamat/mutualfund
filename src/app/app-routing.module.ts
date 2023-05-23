@@ -36,7 +36,7 @@ const routes: Routes = [
   {path:'dashboard/allfundsdetail/:id/sip',component:SipComponent},
   {path:'dashboard/allfundsdetail/:id/buying', component:BuyingComponent},
   {path:'allfundsdetail/:schemaId',component:AllfundsdetailComponent},
-  {path:'dashboard/allfundsdetail/:id',component:AllfundsdetailComponent},
+  {path:'dashboard/allfundsdetail/:id',component:AllfundsdetailComponent, canActivate:[AuthGuard]},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
   {path: 'dashboard/investnow', component: InvestNowComponent},

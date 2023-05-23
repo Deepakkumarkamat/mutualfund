@@ -19,8 +19,8 @@
         <tr *ngFor="let data of history">
           <!-- <div"> -->
           <td>
-            {{ data.transactionDate }}
-          </td>
+             {{ data.transactionDate.substring(0, 10) }}
+            </td>
           <td>
             <!-- HDFC BANK <br /> -->
             {{data.transactionTypeId ===1 ? 'Payment received':'withdraw'}}

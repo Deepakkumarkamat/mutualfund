@@ -1,59 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
+<app-navbar></app-navbar>
 
-  <body>
-
-   <div class="d-flex flex-row-reverse justify-content-between" style="width: 100%; padding-inline: 2rem">
+<div class="d-flex flex-row-reverse justify-content-between" style="width: 100%; padding-inline: 2rem">
   <ng-lottie [options]="options" (animationCreated)="animationCreated($event)" width="500px"></ng-lottie>
-        <div data-aos="fade-right" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
-        data-aos-easing="ease-in-out" class="rounded float-start mb-5 d-flex justify-content-center align-items-center">
-        <h1 style="font-size: 5rem; font-family: 'Noto Sans', sans-serif; text-shadow: #ccc 3px 3px 3px;">
-          Didn't Invest Yet?<br/>
-          Invest Now!
-        </h1>
+  <div data-aos="fade-right" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
+    data-aos-easing="ease-in-out" class="rounded float-start mb-5 d-flex justify-content-center align-items-center">
+    <h1 style="font-size: 5rem; font-family: 'Noto Sans', sans-serif; text-shadow: #ccc 3px 3px 3px;">
+      Didn't Invest Yet?<br />
+      Invest Now!
+    </h1>
 
-      </div>
   </div>
+</div>
 <div *ngIf="mutualFunds" class="container-fluid">
 
-    <!-- <h2>Explore Funds</h2> -->
+  <!-- <h2>Explore Funds</h2> -->
 
-    <h1>All FUNDS </h1>
+  <h1>All FUNDS </h1>
+  <ul class="horizontal-list">
 
-    <ul class="horizontal-list">
+    <li *ngFor="let fund of mutualFunds" [ngClass]="{ 'positive': fund.delta > 0, 'negative': fund.delta < 0 }">
 
-      <li *ngFor="let fund of mutualFunds" [ngClass]="{ 'positive': fund.delta > 0, 'negative': fund.delta < 0 }">
+      <button class="explore-button" [routerLink]="'allfundsdetail/' + fund.schemaId">
 
-        <button class="explore-button" [routerLink]="'allfundsdetail/' + fund.schemaId">
+        {{ fund.schemaName }}
 
-          {{ fund.schemaName }}
+      </button>
 
-        </button>
+      <div class="details" [class.show]="true">
 
-        <div class="details" [class.show]="true">
+        <p><strong>Fund House:</strong> {{ fund.fundHouse }}</p>
 
-          <p><strong>Fund House:</strong> {{ fund.fundHouse }}</p>
+        <p><strong>Category:</strong> {{ fund.schemaCategory }}</p>
 
-          <p><strong>Category:</strong> {{ fund.schemaCategory }}</p>
+        <p><strong>Current Price:</strong> {{ fund.currentPrice }}</p>
 
-          <p><strong>Current Price:</strong> {{ fund.currentPrice }}</p>
+        <p><strong>Delta:</strong> <span [class.gain]="fund.delta > 0">{{ fund.delta > 0 ? '+' : '' }}{{ fund.delta
+            }}</span></p>
 
-          <p><strong>Delta:</strong> <span [class.gain]="fund.delta > 0">{{ fund.delta > 0 ? '+' : '' }}{{ fund.delta }}</span></p>
+        <button class="view-details" [routerLink]="'allfundsdetail/' + fund.schemaId">View Details</button>
 
-          <button class="view-details" [routerLink]="'allfundsdetail/' + fund.schemaId">View Details</button>
+      </div>
 
-        </div>
+    </li>
 
-      </li>
+  </ul>
 
-    </ul>
-
-  </div>
-  </body>
-</html>
+</div>
