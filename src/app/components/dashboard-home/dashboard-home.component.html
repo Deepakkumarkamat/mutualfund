@@ -1,101 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
+<app-navbar></app-navbar>
 
-  <body>
+<div class="d-flex flex-row-reverse justify-content-between" style="width: 100%; padding-inline: 2rem">
+  <ng-lottie [options]="options" (animationCreated)="animationCreated($event)" width="500px"></ng-lottie>
+  <div data-aos="fade-right" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
+    data-aos-easing="ease-in-out" class="rounded float-start mb-5 d-flex justify-content-center align-items-center">
+    <h1 style="font-size: 5rem; font-family: 'Noto Sans', sans-serif; text-shadow: #ccc 3px 3px 3px;">
+      Didn't Invest Yet?<br />
+      Invest Now!
+    </h1>
 
-    <div
-      class="d-flex flex-row-reverse justify-content-between"
-      style="width: 100%; padding-inline: 2rem"
-    >
-      <ng-lottie
-        [options]="options"
-        (animationCreated)="animationCreated($event)"
-        width="500px"
-      ></ng-lottie>
+  </div>
+</div>
+<div *ngIf="mutualFunds" class="container-fluid">
 
-      <div
-        data-aos="fade-right"
-        data-aos-offset="200"
-        data-aos-delay="50"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
-        class="rounded float-start mb-5 d-flex justify-content-center align-items-center"
-      >
-        <h1
-          style="
-            font-size: 4.5rem;
-            font-family: 'Noto Sans', sans-serif;
-            text-shadow: #ccc 3px 3px 3px;
-          "
-        >
-          Didn't Invest Yet?<br />
+  <!-- <h2>Explore Funds</h2> -->
 
-          Invest Now!
-        </h1>
+  <h1>All FUNDS </h1>
+  <ul class="horizontal-list">
+
+    <li *ngFor="let fund of mutualFunds" [ngClass]="{ 'positive': fund.delta > 0, 'negative': fund.delta < 0 }">
+
+      <button class="explore-button" [routerLink]="'allfundsdetail/' + fund.schemaId">
+
+        {{ fund.schemaName }}
+
+      </button>
+
+      <div class="details" [class.show]="true">
+
+        <p><strong>Fund House:</strong> {{ fund.fundHouse }}</p>
+
+        <p><strong>Category:</strong> {{ fund.schemaCategory }}</p>
+
+        <p><strong>Current Price:</strong> {{ fund.currentPrice }}</p>
+
+        <p><strong>Delta:</strong> <span [class.gain]="fund.delta > 0">{{ fund.delta > 0 ? '+' : '' }}{{ fund.delta
+            }}</span></p>
+
+        <button class="view-details" [routerLink]="'allfundsdetail/' + fund.schemaId">View Details</button>
+
       </div>
-    </div>
 
-    <!-- <div class="Mutualfundname">
-          <h1>My Mutual Funds</h1>
-          <div class="table">
-            <div class="table-header">
-              <div class="header-item">Fund Name</div>
-              <div class="header-item">Units</div>
-              <div class="header-item">Current Price</div>
-              <div class="header-item">Total Value</div>
-              <div class="header-item">Gain/Loss</div>
-            </div>
-            <div class="table-body" *ngFor="let detail of detailList">
-              <div class="table-row">
-                <div class="table-cell">{{ detail.fundHouse }}</div>
-                <div class="table-cell">100</div>
-                <div class="table-cell">Rs.{{ detail.currentPrice}}</div>
-                <div class="table-cell">Rs.</div>
-                <div class="table-cell gain">+ Rs. 50000 (20%)</div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-    <app-allfunds></app-allfunds>
+    </li>
 
-    <div *ngIf="mutualFunds" class="container-fluid">
-      <!-- <h2>Explore Funds</h2> -->
-      <ul class="horizontal-list">
-        <li
-          *ngFor="let fund of mutualFunds"
-          [ngClass]="{ positive: fund.delta > 0, negative: fund.delta < 0 }"
-        >
-          <button
-            class="explore-button"
-            [routerLink]="'allfundsdetail/' + fund.schemaId"
-          >
-            {{ fund.schemaName }}
-          </button>
-          <div class="details" [class.show]="true">
-            <p><strong>Fund House:</strong> {{ fund.fundHouse }}</p>
-            <p><strong>Category:</strong> {{ fund.schemaCategory }}</p>
-            <p><strong>Current Price:</strong> {{ fund.currentPrice }}</p>
-            <p>
-              <strong>Delta:</strong>
-              <span [class.gain]="fund.delta > 0"
-                >{{ fund.delta > 0 ? "+" : "" }}{{ fund.delta }}</span
-              >
-            </p>
-            <button
-              class="view-details"
-              [routerLink]="'allfundsdetail/' + fund.schemaId"
-            >
-              View Details
-            </button>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </body>
-</html>
+  </ul>
+
+</div>

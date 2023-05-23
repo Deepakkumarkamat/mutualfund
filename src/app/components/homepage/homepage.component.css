@@ -1,51 +1,4 @@
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #000;
-  color: #ffffff;
-}
-.logo {
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-  font-weight: bold;
-}
-.search {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10%;
-  transition: all 0.3s ease;
-  margin-right: 34px;
-}
-.search input[type="text"] {
-  width: 300px;
-  padding: 10px;
-  border: none;
-  border-color: aqua;
-  border-radius: 5px;
-  margin-right: 10px;
-}
-.search button i {
-  height: 18px;
-  margin-left: 5px;
-  background-color: cadetblue;
-}
-.search button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-}
-.search button:hover {
+•	.search button:hover {
   background-color: #0056b3;
 }
 .authonticate {
@@ -70,7 +23,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   background-color: white;
-  width: 100%;
+  width: 88%;
   height: 100%;
 }
 .main-container {
@@ -137,18 +90,11 @@ main {
   color: #fff;
 }
 .card {
-  width: 164px;
-  height: 160px;
-  margin-right: 20px;
+  width: 200px;
+  height: 210px;
+  margin-right: 15px;
 }
-/* .top-h {
-  color: #ed116585;
-  margin-left: 100px;
-} */
-/* .bottom-h {
-  color: #0056b3;
-  margin-left: 100px;
-} */
+
 body{
     background-color: #394867;
 }
@@ -156,6 +102,7 @@ body{
   transform: scale(1);
  transition: all 300ms ease-in-out;
 }
+
 .cool-card:hover{
   transform: scale(1.12);
   z-index: 500;
@@ -167,13 +114,10 @@ body{
 }
 .cool-card:hover .card{
 
-  background-color: rgba(222, 222, 222, 0.7);
+  background-image: linear-gradient(to right, #63e48b 0%,#ffffff 100%);
   z-index: 500;
-  backdrop-filter: blur(4px);
-/* transform: scale(1.12); */
-  /* width: 20rem; */
-  /* height: 15rem; */
-  width: 100%;
+
+  width: 140%;
 }
  .card-title{
   max-width: 10ch;
@@ -183,7 +127,7 @@ body{
   transition: all 400ms ease-in-out;
 }
 .cool-card:hover .card-title{
-  white-space: nowrap;
+  /* white-space: wrap; */
   text-overflow: unset;
  overflow: hidden;
  font-size: medium;
@@ -193,4 +137,56 @@ body{
 
 a{
   text-decoration: none;
+}
+
+
+
+/* new */
+.top-h {
+  color: #ed1165;
+  margin-left: 100px;
+
+}
+
+.bottom-h {
+  color: #b6c6d7;
+  margin-left: 100px;
+}
+
+.card-text .text-muted {
+  color: #c98080;
+}
+
+.card-text .delta-positive {
+  color: #80be94;
+}
+
+.card-text .delta-negative {
+  color: #d04b4b;
+}
+.top-h {
+  color: #ed1165;
+   /* margin-left: 100px; */
+  margin-left: -11px;
+  background-color: #f6f6f6;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+  /* text-align: center; */
+}
+
+.top-h:hover {
+  background-color: #ececec;
+}
+
+.bottom-h {
+  color:  #ed1165;
+  margin-left: -11px;
+  background-color: #f6f6f6;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+  /* text-align: ; */
+}
+
+.bottom-h:hover {
+  background-color: #ececec;
 }

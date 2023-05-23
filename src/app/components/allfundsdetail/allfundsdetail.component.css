@@ -2,95 +2,148 @@
   width: 50rem;
 } */
 
+body {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
+
 
 th,td {
   padding: 0.5rem;
+
+th {
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
   text-align: left;
   border: 1px solid black;
 }
 
-th {
-  background-color: #f2f2f2;
+td {
+  padding: 0.5rem 1rem;
 }
 
-tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
+.colorful-row {
+  background-color: #f5f5f5;
 }
 
-.positive {
-  color: green;
+.fund-details {
+  margin: 2rem;
+  width: 60rem;
+  font-size: 24px;
+  background-color: #f0f8ea;
+  padding: 1rem;
+  border-radius: 4px;
 }
 
-.negative {
-  color: red;
-}
-
-p {
+.fund-details p {
   margin: 0.5rem 0;
 }
 
-.button-container {
-  display: flex;
-  justify-content: space-between;
+.fund-details span {
+  font-weight: bold;
+}
+
+.rating {
   margin-top: 1rem;
 }
-.text-center{
-    margin-top: -21px;
-}
-.payvai{
-    margin-left: 160px;
-    background-color: rgb(198, 206, 214);
-    cursor: pointer;
-    padding-top: -10px;
-}
-.btn{
-    width: 9em;
-    height: 3em;
-    border-radius: 30em;
-    font-size: 15px;
-    font-family: inherit;
-    border: none;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-    z-index: 1;
-    box-shadow: 6px 6px 12px #c5c5c5,
-    -6px -6px 12px #ffffff
-    }
-    .btn:hover::before{
-        content: '';
-        width: 0;
-        height: 3em;
-        border-radius: 30em;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-image: linear-gradient(to right, #0fd850 0%,#f9f047 100%);
-        transition: .5s ease;
-        display: block;
-        z-index: -1;
 
-    }
-    .btn:hover::before{
-        width: 9em;
-    }
-    .upi{
-        /* text-align: right; */
-        width: 130px;
-        height: 40px;
-        margin-left: 100px;
-        margin-top: 30px;
-        border: none;
-        outline: none;
-        background-color: #80ffd4;
+.rating span {
+  color: #28a745;
+}
 
-    }
-    .upibtn{
-        margin-top: 17px;
-        margin-left: 86px;
-    }
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #a3dba1;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 9.2em;
+  height: 3.1em;
+}
+
+.btn:hover {
+  background-color: #a3dba1;
+  font-size: 15px;
+  font-family: inherit;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  width: 9em;
+  height: 3em;
+}
+
+
+/* ===============================*/
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+
+  tr.colorful-row {
+    background-color: #f9f9f9;
+  }
+
+  /* Style for the mutual fund details container */
+  .fund-details {
+    margin: 2rem;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+  }
+
+  .fund-details p {
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .fund-details p span {
+    font-weight: bold;
+  }
+
+  .rating {
+    margin-top: 1rem;
+  }
+
+  .rating span {
+    color: gold;
+  }
+
+
+  .bttn {
+    display: flex;
+    justify-content: center;
+  }
+
+  .fav{
+    display: flex;
+    justify-content: flex-end;
+    /* margin-left: 20px; */
+    margin-bottom: 300px;
+}
