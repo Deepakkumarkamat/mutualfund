@@ -1,25 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <!-- <div *ngIf="showMonthlySip"> -->
+
       <app-navbar></app-navbar>
-    <div class="container">
-      <div class="row" style="padding-bottom: 5rem">
-        <div class="col-lg-8 col-md-8">
-          <div
-            class="container-fluid"
-            justify-content-center
-            align-items-center
-          >
-            <div style="margin: 1rem; width: 40rem">
-              <canvasjs-chart [options]="chartOptions"></canvasjs-chart>
-            </div>
+
+
+      <div class="fund-details">
+        <p>NAV: <span>{{ fundDetail?.currentPrice }}</span></p>
+        <p>Min. Purchase amount: <span>{{ (fundDetail?.schemaId * 10 + fundDetail?.currentPrice )  | number: '1.0-1' }} INR</span></p>
+        <p>Fund Size: <span>{{ (fundDetail?.schemaId * fundDetail?.currentPrice * 10) / 100 | number: '1.0-1' }} million INR</span></p>
+
+        <p class="rating">Rating: <span>{{ getRatingStars(fundDetail?.delta) }}</span></p>
+
+      </div>
+
+
+      <canvasjs-chart [options]="chartOptions"></canvasjs-chart>
+
             <table>
               <thead>
                 <th>FundHouse</th>
@@ -27,181 +21,29 @@
                 <th>Delta</th>
                 <th>Category</th>
               </thead>
-              <!-- <ng-container *ngFor="let list of allTopfundDetail">
-          -->
-              <tr>
+
+              <tr class="colorful-row">
                 <td>{{ fundDetail?.fundHouse }}</td>
                 <td>{{ fundDetail?.currentPrice }}</td>
                 <td>{{ fundDetail?.delta }}</td>
                 <td>{{ fundDetail?.description }}</td>
               </tr>
 
-              <!-- </ng-container> -->
             </table>
-            <p>NAV:{{ fundDetail?.currentPrice }}</p>
-            <p>Min.SIP amount:5000</p>
-            <p>Fund Size:10000Cr</p>
-            <p>Rating:5⭐</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4">
-          <div
-            class="container-fluid justify-content-center align-items-center"
-            style="padding: 1rem 0.5rem"
-          >
-            <div class="d-flex justify-content-between align-items-center mb-4">
+
+            <!-- <div style="margin: 2rem; width: 60rem"> -->
+
+            <!-- </div> -->
+
+
+
+            <div class="bttn">
               <button type="button" class="btn" (click)="showMonthlySip()" routerLink="sip">
-              SIP
+                SIP
               </button>
+              <span style="margin-right: 4rem;"></span>
               <button type="button" class="btn" (click)="showOneTime()" routerLink="buying">
-              Lumsump
+                Lumsump
               </button>
             </div>
-            <div
-              class="container-fluid justify-content-center align-items-center"
-              style="max-width: 30rem"
-            >
-              <!-- <div *ngIf="oneTime">
-                <div class="card">
-                  <div class="card-body" style="width: 300">
-                    <p class="card-title">One Time</p>
-                    <div>
-                      <label for="">Amount</label>
-                      <span
-                        style="
-                          margin-left: 165px;
-                          background-color: aquamarine;
-                          padding-top: 2.3px;
-                          padding-bottom: 2.3;
-                        "
-                        >₹</span
-                      >
-                      <input
-                        type="number"
-                        class="one_amount"
-                        id="amount"
-                        name="amount"
-                        placeholder="0"
-                        value
-                        [(ngModel)]="inputAmount"
-                      />
-                    </div>
 
-                    <div class="row mt-3">
-                      <div class="col" style="width: 100px">
-                        <div
-                          class="d-flex flex-row justify-content-between align-items-center"
-                          style="margin-top: 14px"
-                        >
-                          <button type="button" class="btn">
-                            <span>Add To Cart</span>
-                          </button>
-
-                          <button type="button" class="btn" (click)="showUpi()">
-                            <span>Invest</span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-              <!-- <div *ngIf="monthlysip">
-                <div class="card">
-                  <div class="card-body">
-                    <p class="card-title"><b> MONTHLY SIP</b></p>
-                    <div input-container>
-                      <div>
-                        <label for="sip">SIP Amount</label>
-
-                        <span
-                          style="
-                            margin-left: 140px;
-                            background-color: aquamarine;
-                            padding-top: 2.3px;
-                            padding-bottom: 2px;
-                          "
-                          >₹</span
-                        >
-                        <input
-                          type="text"
-                          class="input1"
-                          id="sip"
-                          name="sip"
-                          placeholder="0"
-                          [(ngModel)]="inputAmount"
-                        />
-                      </div>
-                      <div style="margin-top: 23px">
-                        <label for="date">Monthly SIP Date</label>
-                        <input
-                          type="date"
-                          class="sip_date"
-                          id="date"
-                          name="date"
-                          placeholder=""
-                        />
-                      </div>
-                      <div class="para text-muted">Next Installment date</div>
-                      <div class="row mt-4">
-                        <div class="col">
-                          <div
-                            class="d-flex flex-row justify-content-between align-items-center"
-                          >
-                            <button type="button" class="btn">
-                              <span style="cursor: pointer">Add To Cart</span>
-                            </button>
-
-                            <button
-                              type="button"
-                              class="btn"
-                              (click)="showUpi()"
-                            >
-                              <span>Start SIP</span>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-              <!-- <div *ngIf="upi">
-                <div class="card">
-                  <div class="card-body" style="width: 300">
-                    <i
-                      class="fa-solid fa-arrow-left"
-                      style="cursor: pointer"
-                    ></i>
-                    <div class="text-center">
-                      <span style="text-align: center; padding-bottom: -20px"
-                        >Amount Payable:{{ inputAmount }}</span
-                      >
-                    </div> -->
-
-                    <!-- <div>
-                      <span>UPI</span>
-                      <span class="payvai">Pay via a/c</span>
-                    </div> -->
-                    <!-- <label for="upi"></label>
-                    <input
-                      type="text"
-                      id="upi"
-                      name="upi"
-                      class="upi"
-                      placeholder="Enter Upi Id"
-                    /> -->
-                    <!-- <button type="button" class="btn upibtn">
-                      Pay Via....
-                    </button> -->
-                  <!-- </div> -->
-                <!-- </div>
-              </div> -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
-d
