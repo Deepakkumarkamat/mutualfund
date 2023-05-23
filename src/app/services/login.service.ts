@@ -16,7 +16,31 @@ export class LoginService {
 
   generateToken(credentials:any){
     return this.http.post(`http://34.234.150.41:9596/token`,credentials)
+
   }
+
+  // validateCredentials(credentials:any):Promise<boolean>{
+  //   return new Promise((resolve:any,reject)=>{
+  //     this.generateToken(credentials).subscribe((response:any)=>{
+  //       // Validation logic here
+  //       if (response.success){
+  //         resolve(true);
+  //         // Credentials are valid
+  //       }else{
+  //         resolve(false);
+  //         // Credentials are invalid
+  //       }
+  //     },
+  //       (error:any)=>{
+  //         reject(error);
+  //       }
+  //       );
+  //     });
+  //   }
+  // }
+
+
+
 
 
   //for login user
@@ -47,4 +71,5 @@ export class LoginService {
   getToken(){
     return localStorage.getItem("token")
   }
+
 }

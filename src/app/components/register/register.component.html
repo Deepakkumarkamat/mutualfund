@@ -79,6 +79,7 @@
                   [ngClass]="{'is-invalid':submitted && form['email'].errors}"
                 />
                 <div *ngIf="submitted && form['email']?.errors?.['required']" class="text-danger"> email is required</div>
+                <div *ngIf="submitted && form['email']?.errors">email is Invalid</div>
                 <!-- (input)="checkAvailability()" -->
                 <!-- <div *ngIf="userAvailable === false" class="text-danger">
                   UserName is already taken
@@ -100,7 +101,7 @@
                   formControlName="password"
                   [ngClass]="{'is-invalid':submitted && form['password'].errors}"
                 />
-                <div *ngIf="submitted && form['password']?.errors?.['minlength']" class="text-danger">Password must 6 character</div>
+                <div *ngIf="submitted && form['password']?.errors">password must be 6 character</div>
                 <div *ngIf="submitted && form['password']?.errors?.['required']" class="text-danger">password is required</div>
               </div>
               <br />
