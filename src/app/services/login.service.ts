@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { baseUrl } from '../config';
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
@@ -8,7 +9,7 @@ export class LoginService {
 
   //url="http://localhost:9596"
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient, private router:Router) { }
 
 
   //calling the server to generate token
@@ -38,6 +39,7 @@ export class LoginService {
   //for logout
   logout(){
     localStorage.removeItem('token')
+    this.router.navigate(['/'])
     return true
   }
 

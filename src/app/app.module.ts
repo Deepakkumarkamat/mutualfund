@@ -38,6 +38,7 @@ import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { ThankyouComponent } from './components/thankyou/thankyou.component';
 import { Searchbox2Component } from './components/searchbox2/searchbox2.component';
+import { PaymentoptionComponent } from './components/paymentoption/paymentoption.component';
 
 
 var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
@@ -76,6 +77,7 @@ export function playerFactory() {
     MutualFundDetailsComponent,
     ThankyouComponent,
     Searchbox2Component,
+    PaymentoptionComponent,
 
 
 
