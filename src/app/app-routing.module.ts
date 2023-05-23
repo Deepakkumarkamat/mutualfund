@@ -44,16 +44,11 @@ const routes: Routes = [
   {path: 'dashboard/account-details', component: AccountDetailsComponent},
   {path:'homepage/mutual-funds/:schemaId',component:MutualFundDetailsComponent},
   {path:'dashboard/allfundsdetail/:id/wishlist/wishlist-page',component:WishlistPageComponent},
+  {path:"dashboard/allfundsdetail/:schemaId",component:AllfundsdetailComponent},
+  {path:'paymentoption',component:PaymentoptionComponent},
+  {path:'wishlist',component:WishlistPageComponent},
   {path:'thankyou',component:ThankyouComponent},
   {path: '**', pathMatch: 'full', component: ErrorPageComponent},
-
-{path:'wishlist',component:WishlistPageComponent},
-  {path:'thankyou',component:ThankyouComponent},
-  {path:"dashboard/allfundsdetail/:schemaId",component:AllfundsdetailComponent},
-  {path:'paymentoption',component:PaymentoptionComponent}
-
-
-
 
 ];
 

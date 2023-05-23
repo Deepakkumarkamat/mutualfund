@@ -1,49 +1,95 @@
+<app-navbar></app-navbar>
 
-      <app-navbar></app-navbar>
+      <div class="fund-details">
 
+        <p>NAV: <span>{{ fundDetail?.currentPrice }}</span></p>
 
-      <div class="fund-details">
-        <p>NAV: <span>{{ fundDetail?.currentPrice }}</span></p>
-        <p>Min. Purchase amount: <span>{{ (fundDetail?.schemaId * 10 + fundDetail?.currentPrice )  | number: '1.0-1' }} INR</span></p>
-        <p>Fund Size: <span>{{ (fundDetail?.schemaId * fundDetail?.currentPrice * 10) / 100 | number: '1.0-1' }} million INR</span></p>
+        <p>Min. Purchase amount: <span>{{ (fundDetail?.schemaId * 10 + fundDetail?.currentPrice )  | number: '1.0-1' }} INR</span></p>
 
-        <p class="rating">Rating: <span>{{ getRatingStars(fundDetail?.delta) }}</span></p>
-
-      </div>
-
-
-      <canvasjs-chart [options]="chartOptions"></canvasjs-chart>
-
-            <table>
-              <thead>
-                <th>FundHouse</th>
-                <th>Price</th>
-                <th>Delta</th>
-                <th>Category</th>
-              </thead>
-
-              <tr class="colorful-row">
-                <td>{{ fundDetail?.fundHouse }}</td>
-                <td>{{ fundDetail?.currentPrice }}</td>
-                <td>{{ fundDetail?.delta }}</td>
-                <td>{{ fundDetail?.description }}</td>
-              </tr>
-
-            </table>
-
-            <!-- <div style="margin: 2rem; width: 60rem"> -->
-
-            <!-- </div> -->
+        <p>Fund Size: <span>{{ (fundDetail?.schemaId * fundDetail?.currentPrice * 10) / 100 | number: '1.0-1' }} million INR</span></p>
 
 
 
-            <div class="bttn">
-              <button type="button" class="btn" (click)="showMonthlySip()" routerLink="sip">
-                SIP
-              </button>
-              <span style="margin-right: 4rem;"></span>
-              <button type="button" class="btn" (click)="showOneTime()" routerLink="buying">
-                Lumsump
-              </button>
-            </div>
 
+        <p class="rating">Rating: <span>{{ getRatingStars(fundDetail?.delta) }}</span></p>
+
+
+
+
+      </div>
+
+
+
+
+
+      <canvasjs-chart [options]="chartOptions"></canvasjs-chart>
+
+
+
+
+            <table>
+
+              <thead>
+
+                <th>FundHouse</th>
+
+                <th>Price</th>
+
+                <th>Delta</th>
+
+                <th>Category</th>
+
+              </thead>
+
+
+
+
+              <tr class="colorful-row">
+
+                <td>{{ fundDetail?.fundHouse }}</td>
+
+                <td>{{ fundDetail?.currentPrice }}</td>
+
+                <td>{{ fundDetail?.delta }}</td>
+
+                <td>{{ fundDetail?.description }}</td>
+
+              </tr>
+
+
+
+
+            </table>
+
+
+
+
+            <!-- <div style="margin: 2rem; width: 60rem"> -->
+
+
+
+
+            <!-- </div> -->
+
+
+
+
+
+
+            <div class="bttn">
+
+              <button type="button" class="btn" (click)="showMonthlySip()" routerLink="sip">
+
+                SIP
+
+              </button>
+
+              <span style="margin-right: 4rem;"></span>
+
+              <button type="button" class="btn" (click)="showOneTime()" routerLink="buying">
+
+                Lumsump
+
+              </button>
+
+            </div>

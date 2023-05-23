@@ -1,141 +1,302 @@
-<app-navbar></app-navbar>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/cabe0fdb4d.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
 
     <main class="main-container">
-      <div class="container-fluid">
-        <div>
-        <h1 class="mt-5"
-        style="text-align: center;font-size: 5rem;text-shadow: #ccc 3px 3px 3px;"
-         >
-          All Mutual Finance,<br>
-          Right Here
-        </h1>
 
-        <p style="text-align: center; font-size: 2.2rem;" class="text-muted">Built for Growing India</p>
-      </div>
-        <div
-          class="d-flex flex-row justify-content-between align-items-center"
-          style="padding-inline: 1rem"
-        >
-          <img
-            data-aos="fade-right"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-            class="justify-content-center align-items-center"
-            style="max-width: 38rem; min-width: 20rem"
-            src="../../../assets/animation_640_lhrz899t.gif"
-            alt=""
-          />
+      <div class="container-fluid">
 
-          <!-- <div style="margin-top: 100px"> -->
-          <app-currency-converter
-            data-aos="fade-left"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-          ></app-currency-converter>
-          <!-- </div> -->
-        </div>
+        <div>
 
-        <div class="d-flex justify-content-between" >
-        <h1 class="rounded float-start">
-          Create Your Account Now..
-         <p> And invest now with <b>EASY & SECURELY</b>.</p>
-        </h1>
-        <div class="d-flex justify-content-center mb-3">
-        <img src="assets\animation_640_lhtelm5f.gif" alt="" style="width:50%">
-      </div>
-      </div>
-      </div>
-      <!-- <img src="\assets\stock-pic.jpg" alt="My Image" class="rounded float-end" style="position: absolute; width: 350px; bottom: 390px; height: 250px;;right:10px;"> -->
-      <div
-        class="d-flex flex-row-reverse justify-content-between"
-        style="width: 100%; padding-inline: 2rem"
-      >
-        <img
-          data-aos="fade-left"
-          data-aos-offset="200"
-          data-aos-delay="50"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          src="assets\money.webp"
-          class="img-fluid rounded float-end"
-          alt=""
-          style="width: 50%; mix-blend-mode: hard-light"
-        />
-        <div
-          data-aos="fade-right"
-          data-aos-offset="200"
-          data-aos-delay="50"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          class="rounded float-start mb-5 d-flex justify-content-center align-items-center"
-        >
-          <h1 style="font-size: 5rem">
-            Credit, <br />
-            Where you need it!
-          </h1>
-        </div>
-      </div>
+        <h1 class="mt-5"
 
-      <div class="row" style="padding-inline: 1.5rem">
-        <h1 class="top-h">Top 5 Mutual Funds</h1>
-        <div
-          data-aos="fade-right"
-          data-aos-offset="200"
-          data-aos-delay="50"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          class="col-sm-2 cool-card ml-3"
-          *ngFor="let data of allTopData"
-        >
-          <!-- <div class="card mb-3" style="left: 4px"> -->
-            <a href="#" class="card btn">
-              <div class="card-body">
-                <h4 class="card-title">
-                  <b>{{ data.schemaName }}</b>
-                </h4>
-                <p class="card-text">
-                  <span class="text-muted">Current price :</span> ₹{{
-                    data.currentPrice
-                  }}
-                  <br />
-                  <span class="text-muted">Delta :</span> {{ data.delta }} %
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-      <!-- </div> -->
+        style="text-align: center;font-size: 5rem;text-shadow: #ccc 3px 3px 3px;"
 
-      <div class="row" style="padding-inline: 1.5rem">
-        <h1 class="bottom-h">Bottom 5 Mutual Funds</h1>
-        <div
-          data-aos="fade-right"
-          data-aos-delay="50"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          class="col-sm-2 cool-card ml-3"
-          *ngFor="let data of allBottomData"
-        >
-          <!-- <div class="card md-3" style="left: 4px"> -->
-            <a href="#" class="card btn">
-              <div class="card-body">
-                <h4 class="card-title" [title]="data.schemaName">
-                  <b>{{ data.schemaName }}</b>
-                </h4>
-                <p class="card-text">
-                  <span class="text-muted">Current price :</span> ₹{{
-                    data.currentPrice
-                  }}
-                  <br />
-                  <span class="text-muted">Delta :</span> {{ data.delta }} %
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-      <!-- </div> -->
-    </main>
+         >
+
+          All Mutual Finance,<br>
+
+          Right Here
+
+        </h1>
+
+
+
+
+        <p style="text-align: center; font-size: 2.2rem;" class="text-muted">Built for Growing India</p>
+
+      </div>
+
+        <div
+
+          class="d-flex flex-row justify-content-between align-items-center"
+
+          style="padding-inline: 1rem"
+
+        >
+
+          <img
+
+            data-aos="fade-right"
+
+            data-aos-offset="200"
+
+            data-aos-delay="50"
+
+            data-aos-duration="1000"
+
+            data-aos-easing="ease-in-out"
+
+            class="justify-content-center align-items-center"
+
+            style="max-width: 38rem; min-width: 20rem"
+
+            src="../../../assets/animation_640_lhrz899t.gif"
+
+            alt=""
+
+          />
+
+
+
+
+          <!-- <div style="margin-top: 100px"> -->
+
+          <app-currency-converter
+
+            data-aos="fade-left"
+
+            data-aos-offset="200"
+
+            data-aos-delay="50"
+
+            data-aos-duration="1000"
+
+            data-aos-easing="ease-in-out"
+
+          ></app-currency-converter>
+
+          <!-- </div> -->
+
+        </div>
+
+
+
+
+        <div class="d-flex justify-content-between" >
+
+        <h1 class="rounded float-start">
+
+          Create Your Account Now..
+
+         <p> And invest now with <b>EASY & SECURELY</b>.</p>
+
+        </h1>
+
+        <div class="d-flex justify-content-center mb-3">
+
+        <img src="assets\animation_640_lhtelm5f.gif" alt="" style="width:50%">
+
+      </div>
+
+      </div>
+
+      </div>
+
+      <!-- <img src="\assets\stock-pic.jpg" alt="My Image" class="rounded float-end" style="position: absolute; width: 350px; bottom: 390px; height: 250px;;right:10px;"> -->
+
+      <div
+
+        class="d-flex flex-row-reverse justify-content-between"
+
+        style="width: 100%; padding-inline: 2rem"
+
+      >
+
+        <img
+
+          data-aos="fade-left"
+
+          data-aos-offset="200"
+
+          data-aos-delay="50"
+
+          data-aos-duration="1000"
+
+          data-aos-easing="ease-in-out"
+
+          src="assets\money.webp"
+
+          class="img-fluid rounded float-end"
+
+          alt=""
+
+          style="width: 50%; mix-blend-mode: hard-light"
+
+        />
+
+        <div
+
+          data-aos="fade-right"
+
+          data-aos-offset="200"
+
+          data-aos-delay="50"
+
+          data-aos-duration="1000"
+
+          data-aos-easing="ease-in-out"
+
+          class="rounded float-start mb-5 d-flex justify-content-center align-items-center"
+
+        >
+
+          <h1 style="font-size: 5rem">
+
+            Credit, <br />
+
+            Where you need it!
+
+          </h1>
+
+        </div>
+
+      </div>
+
+
+
+
+      <div class="row" style="padding-inline: 1.5rem">
+
+        <h1 class="top-h">Top 5 Mutual Funds</h1>
+
+        <div
+
+          data-aos="fade-right"
+
+          data-aos-offset="200"
+
+          data-aos-delay="50"
+
+          data-aos-duration="1000"
+
+          data-aos-easing="ease-in-out"
+
+          class="col-sm-2 cool-card ml-3"
+
+          *ngFor="let data of allTopData"
+
+        >
+
+          <!-- <div class="card mb-3" style="left: 4px"> -->
+
+            <a href="#" class="card btn">
+
+              <div class="card-body">
+
+                <h4 class="card-title">
+
+                  <b>{{ data.schemaName }}</b>
+
+                </h4>
+
+                <p class="card-text">
+
+                  <span class="text-muted">Current price :</span> ₹{{
+
+                    data.currentPrice
+
+                  }}
+
+                  <br />
+
+                  <span class="text-muted">Delta :</span> {{ data.delta }} %
+
+                </p>
+
+              </div>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      <!-- </div> -->
+
+
+
+
+      <div class="row" style="padding-inline: 1.5rem">
+
+        <h1 class="bottom-h">Bottom 5 Mutual Funds</h1>
+
+        <div
+
+          data-aos="fade-right"
+
+          data-aos-delay="50"
+
+          data-aos-duration="1000"
+
+          data-aos-easing="ease-in-out"
+
+          class="col-sm-2 cool-card ml-3"
+
+          *ngFor="let data of allBottomData"
+
+        >
+
+          <!-- <div class="card md-3" style="left: 4px"> -->
+
+            <a href="#" class="card btn">
+
+              <div class="card-body">
+
+                <h4 class="card-title" [title]="data.schemaName">
+
+                  <b>{{ data.schemaName }}</b>
+
+                </h4>
+
+                <p class="card-text">
+
+                  <span class="text-muted">Current price :</span> ₹{{
+
+                    data.currentPrice
+
+                  }}
+
+                  <br />
+
+                  <span class="text-muted">Delta :</span> {{ data.delta }} %
+
+                </p>
+
+              </div>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      <!-- </div> -->
+
+    </main>

@@ -91,9 +91,13 @@ main {
   color: #fff;
 }
 .card {
+
   width: 200px;
   height: 210px;
   margin-right: 15px;
+  width: 164px;
+  height: 160px;
+  margin-right: 20px;
 }
 /* .top-h {
   color: #ed116585;
@@ -110,7 +114,6 @@ body{
   transform: scale(1);
  transition: all 300ms ease-in-out;
 }
-
 .cool-card:hover{
   transform: scale(1.12);
   z-index: 500;
@@ -139,7 +142,7 @@ body{
   transition: all 400ms ease-in-out;
 }
 .cool-card:hover .card-title{
-  /* white-space: wrap; */
+  white-space: nowrap;
   text-overflow: unset;
  overflow: hidden;
  font-size: medium;
@@ -150,9 +153,6 @@ body{
 a{
   text-decoration: none;
 }
-
-
-
 
 /* new */
 .top-h {
