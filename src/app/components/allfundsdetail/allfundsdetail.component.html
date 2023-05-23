@@ -1,93 +1,126 @@
 <app-navbar></app-navbar>
 
-      <div class="fund-details">
-        <p>NAV: <span>{{ fundDetail?.currentPrice }}</span></p>
-        <p>Min. Purchase amount: <span>{{ (fundDetail?.schemaId * 10 + fundDetail?.currentPrice )  | number: '1.0-1' }} INR</span></p>
-        <p>Fund Size: <span>{{ (fundDetail?.schemaId * fundDetail?.currentPrice * 10) / 100 | number: '1.0-1' }} million INR</span></p>
 
-        <p class="rating">Rating: <span>{{ getRatingStars(fundDetail?.delta) }}</span></p>
+<div class="fund-details">
 
-      </div>
-
-      <canvasjs-chart [options]="chartOptions"></canvasjs-chart>
-
-            <table>
-              <thead>
-                <th>FundHouse</th>
-                <th>Price</th>
-                <th>Delta</th>
-                <th>Category</th>
-              </thead>
-
-              <tr class="colorful-row">
-                <td>{{ fundDetail?.fundHouse }}</td>
-                <td>{{ fundDetail?.currentPrice }}</td>
-                <td>{{ fundDetail?.delta }}</td>
-                <td>{{ fundDetail?.description }}</td>
-              </tr>
-
-            </table>
-
-            <!-- <div style="margin: 2rem; width: 60rem"> -->
-
-            <!-- </div> -->
+  <p>
+    NAV: <span>{{ fundDetail?.currentPrice }}</span>
+  </p>
 
 
-            <div class="bttn">
-              <button type="button" class="btn" (click)="showMonthlySip()" routerLink="sip">
-                SIP
-              </button>
-              <span style="margin-right: 4rem;"></span>
-              <button type="button" class="btn" (click)="showOneTime()" routerLink="buying">
-                Lumsump
-              </button>
-              <div class="fav">
-                <a [routerLink]="'/dashboard/allfundsdetail/'+id+'/wishlist/wishlist-page'"><svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="blue" class="bi bi-heart" viewBox="0 0 16 16">
-                  <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-                </svg></a>
-              </div>
-            </div>
+  <p>
+    Min. Purchase amount:
+    <span
+      >{{
+        fundDetail?.schemaId * 10 + fundDetail?.currentPrice | number : "1.0-1"
+      }}
+      INR</span
+    >
+  </p>
 
-            <div
-              class="container-fluid justify-content-center align-items-center"
-              style="max-width: 30rem"
-            >
-              <!-- <div *ngIf="oneTime">
-                <div class="card">
-                  <div class="card-body" style="width: 300">
-                    <p class="card-title">One Time</p>
-                    <div>
-                      <label for="">Amount</label>
-                      <span
-                        style="
-                          margin-left: 165px;
-                          background-color: aquamarine;
-                          padding-top: 2.3px;
-                          padding-bottom: 2.3;
-                        "
-                        >₹</span
-                      >
-                      <input
-                        type="number"
-                        class="one_amount"
-                        id="amount"
-                        name="amount"
-                        placeholder="0"
-                        value
-                        [(ngModel)]="inputAmount"
-                      />
-                    </div>
+   
+  <p>
+    Fund Size:
+    <span
+      >{{
+        (fundDetail?.schemaId * fundDetail?.currentPrice * 10) / 100
+          | number : "1.0-1"
+      }}
+      million INR</span
+    >
+  </p>
 
-                    <div class="row mt-3">
-                      <div class="col" style="width: 100px">
-                        <div
-                          class="d-flex flex-row justify-content-between align-items-center"
-                          style="margin-top: 14px"
-                        >
-                          <button type="button" class="btn">
-                            <span>Add To Cart</span>
-                          </button>
-  
-              </div>
-            </div>
+  <p class="rating">
+    Rating: <span>{{ getRatingStars(fundDetail?.delta) }}</span>
+  </p>
 
+
+</div>
+
+<canvasjs-chart [options]="chartOptions"></canvasjs-chart>
+
+
+<table>
+
+  <thead>
+
+    <th>FundHouse</th>
+
+
+    <th>Price</th>
+
+
+    <th>Delta</th>
+
+
+    <th>Category</th>
+
+  </thead>
+
+
+  <tr class="colorful-row">
+
+    <td>{{ fundDetail?.fundHouse }}</td>
+
+
+    <td>{{ fundDetail?.currentPrice }}</td>
+
+
+    <td>{{ fundDetail?.delta }}</td>
+
+
+    <td>{{ fundDetail?.description }}</td>
+
+
+  </tr>
+
+
+</table>
+
+<!-- <div style="mar
+gin: 2rem; width: 60rem"> -->
+
+<!-- </div> -->
+
+
+<div class="bttn">
+
+  <button type="button" class="btn" (click)="showMonthlySip()" routerLink="sip">
+    SIP
+  </button>
+
+ <span style="margin-right: 4rem"></span>
+
+
+  <button type="button" class="btn" (click)="showOneTime()" routerLink="buying">
+   Lumsump
+  </button>
+
+
+  <div class="fav">
+
+    <a
+      [routerLink]="
+        '/dashboard/allfundsdetail/' + id + '/wishlist/wishlist-page'
+      "
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="30px"
+        height="30px"
+        fill="blue"
+        class="bi bi-heart"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+        />
+
+
+      </svg></a
+    >
+
+
+  </div>
+
+
+</div>
