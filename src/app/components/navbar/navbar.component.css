@@ -1,50 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
 @import '~@fortawesome/fontawesome-free/css/all.css';
 
+* {
+  margin: -3px;
+}
+
 *{
     margin: -3px;
 }
+
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0px;
-    padding: 0px;
-    }
+  font-family: 'Arial', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
 
-    .navbar {
-    background-color: #343a40;
-    }
+.navbar {
+  background-color: #343a40;
+}
 
-    .navbar-brand {
-    color: #fff;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-    }
-    .navbar-nav .nav-link {
-    color: #fff;
-    margin-right: 1rem;
-    }
+.navbar-brand {
+  color: #fff;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  margin-right: 1rem;
+}
+
 .navbar-nav .nav-link:hover {
-    color: #17a2b8;
-    }
+  color: #17a2b8;
+}
+
 .account button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    }
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 .account button:hover {
-    color: #17a2b8;
-    }
+  color: #17a2b8;
+}
 
 .account .material-icons {
-    color: #fff;
-    font-size: 2rem;
-    vertical-align: middle;
-    }
+  color: #fff;
+  font-size: 2rem;
+  vertical-align: middle;
+}
 
 .container-fluid {
+  display: flex;
+  justify-content: between;
+  margin: 0px;
+  max-width: 1400px;
+  width: 97vw;
+  padding: 0px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
     display: flex;
     justify-content: between;
     margin: 0px;
@@ -54,36 +72,63 @@ body {
     font-family: 'Noto Sans', sans-serif;
     }
 
- 
 @media screen and (min-width: 768px) {
-.navbar-expand-md .navbar-nav {
+  .navbar-expand-md .navbar-nav {
     display: flex;
     justify-content: flex-start;
     width: 100%;
+  }
 
-    }
+  .navbar-nav .nav-link {
+    margin-right: 0;
+  }
 
-    .navbar-nav .nav-link {
-     margin-right: 0;
-    }
-   .account {
+  .account {
     order: 4;
-    }
-    .account .dropdown-menu{
-        display: none;
-    }
-    .account:hover .dropdown-menu{
-        display: block;
-    }
-}
-.material-symbols-outlined{
-    color: #fff;
-    /* margin-right: 15px; */
-    font-size: 2.1rem;
+  }
+
+  .account .dropdown-menu {
+    display: none;
+  }
+
+  .account:hover .dropdown-menu {
+    display: block;
+  }
 }
 
+.material-symbols-outlined {
+  color: #fff;
+  font-size: 2.1rem;
+}
 
 .navbar-dark .navbar-toggler {
+  color: rgba(255, 255, 255, .5);
+  border-color: rgba(255, 255, 255, .1);
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-left: 462px;
+}
+
+.container-fluid-4 {
+  display: flex;
+  justify-content: center;
+  margin-left: 60px;
+  margin-bottom: 10px;
+}
+
+/* Add light green elements */
+.navbar-nav .nav-link::after {
+  content: "";
+  display: block;
+  height: 4px;
+  background-color: #B8D8BA;
+  margin-top: 3px;
+}
+
+.account .dropdown-menu a.dropdown-item:hover {
+  background-color: #B8D8BA;
+  color: #fff;
+}
     color: rgba(255,255,255,.5);
     border-color: rgba(255,255,255,.1);
     padding-left: 2px;

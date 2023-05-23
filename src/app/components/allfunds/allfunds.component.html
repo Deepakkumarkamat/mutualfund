@@ -13,18 +13,18 @@
       <h2 style="font-size: 2rem;text-shadow: #ccc 3px 3px 3px;">Top 5 Mutual fund</h2>
       <div class="row">
         <ng-container *ngFor="let detail of detailList; let i = index">
-        
+
           <div
             class="card cardform"
             routerLink="allfundsdetail/{{ detail.schemaId }}"
           >
             <img src="assets\icici.webp" style="width: 32px;
             height: 31px;" alt="" />
-           
+
             <p class="fund">{{ detail.fundHouse }}</p>
             <p>{{ detail.delta }}%</p>
           </div>
-         
+
         </ng-container>
       </div>
     </div>
@@ -33,7 +33,7 @@
       <h2 style="font-size: 2rem; text-shadow: #ccc 3px 3px 3px;">Bottom 5 Mutual fund</h2>
       <div class="row">
         <ng-container *ngFor="let detail of allBottomDetail">
-        
+
           <div
             class="card cardform"
             [routerLink]="'allfundsdetail/' + detail.schemaId"
@@ -43,7 +43,7 @@
             <p class="fund">{{ detail.fundHouse }}</p>
             <p>{{ detail.delta }}%</p>
           </div>
-         
+
         </ng-container>
       </div>
     </div>

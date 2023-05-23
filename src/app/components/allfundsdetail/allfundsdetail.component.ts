@@ -42,7 +42,7 @@ export class AllfundsdetailComponent {
         theme:'dark1',
         zoomeEnabled:true,
         title: {
-          text: this.fundDetail.fundHouse 
+          text: this.fundDetail.fundHouse
         },
         axisX: {
           valueFormatString: "MMM YYYY"
@@ -57,58 +57,47 @@ export class AllfundsdetailComponent {
           color: "#80ffd4",
           dataPoints: dataPoints
         }]
-            
+
       };
 
     });
 
     this.apii.getTopDetail().subscribe((res:any)=>{
       return this.allTopfundDetail = res;
-      // const deltas = this.allTopfundDetail[i].delta;
-      // for (let i =0;i<this.allTopfundDetail.length;i++){
-      //   const deltas = this.allTopfundDetail[i].delta;
-      //   console.log(deltas)
-  
-      // }
-      
-     
-    })
-    
+    });
   }
-  // showDelts(){
-  //   this.apii.getTopDetail().subscribe((res:any)=>{
-
-  //     return this.allTopfundDetail = res;
-  //   });
-  //     const deltas = this.allTopfundDetail.map(item=>item.delta);
-  //     console.log(deltas)
-  // }
-  
-  
- 
-
 
   ngOnDistroy() {
     this.show = false;
   }
-  showMonthlySip(){
+
+  showMonthlySip() {
     this.monthlysip = true;
     this.oneTime = false;
     this.upi = false;
-
-
   }
-  showOneTime(){
+
+  showOneTime() {
     this.oneTime = true;
-    this.monthlysip =false;
+    this.monthlysip = false;
     this.upi = false;
-
   }
-  showUpi(){
+
+  showUpi() {
     this.upi = true;
-    this.monthlysip=false;
-    this.oneTime=false;
+    this.monthlysip = false;
+    this.oneTime = false;
   }
 
-  
+  getRatingStars(rating: number): string {
+    if (rating < 0) {
+      return '⭐⭐';
+    } else if (rating < 5) {
+      return '⭐⭐⭐';
+    } else if (rating < 10) {
+      return '⭐⭐⭐⭐';
+    } else {
+      return '⭐⭐⭐⭐⭐';
+    }
+  }
 }
