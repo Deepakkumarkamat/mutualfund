@@ -1,6 +1,6 @@
-.container {
+/* .container {
   width: 50rem;
-}
+} */
 
 table {
   width: 100%;
@@ -8,10 +8,10 @@ table {
   margin-bottom: 1rem;
 }
 
-th,
-td {
+th,td {
   padding: 0.5rem;
   text-align: left;
+  border: 1px solid black;
 }
 
 th {
