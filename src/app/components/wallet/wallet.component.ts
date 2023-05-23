@@ -16,10 +16,6 @@ showTransactionList:boolean=false;
   }
   constructor(private api:WalletService){}
   ngOnInit(){
-    // this.api.addMoney(1,1).subscribe((res:any)=>{
-    //   return this.walletAmount = res;
-
-    // })
     
       this.api.walletBalance(1).subscribe((res:any)=>{
         return this.wallet.balance = Number(res).toFixed(2);
