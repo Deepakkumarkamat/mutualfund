@@ -12,107 +12,76 @@ import { AnimationItem } from 'lottie-web';
 
 import { AllfundService } from 'src/app/services/allfund.service';
 
-
-
-
 @Component({
+  selector: 'app-dashboard-home',
 
-  selector: 'app-dashboard-home',
+  templateUrl: './dashboard-home.component.html',
 
-  templateUrl: './dashboard-home.component.html',
-
-  styleUrls: ['./dashboard-home.component.css']
-
+  styleUrls: ['./dashboard-home.component.css'],
 })
-
 export class DashboardHomeComponent implements OnInit {
+  mutualFunds: any;
 
-  mutualFunds: any;
+  flag: any;
 
-  flag: any;
+  error: any;
 
-  error: any;
+  detailList: any[] = [];
 
-  detailList: any[] = [];
+  allBottomDetail: any[] = [];
 
-  allBottomDetail: any[] = [];
+  data: any;
+  showAllfund:boolean=false;
 
-  data: any;
+  constructor(
+    private api: ApiService,
+    private router: Router,
+    private fund: AllfundService
+  ) {}
 
+  ngOnInit() {
+    this.api.getTopDetail().subscribe((res) => {
+      this.detailList = res;
 
+      console.log(this.detailList);
 
+      this.loadMutualFunds();
+    });
 
-  constructor(private api: ApiService, private router: Router, private fund: AllfundService) {}
+    this.api.getBottomDetail().subscribe((res) => {
+      this.allBottomDetail = res;
+    });
 
+  }
 
-
-
-  ngOnInit() {
-
-    this.api.getTopDetail().subscribe((res) => {
-
-      this.detailList = res;
-
-      console.log(this.detailList);
-
-      this.loadMutualFunds();
-
-    });
-
-    this.api.getBottomDetail().subscribe((res) => {
-
-      this.allBottomDetail = res;
-
-    });
-
-  }
+  showAllMutualfund(){
+    this.showAllfund =! this.showAllfund
 
 
+  }
 
+  fetchById(schemaId: number): void {
+    this.api.detailById(schemaId).subscribe((data) => {
+      this.data = data;
 
-  fetchById(schemaId: number): void {
+      console.log(data[27]);
+    });
+  }
 
-    this.api.detailById(schemaId).subscribe((data) => {
+  options: AnimationOptions = {
+    path: '../../../assets/135363-mutual-funds-investment.json',
+  };
 
-      this.data = data;
+  animationCreated(animationItem: AnimationItem): void {
+    console.log(animationItem);
+  }
 
-      console.log(data[27]);
+  loadMutualFunds() {
+    this.fund
+      .getMutualFunds()
 
-    });
-
-  }
-
-
-
-
-  options: AnimationOptions = {
-
-    path: '../../../assets/135363-mutual-funds-investment.json',
-
-  };
-
-
-
-
-  animationCreated(animationItem: AnimationItem): void {
-
-    console.log(animationItem);
-
-  }
-
-
-
-
-  loadMutualFunds() {
-
-    this.fund.getMutualFunds()
-
-      .subscribe((data: any[]) => {
-
-        this.mutualFunds = data;
-
-      });
-
-  }
-
+      .subscribe((data: any[]) => {
+        this.mutualFunds = data;
+      });
+  }
 }
