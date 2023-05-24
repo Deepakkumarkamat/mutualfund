@@ -67,11 +67,11 @@
                   name="email"
                   id="email"
                   placeholder="email"
-                  formControlName="email"
-                  [ngClass]="{'is-invalid':submitted && form['email'].errors}"
+                  formControlName="username"
+                  [ngClass]="{'is-invalid':submitted && form['username'].errors}"
                 />
-                <div *ngIf="submitted && form['email']?.errors?.['required']" class="text-danger"> email is required</div>
-                <div *ngIf="submitted && form['email']?.errors">email is Invalid</div>
+                <div *ngIf="submitted && form['username']?.errors?.['required']" class="text-danger"> email is required</div>
+                <div *ngIf="submitted && form['username']?.errors">email is Invalid</div>
                 <!-- (input)="checkAvailability()" -->
                 <!-- <div *ngIf="userAvailable === false" class="text-danger">
                   UserName is already taken

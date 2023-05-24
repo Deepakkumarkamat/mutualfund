@@ -14,6 +14,8 @@ import {
   Validators,
 } from '@angular/forms';
 import { from, last } from 'rxjs';
+import { RegistrationService } from 'src/app/services/registration.service';
+import { User } from 'src/app/classes/user';
 
 @Component({
   selector: 'app-register',
@@ -62,8 +64,9 @@ export class RegisterComponent {
   constructor(
     public ro: Router,
     public http: HttpClient,
-    private api: ApiService,
-    private formBuilder: FormBuilder
+
+    private formBuilder: FormBuilder,
+    private registration:RegistrationService
   ) {
     this.innerWidth = window.innerWidth;
 
@@ -76,58 +79,73 @@ export class RegisterComponent {
     this.registerForm =this.formBuilder.group({
       firstname: ['', Validators.required],
       lastname:['',Validators.required],
-      email:['',[Validators.required, Validators.pattern(/([a-zA-Z0-9]+)([\.{1}])?([a-zA-Z0-9]+)\@gmail([\.])com/g)]],
-      password:['',[Validators.required, Validators.pattern(/^(?=.*[.,?!$&@%^*])(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z]).{6,}/)]],
-      confirmPassword:['',Validators.required]
+      username:['',[Validators.required, Validators.pattern(/([a-zA-Z0-9]+)([\.{1}])?([a-zA-Z0-9]+)\@gmail([\.])com/g)]],
+      password:['',[Validators.required, Validators.pattern(/^(?=.*[.,?!$&@%^*])(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z]).{6,}/)]]
+      // confirmPassword:['',Validators.required]
 
     })
   }
   get form() { return this.registerForm.controls; }
-  onSubmit(form?: any) {
+
+  onSubmit() {
     // if (this.registerForm.invalid) return;
     this.submitted = true;
     if(this.registerForm.invalid){
       return
     }
     // alert("success")
+
+    const userData = this.registerForm.value
+    const user = new User(userData.firstname,userData.lastname,userData.username,userData.password)
     console.log(this.registerForm);
-    let { firstname, lastname, email, password } = this.registerForm.value;
-    this.api
-      .registrationUser(
-        String(firstname),
-        String(lastname),
-        String(email),
-        String(password)
-      )
-      .subscribe(
-        (data) => {
-          console.log(data);
-          console.log('Registration successfully!');
-          this.ro.navigate(['/thankyou']);
-          // alert('User Registration successfully!');
-        },
-        (error) => {
-          alert('Registration failed!');
-          console.log(error);
-        }
-      );
+    this.registration.registerUser(user).subscribe((res:any)=>{
+      // console.log(res)
+       alert(res)
+    },
+    (error)=>{
+      console.log(error)
+    }
+    )
+
+
+
+    // let { firstname, lastname, email, password } = this.registerForm.value;
+    // this.api
+    //   .registrationUser(
+    //     String(firstname),
+    //     String(lastname),
+    //     String(email),
+    //     String(password)
+    //   )
+    //   .subscribe(
+    //     (data) => {
+    //       console.log(data);
+    //       console.log('Registration successfully!');
+    //       this.ro.navigate(['/thankyou']);
+    //       // alert('User Registration successfully!');
+    //     },
+    //     (error) => {
+    //       alert('Registration failed!');
+    //       console.log(error);
+    //     }
+    //   );
   }
 
-  checkAvailability() {
-    this.http
-      .get<boolean>(
-        `http://localhost:9191/register?username=${this.registerForm.value.email}`
-      )
-      .subscribe(
-        (isAvailable: boolean) => {
-          this.userAvailable = isAvailable;
-        },
-        (error) => {
-          console.log(error);
-          this.userAvailable = null;
-        }
-      );
-  }
+  // checkAvailability() {
+  //   this.http
+  //     .get<boolean>(
+  //       `http://localhost:9191/register?username=${this.registerForm.value.email}`
+  //     )
+  //     .subscribe(
+  //       (isAvailable: boolean) => {
+  //         this.userAvailable = isAvailable;
+  //       },
+  //       (error) => {
+  //         console.log(error);
+  //         this.userAvailable = null;
+  //       }
+  //     );
+  // }
 
   // confirmpassword() {
   //   return (

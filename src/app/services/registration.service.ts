@@ -1,23 +1,35 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
+import { baseUrl } from '../config';
+import { User } from '../classes/user';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class RegistrationService {
-  private baseUrl: string = 'http://34.234.150.41:9191/register';
+  // private baseUrl: string = 'http://34.234.150.41:4747/customer/register'
 
+  constructor(private http: HttpClient) {}
+  private userUrl = `http://34.234.150.41:6161/customer/register`;
 
+  registerUser(user: User) {
+    //  const headers = new HttpHeaders({ 'Content-Type': 'application/text' });
 
-  constructor(private http: HttpClient) { }
-  updateUserDetails(username: string, email: string): Observable<any> {
-     const url = `${this.baseUrl}`;
-     // Use backticks (`) for string interpolation
-     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    const params = { username, email };
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+     // const params = { username, email };
 
+    return this.http.post(this.userUrl, user, {
+      headers: headers,
+      responseType: 'text',
+    });
+  }
 
+  //   updateUserDetails(firstname:string,lastname: username: string, email: string): Observable<any> {
+  //      const url = `${this.}`;
 
-    return this.http.patch(url, null, { headers, params });
-}
+  //      const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+  //     const params = { username, email };
+
+  //     return this.http.post(url, null, { headers, params });
+  // }
 }
