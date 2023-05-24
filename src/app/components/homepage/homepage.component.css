@@ -29,10 +29,12 @@ main {
 .main-container {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 .container {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 .description,
 .description1 {
@@ -114,10 +116,10 @@ body{
 }
 .cool-card:hover .card{
 
-  background-image: linear-gradient(to right, #63e48b 0%,#ffffff 100%);
+  background-image: linear-gradient(to right, rgb(96, 147, 235) 0%,#23f694 100%);
   z-index: 500;
-
-  width: 140%;
+transform: scaleX(1.2);
+  /* width: 140%; */
 }
  .card-title{
   max-width: 10ch;
