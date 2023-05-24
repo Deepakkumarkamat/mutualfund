@@ -11,9 +11,18 @@
 
   </div>
 </div>
-<div *ngIf="mutualFunds" class="container-fluid">
+
+<app-allfunds>
+
+</app-allfunds>
+<div class="d-md-flex justify-content-md-end mr-2">
+  <button type="button" class="btn btn-outline-primary" (click)="showAllMutualfund()">show all fund</button>
+  </div>
+<!-- <div *ngIf="showAllfund"> -->
+<div *ngIf="showAllfund " class="container-fluid">
 
   <!-- <h2>Explore Funds</h2> -->
+
 
   <h1>All FUNDS </h1>
   <ul class="horizontal-list">
@@ -46,3 +55,4 @@
   </ul>
 
 </div>
+<!-- </div> -->
