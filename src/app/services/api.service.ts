@@ -33,31 +33,31 @@ export class ApiService {
   }
   //signUp
 
-  registrationUser(
-    firstName: string,
-    lastName: string,
-    email: string,
-    password: string
-  ) {
-    const data = {
-      firstName,
-      lastName,
-      username: email,
-      password,
-    };
-    return this.http.put(`http://34.234.150.41:9191/register`, data, {
-      responseType: 'text',
-      headers: {
-        'Accept':'*/*',
-        'Connection':'keep-alive',
-        'Content-Type': 'application/text',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods':
-          'OPTIONS, DELETE, POST, GET, PATCH, PUT',
-        'Access-Control-Allow-Headers': 'Content-Type',
-      },
-    });
-  }
+  // registrationUser(
+  //   firstName: string,
+  //   lastName: string,
+  //   email: string,
+  //   password: string
+  // ) {
+  //   const data = {
+  //     firstName,
+  //     lastName,
+  //     username: email,
+  //     password,
+  //   };
+  //   return this.http.put(`http://34.234.150.41:9191/register`, data, {
+  //     responseType: 'text',
+  //     headers: {
+  //       'Accept':'*/*',
+  //       'Connection':'keep-alive',
+  //       'Content-Type': 'application/text',
+  //       'Access-Control-Allow-Origin': '*',
+  //       'Access-Control-Allow-Methods':
+  //         'OPTIONS, DELETE, POST, GET, PATCH, PUT',
+  //       'Access-Control-Allow-Headers': 'Content-Type',
+  //     },
+  //   });
+  // }
   // private baseURL: string = `http://${baseUrl}`;
   //  checkUsernameAvailability(userName: String){
 
