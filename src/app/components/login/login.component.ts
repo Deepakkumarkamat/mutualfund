@@ -74,4 +74,7 @@ export class LoginComponent {
     this.credentials.password=''
     this.errorMesage = ''
   }
+  goToReegistration(){
+    this.router.navigate(['/register'])
+  }
 }

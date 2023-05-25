@@ -83,7 +83,7 @@
     <div data-aos="fade-right" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
       data-aos-easing="ease-in-out" class="col-sm-2 cool-card ml-3" *ngFor="let data of allTopData">
       <!-- <div class="card mb-3" style="left: 4px"> -->
-      <a href="/login" class="card btn">
+      <a (click)="toViewAllDetail(data.schemaId)" class="card btn">
         <div class="card-body">
           <h4 class="card-title">
             <b>{{ data.schemaName }}</b>
@@ -110,7 +110,7 @@
       class="col-sm-2 cool-card ml-3" *ngFor="let data of allBottomData">
 
 
-      <a href="/login" class="card btn">
+      <a (click)="toViewAllDetail(data.schemaId)" class="card btn">
 
         <div class="card-body">
 
