@@ -19,7 +19,7 @@ export class AllfundsdetailComponent {
   name:any;
 
   chartOptions ={}
-  constructor(private apii: ApiService, private route: ActivatedRoute) {}
+  constructor(private apii: ApiService, private router:Router, private route: ActivatedRoute) {}
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
     this.apii.detailById(this.id).subscribe((res) => {
@@ -100,4 +100,9 @@ export class AllfundsdetailComponent {
       return '⭐⭐⭐⭐⭐';
     }
   }
+
+  // toshowsip(id:any){
+  //   this.id = this.route.snapshot.paramMap.get('id');
+  //   this.router.navigate(['dashboard/allfundsdetail/'+this.id+'/sip'])
+  // }
 }
