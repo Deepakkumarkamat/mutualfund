@@ -13,7 +13,7 @@ export class WithdrawPageComponent {
  withdrawMoney(){
   this.api.withdrawBalance(1,this.balancewithdraw).subscribe((res:any)=>{
     alert(res)
-    window.location.reload();
+    // window.location.reload();
   })
  }
  transactionHistory(){

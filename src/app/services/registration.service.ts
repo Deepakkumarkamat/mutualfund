@@ -24,6 +24,12 @@ export class RegistrationService {
     });
   }
 
+  varifyOtp(email:string,otp:number){
+    const Url = `http://34.234.150.41:6161/customer/verification?email=${email}&otp=${otp}`
+  }
+
+
+
   //   updateUserDetails(firstname:string,lastname: username: string, email: string): Observable<any> {
   //      const url = `${this.}`;
 

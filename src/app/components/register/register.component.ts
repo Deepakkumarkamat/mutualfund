@@ -85,6 +85,10 @@ export class RegisterComponent {
 
     })
   }
+  // Varifyotp(){
+  //     this.ro.navigate(['/varifyotp'])
+  // }
+
   get form() { return this.registerForm.controls; }
 
   onSubmit() {
@@ -92,7 +96,9 @@ export class RegisterComponent {
     this.submitted = true;
     if(this.registerForm.invalid){
       return
+
     }
+    // this.ro.navigate(['/varifyotp'])
     // alert("success")
 
     const userData = this.registerForm.value
@@ -106,6 +112,7 @@ export class RegisterComponent {
       console.log(error)
     }
     )
+
 
 
 

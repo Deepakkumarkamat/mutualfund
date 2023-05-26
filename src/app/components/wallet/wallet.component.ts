@@ -20,12 +20,12 @@ showTransactionList:boolean=false;
     //   return this.walletAmount = res;
 
     // })
-    
+
       this.api.walletBalance(1).subscribe((res:any)=>{
         return this.wallet.balance = Number(res).toFixed(2);
       })
-    
-    
+
+
   }
 
   showDeposit(){

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="position-absolute top-50 start-50 translate-middle">
+    <div class="card" style="width: 18rem; height: 18rem">
+      <div class="card-body">
+        <h5 class="card-title text-center">Varify Otp</h5>
+        <form [formGroup]="varifyOtp">
+
+
+          <div class="form-group">
+            <label for="otp">Enter Otp</label>
+            <br>
+            <input
+              type="text"
+              class="form-control"
+              id="otp"
+              placeholder="enter the otp!"
+              formControlName="otp"
+
+            />
+          </div>
+          <button type="button"
+          class="btn btn-outline-primary d-grid gap-2 col-6 mx-auto"
+          style="margin-top: 7rem;"
+          routerLink="varifyotp"
+          >Submit</button>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

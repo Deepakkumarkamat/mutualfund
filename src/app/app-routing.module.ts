@@ -23,6 +23,9 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
 import { ThankyouComponent } from './components/thankyou/thankyou.component';
 import { AuthGuard } from './services/auth.guard';
 import { PaymentoptionComponent } from './components/paymentoption/paymentoption.component';
+import { ForgotpasswordComponent } from './components/forgotpassword/forgotpassword.component';
+import { SendOtpComponent } from './components/send-otp/send-otp.component';
+import { VarifyotpComponent } from './components/varifyotp/varifyotp.component';
 // import { combineLatest } from 'rxjs';
 
 const routes: Routes = [
@@ -49,6 +52,9 @@ const routes: Routes = [
   {path:'wishlist',component:WishlistPageComponent},
   {path:'register/account',component:RegisterComponent},
   {path:'thankyou',component:ThankyouComponent},
+  // {path:'sendOtp',component:ForgotpasswordComponent},
+  // {path:'update',component:SendOtpComponent},
+  // {path:'varifyotp',component:VarifyotpComponent},
   {path: '**', pathMatch: 'full', component: ErrorPageComponent},
 
 ];
