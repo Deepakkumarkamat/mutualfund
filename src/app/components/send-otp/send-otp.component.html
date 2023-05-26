@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="position-absolute top-50 start-50 translate-middle">
+      <div class="card" style="width: 18rem; height: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title text-center">Update Password</h5>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              placeholder="enter the password!"
+            />
+          </div>
+          <br />
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              type="confirmPassword"
+              class="form-control"
+              placeholder="enter confirm password!"
+            />
+          </div>
+        </div>
+       <a class="btn btn-outline-primary" (click)="showUpdate()">Update</a>
+      </div>
+    </div>
+  </body>
+</html>

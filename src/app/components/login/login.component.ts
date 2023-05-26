@@ -77,4 +77,7 @@ export class LoginComponent {
   goToReegistration(){
     this.router.navigate(['/register'])
   }
+  sendOtp(){
+    this.router.navigate(['/sendOtp'])
+  }
 }

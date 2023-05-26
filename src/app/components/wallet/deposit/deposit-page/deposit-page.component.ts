@@ -27,7 +27,7 @@ export class DepositPageComponent {
     this.api.addMoney(1,this.add_balance).subscribe((res:any)=>{
       alert(res);
 
-      window.location.reload();
+      // window.location.reload();
     })
 
   }
