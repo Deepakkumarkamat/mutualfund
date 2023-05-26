@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 import { LoginService } from 'src/app/services/login.service';
 
@@ -17,7 +17,8 @@ export class SipComponent {
   id: string | any = ''
   loading: boolean = false;
   unit: number = -1;
-  constructor(private http: HttpClient, private route: ActivatedRoute, private api: ApiService, private loginService: LoginService) { }
+  success:boolean=false;
+  constructor(private http: HttpClient, private route: ActivatedRoute, private api: ApiService, private loginService: LoginService,private router:Router) { }
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id')
     this.api.detailById(Number(this.id)).subscribe(data => {
@@ -30,9 +31,17 @@ export class SipComponent {
   }
   buymethod() {
     this.loading = true
-    this.http.post(`http://34.234.150.41:5151/transactions/updateportfolio?username=${this.loginService.getLoggedInUser()}&mutualFundsId=${this.id}&price=${this.amount}&unit=1`, {}).subscribe((data) => {
+    this.http.post(`http://34.234.150.41:5151/transactions/updateportfolio?username=${this.loginService.getLoggedInUser()}&mutualFundsId=${this.id}&price=${this.amount}&unit=1`, {},{responseType:'text'}).subscribe((data) => {
       console.log(data)
+   
       this.loading = false
+      this.success=true
+      setTimeout(() => {
+        this.success=false
+        document.getElementById('modalclose')?.click()
+        this.router.navigate(['dashboard'])
+      }, 2000);
+      
     }, err => {
       console.log(err)
       this.loading = false
