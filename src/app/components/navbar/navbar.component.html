@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" ng-app>
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -22,7 +23,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul  *ngIf="isLoggedIn()" class="navbar-nav ml-auto">
+          <ul *ngIf="isLoggedIn()" class="navbar-nav ml-auto">
             <li class="nav-item active">
             <li class="nav-item">
               <a class="nav-link" routerLink="/dashboard/wallet">Wallet Details</a>
@@ -41,18 +42,23 @@
         <div class="account" style="position: relative;">
           <div *ngIf="isLoggedIn()" class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <!-- <a class="nav-link" routerLink="account-details"> -->
-              <div class="material-symbols-outlined" id="account-icon">
-                account_circle
+
+            <div class="material-symbols-outlined" id="account-icon">
+              account_circle
+            </div>
+            <div class="dropdown-menu" style="position: absolute; left: -8rem;" id="account-menu">
+              <div class="dropdown-item">
+                <span class="badge bg-success text-wrap" style="margin-right: 0.5rem;">{{getCurrentUser()}}</span>
               </div>
-              <div class="dropdown-menu" style="position: absolute; left: -5rem" id="account-menu">
-                <a class="dropdown-item" href="#">Setting</a>
-                <button class="dropdown-item" (click)="logout()">Logout</button>
+
+              <a class="dropdown-item" href="#">Setting</a>
+              <button class="dropdown-item" (click)="logout()">Logout</button>
 
             </div>
           </div>
           <div *ngIf="!isLoggedIn()" class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <a routerLink="login" class="btn btn-primary">Login</a>
-            <a  routerLink="register" class="btn btn-success">Signup</a>
+            <a routerLink="register" class="btn btn-success">Signup</a>
           </div>
         </div>
       </div>

@@ -22,7 +22,7 @@ export class HomepageComponent {
     this.api.getData1().subscribe((res) =>{
       this.allBottomData =res;
       console.log(this.allBottomData);
-    })
+    }) 
   }
 
   toViewAllDetail(id:any){
