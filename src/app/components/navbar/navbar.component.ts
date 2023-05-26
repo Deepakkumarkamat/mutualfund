@@ -15,5 +15,8 @@ export class NavbarComponent {
   isLoggedIn(){
     return this.loginservice.isLoggedIn()
     }
+    getCurrentUser(){
+      return this.loginservice.getLoggedInUser()
+    }
 
 }
