@@ -23,6 +23,9 @@ export class RegistrationService {
       responseType: 'text',
     });
   }
+  checkEmailExist(email:string){
+    return this.http.post(`${this.userUrl}/${email}`,{email})
+  }
 
   varifyOtp(email:string,otp:number){
     const Url = `http://34.234.150.41:6161/customer/verification?email=${email}&otp=${otp}`

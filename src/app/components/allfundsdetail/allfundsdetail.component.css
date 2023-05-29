@@ -38,7 +38,7 @@ td {
 
 .fund-details {
   margin: 2rem;
-  width: 60rem;
+  width: auto;
   font-size: 24px;
   background-color: #f0f8ea;
   padding: 1rem;
@@ -72,10 +72,11 @@ td {
   transition: all 0.3s ease;
   width: 9.2em;
   height: 3.1em;
+  background-color: teal;
 }
 
 .btn:hover {
-  background-color: #a3dba1;
+  background-color: teal;
   font-size: 15px;
   font-family: inherit;
   border: none;
@@ -141,9 +142,9 @@ td {
     justify-content: center;
   }
 
-  .fav{
+  /* .fav{
     display: flex;
     justify-content: flex-end;
-    /* margin-left: 20px; */
+
     margin-bottom: 300px;
-}
+} */

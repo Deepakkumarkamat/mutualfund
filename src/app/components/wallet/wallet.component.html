@@ -38,7 +38,7 @@
             <div class="d-grid gap-2 d-md-flex justify-content-md-center">
               <button
                 type="button"
-                class="btn btn-outline-primary"
+                class="btn "
                 (click)="showDeposit()"
               >
                 Deposit
@@ -46,7 +46,7 @@
 
               <button
                 type="button"
-                class="btn btn-outline-primary"
+                class="btn"
                 (click)="showWithdraw()"
               >
                 Withdraw
@@ -58,6 +58,7 @@
       <div class="col-lg-6 col-md-6 col-sm-12">
         <div *ngIf="showDepositCard">
           <app-deposit-page
+          (balance)="getBalance($event)"
             class="d-flex justify-content-end mr-5"
           ></app-deposit-page>
         </div>

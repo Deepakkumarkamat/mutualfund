@@ -10,13 +10,14 @@ import { WalletService } from 'src/app/services/wallet.service';
 })
 export class TransactionPageComponent {
   history:any;
-  
-    
+
+
 
 constructor(private api:WalletService,private apii:ApiService){}
 ngOnInit(){
   this.api.walletHistory(1).subscribe((data)=>{
     this.history=data
+    this.history=this.history.sort((a:any,b:any)=>Date.parse(b.transactionDate)-Date.parse(a.transactionDate))
     console.log(this.history);
 
     // this.show=true
@@ -24,7 +25,7 @@ ngOnInit(){
 
   }
   // showTransaction(){
-   
+
   // }
 
   // ngOnDistroy() {
@@ -32,7 +33,7 @@ ngOnInit(){
   // }
 }
 
-  
+
 
 
 

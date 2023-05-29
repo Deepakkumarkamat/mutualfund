@@ -31,6 +31,14 @@ export class ApiService {
   detailById(schemaId: number): Observable<any> {
     return this.http.get<any>(`${baseUrl}/mutualfund/${schemaId}`);
   }
+
+  verify(email:string,otp:Number){
+return this.http.put(`http://34.234.150.41:6161/customer/verification?email=${email}&otp=${otp}`,{},{responseType:'text'})
+  }
+
+  resend(email:string){
+    return this.http.get(`http://34.234.150.41:6161/customer/send?email=${email}`)
+  }
   //signUp
 
   // registrationUser(

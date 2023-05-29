@@ -126,3 +126,14 @@ body {
     margin-left: 60px;
     margin-bottom: 10px;
 }
+
+/* .log_btn{
+  position: absolute;
+  top: 0px;
+  right: 15px;
+}
+@media (max-width: 767px) {
+  .log-btn {
+    right: 75px;
+  }
+} */

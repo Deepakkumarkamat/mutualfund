@@ -167,7 +167,7 @@ a{
   color: #d04b4b;
 }
 .top-h {
-  color: #ed1165;
+  color:teal  ;
    /* margin-left: 100px; */
   margin-left: -11px;
   background-color: #f6f6f6;
@@ -181,7 +181,7 @@ a{
 }
 
 .bottom-h {
-  color:  #ed1165;
+  color:  teal;
   margin-left: -11px;
   background-color: #f6f6f6;
   padding: 10px;
@@ -191,4 +191,32 @@ a{
 
 .bottom-h:hover {
   background-color: #ececec;
+}
+.main-head{
+  text-align: center;
+          font-size: 5rem;
+          text-shadow: #ccc 3px 3px 3px;
+}
+@media screen and (max-width:600px) {
+  .main-head{
+    font-size: 3rem;
+  }
+  .main-title{
+    font: 2em sans-serif;
+    text-align: center;
+  }
+}
+.btn:active{
+  outline-color: teal;
+  border-color: teal;
+  color: #fff;
+  box-shadow:  0 0 0 0.25rem rgba(0, 128, 128, 0.596);
+
+}
+.btn:focus{
+  outline-color: teal;
+  border-color: teal;
+  color: #fff;
+  box-shadow:  0 0 0 0.25rem rgba(0, 128, 128, 0.596);
+
 }

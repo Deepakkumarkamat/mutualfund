@@ -32,9 +32,9 @@ export class RegisterComponent {
   // Password:any;
   // confirm_password:any;
   userAvailable: boolean | null = null;
-  registerForm!: FormGroup
-  submitted=false;
-
+  registerForm!: FormGroup;
+  submitted = false;
+  loading = false;
 
   // registerForm = new FormGroup({
   //   firstname: new FormControl<string|null>(''),
@@ -43,9 +43,6 @@ export class RegisterComponent {
   //   password: new FormControl(''),
   //   confirmPassword: new FormControl(''),
   // });
-
-
-
 
   options: AnimationOptions = {
     path: '../../../assets/93385-login.json',
@@ -66,7 +63,8 @@ export class RegisterComponent {
     public http: HttpClient,
 
     private formBuilder: FormBuilder,
-    private registration:RegistrationService
+    private registration: RegistrationService,
+    private router: Router
   ) {
     this.innerWidth = window.innerWidth;
 
@@ -76,44 +74,87 @@ export class RegisterComponent {
     });
   }
   ngOnInit() {
-    this.registerForm =this.formBuilder.group({
+    this.registerForm = this.formBuilder.group({
       firstname: ['', Validators.required],
-      lastname:['',Validators.required],
-      username:['',[Validators.required, Validators.pattern(/([a-zA-Z0-9]+)([\.{1}])?([a-zA-Z0-9]+)\@gmail([\.])com/g)]],
-      password:['',[Validators.required, Validators.pattern(/^(?=.*[.,?!$&@%^*])(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z]).{6,}/)]]
+      lastname: ['', Validators.required],
+      username: [
+        '',
+        [
+          Validators.required,
+          Validators.pattern(
+            /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g
+          ),
+        ],
+      ],
+      password: [
+        '',
+        [
+          Validators.required,
+          Validators.pattern(
+            /^(?=.*[.,?!$&@%^*])(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z]).{6,}/
+          ),
+        ],
+      ],
       // confirmPassword:['',Validators.required]
-
-    })
+    });
   }
   // Varifyotp(){
   //     this.ro.navigate(['/varifyotp'])
   // }
 
-  get form() { return this.registerForm.controls; }
+  get form() {
+    return this.registerForm.controls;
+  }
 
   onSubmit() {
+    this.loading = true;
     // if (this.registerForm.invalid) return;
     this.submitted = true;
-    if(this.registerForm.invalid){
-      return
-
+    if (this.registerForm.invalid) {
+      return;
     }
     // this.ro.navigate(['/varifyotp'])
     // alert("success")
 
-    const userData = this.registerForm.value
-    const user = new User(userData.firstname,userData.lastname,userData.username,userData.password)
+    const userData = this.registerForm.value;
+    const user = new User(
+      userData.firstname,
+      userData.lastname,
+      userData.username,
+      userData.password
+    );
     console.log(this.registerForm);
-    this.registration.registerUser(user).subscribe((res:any)=>{
-      // console.log(res)
-       alert(res)
-    },
-    (error)=>{
-      console.log(error)
-    }
-    )
+    this.loading=true
+    this.registration.registerUser(user).subscribe(
+      (res: any) => {
+        // console.log(res)
+        // this.registration.checkEmailExist(userData.username).subscribe((res)=>{
 
+        // })
+        this.loading=false
+        if (res.includes('Email Id:')) {
+          const existEmail = res.split(':')[1].trim();
+          alert(`This email ${existEmail}`)
+          // alert(res);
+        } else {
+          this.router.navigate(['emailVerify', userData.username]);
 
+        }
+
+      },
+      (error) => {
+        // if(error.error && error.error.includes('Email Id:')[1].trim()){
+
+        //   alert('this email ${existEmail} already exist!')
+        // }
+        // else{
+        //   console.log("Regsitration failed!")
+        // }
+
+        console.log(error);
+        this.loading = false;
+      }
+    );
 
 
     // let { firstname, lastname, email, password } = this.registerForm.value;
