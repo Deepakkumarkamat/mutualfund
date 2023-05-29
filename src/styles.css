@@ -1,3 +1,4 @@
+
 /* You can add global styles to this file, and also import other style files */
 *{
   margin: 0;
@@ -59,4 +60,15 @@
 .form-control:focus{
   border-color:teal;
   box-shadow: 2px 2px 2px 3px rgba(0, 128, 128, 0.596),-2px -2px 2px 3px rgba(0, 128, 128, 0.596);
+}
+
+/* You can add global styles to this file, and also import other style files */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --bs-primary: teal;
+  --bs-blue:teal;
 }

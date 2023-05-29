@@ -2,11 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { baseUrl } from '../config';
 import { Router } from '@angular/router';
+import jwtDecode from 'jwt-decode';
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
-
+loggedUser:any;
   //url="http://localhost:9596"
 
   constructor(private http:HttpClient, private router:Router) { }
@@ -45,14 +46,19 @@ export class LoginService {
 
   //for login user
   loginUser(token:any){
+    this.loggedUser=jwtDecode(token)
     localStorage.setItem("token",token)
     // localStorage.setItem("expire": Date.now()+1000)
     return true;
   }
+  getLoggedInUser(){
+    return this.loggedUser.sub
+  }
 
   //to check user is login or not
   isLoggedIn(){
-    let token= localStorage.getItem("token")
+    let token:any= localStorage.getItem("token")
+    this.loggedUser=jwtDecode(token)
     if(token==undefined || token==='' || token==null){
       return false;
     }else{
