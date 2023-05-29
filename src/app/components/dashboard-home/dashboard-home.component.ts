@@ -57,7 +57,7 @@ export class DashboardHomeComponent implements OnInit {
   showAllMutualfund(){
     this.showAllfund =! this.showAllfund
 
-
+    // document.getElementById("horizontal-list")?.scroll({behavior:'smooth',top:-10000})
   }
 
   fetchById(schemaId: number): void {

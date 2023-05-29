@@ -16,7 +16,7 @@
 
 </app-allfunds>
 <div class="d-md-flex ml-3">
-  <button type="button" class="btn btn-outline-primary" (click)="showAllMutualfund()">show all fund</button>
+  <button  type="button" class="btn" (click)="showAllMutualfund()">show all funds</button>
   </div>
 <!-- <div *ngIf="showAllfund"> -->
 <div *ngIf="showAllfund " class="container-fluid">
@@ -25,7 +25,7 @@
 
 
   <h1>All FUNDS </h1>
-  <ul class="horizontal-list">
+  <ul id="horizontal-list" class="horizontal-list">
 
     <li *ngFor="let fund of mutualFunds" [ngClass]="{ 'positive': fund.delta > 0, 'negative': fund.delta < 0 }">
 

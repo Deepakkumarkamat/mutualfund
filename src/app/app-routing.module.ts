@@ -52,9 +52,10 @@ const routes: Routes = [
   {path:'wishlist',component:WishlistPageComponent},
   {path:'register/account',component:RegisterComponent},
   {path:'thankyou',component:ThankyouComponent},
-  // {path:'sendOtp',component:ForgotpasswordComponent},
-  // {path:'update',component:SendOtpComponent},
-  // {path:'varifyotp',component:VarifyotpComponent},
+
+  {path:'sendOtp',component:ForgotpasswordComponent},
+  {path:'update',component:SendOtpComponent},
+  {path:'emailVerify/:email',component:VarifyotpComponent},
   {path: '**', pathMatch: 'full', component: ErrorPageComponent},
 
 ];

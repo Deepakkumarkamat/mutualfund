@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { WalletService } from 'src/app/services/wallet.service';
 import { TransactionPageComponent } from '../../transaction/transaction-page/transaction-page.component';
 import { ApiService } from 'src/app/services/api.service';
@@ -9,7 +9,7 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class DepositPageComponent {
 
-
+@Output() balance= new EventEmitter<any>()
   moneyToWallet:any[]=[]
   add_balance:number | any;
   constructor(private api:WalletService,private apii:ApiService){}
@@ -24,9 +24,9 @@ export class DepositPageComponent {
 
   }
   addMoneyToWallet(){
-    this.api.addMoney(1,this.add_balance).subscribe((res:any)=>{
+    this.api.addMoney(39,this.add_balance).subscribe((res:any)=>{
       alert(res);
-
+this.balance.emit(res)
       // window.location.reload();
     })
 

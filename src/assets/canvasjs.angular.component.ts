@@ -30,15 +30,15 @@ class CanvasJSChart implements AfterViewInit, OnChanges, OnDestroy {
 		options: any;
 	@Input()
 		styles: any;
-		
+
 	@Output()
 		chartInstance = new EventEmitter<object>();
-		
+
 	constructor() {
 		this.options = this.options ? this.options : {};
 		this.styles = this.styles ? this.styles : { width: "100%", position: "relative" };
 		this.styles.height = this.options.height ? this.options.height + "px" : "400px";
-		
+
 		this.chartContainerId = 'canvasjs-angular-chart-container-' + CanvasJSChart._cjsChartContainerId++;
 	}
 
@@ -47,8 +47,8 @@ class CanvasJSChart implements AfterViewInit, OnChanges, OnDestroy {
 			this.shouldUpdateChart = true;
 		}
 	}
-	
-	ngOnChanges() {				
+
+	ngOnChanges() {
 		//Update Chart Options & Render
 		if(this.shouldUpdateChart && this.chart) {
 			this.chart.options = this.options;
@@ -57,8 +57,8 @@ class CanvasJSChart implements AfterViewInit, OnChanges, OnDestroy {
 			this.prevChartOptions = this.options;
 		}
 	}
-	
-	ngAfterViewInit() {		
+
+	ngAfterViewInit() {
 	  this.chart = new CanvasJS.Chart(this.chartContainerId, this.options);
 	  this.chart.render();
 	  this.prevChartOptions = this.options;

@@ -12,7 +12,7 @@ showWithdrawCard:boolean=false;
 showTransactionList:boolean=false;
   walletAmount:any[]=[];
   wallet={
-    balance:''
+    balance:'0'
   }
   constructor(private api:WalletService){}
   ngOnInit(){
@@ -21,13 +21,19 @@ showTransactionList:boolean=false;
 
     // })
 
-      this.api.walletBalance(1).subscribe((res:any)=>{
+      this.api.walletBalance(39).subscribe((res:any)=>{
+        console.log(res)
         return this.wallet.balance = Number(res).toFixed(2);
       })
 
 
   }
-
+  getBalance(res:any){
+    console.log(res)
+    this.api.walletBalance(39).subscribe((res:any)=>{
+      return this.wallet.balance = Number(res).toFixed(2);
+    })
+  }
   showDeposit(){
    this.showDepositCard = true;
    this.showWithdrawCard = false;

@@ -80,4 +80,5 @@ export class LoginComponent {
   sendOtp(){
     this.router.navigate(['/sendOtp'])
   }
+
 }

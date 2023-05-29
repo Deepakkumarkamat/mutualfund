@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class ForgotpasswordComponent {
   otpForm!:FormGroup;
   otp:boolean=false;
+  sentSuccess:boolean=true;
   constructor(private router:Router,private formbuilder:FormBuilder){}
 
   ngOnInit(){

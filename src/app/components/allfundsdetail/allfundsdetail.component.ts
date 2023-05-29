@@ -27,9 +27,9 @@ export class AllfundsdetailComponent {
       console.log(this.fundDetail);
       this.show = true;
       let dataPoints=[]
-      let date=4
-      for(let i=1;i<=30;i++){
-        dataPoints.push({x: new Date(2023,date,i),y: ( 1000 +100*Math.random()) - (this.fundDetail.delta*100 )  })
+      let date=0
+      for(let i=100;i<=300;i++){
+        dataPoints.push({x: new Date(2023,date,i),y: ( 1000 +(5*Math.random()*(i)-(Math.random()*i/(i*Math.E)))) - (this.fundDetail.delta*100 )  })
       }
       date++
       setInterval(()=>{
@@ -42,7 +42,7 @@ export class AllfundsdetailComponent {
         theme:'dark1',
         zoomeEnabled:true,
         title: {
-          text: this.fundDetail.fundHouse
+          text: this.fundDetail.schemaName
         },
         axisX: {
           valueFormatString: "MMM YYYY"

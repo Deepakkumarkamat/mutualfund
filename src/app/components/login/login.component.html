@@ -37,11 +37,11 @@
                 class="form-control"
                 [(ngModel)]="credentials.password"
               />
-              <!-- <a style="cursor: pointer;" (click)=" sendOtp()">forgot password</a> -->
+              <a style="cursor: pointer; color: teal;" (click)=" sendOtp()">forgot password</a>
             </div>
             <div style="width: 75%;" class="d-grid gap-2">
               <div *ngIf="errorMesage" class="text-danger">{{errorMesage}}</div>
-              <button type="submit" class="btn btn-primary btn-block" (click)="onSubmit()">
+              <button type="submit" class="btn btn-block" style="background-color: teal;" (click)="onSubmit()">
                 Submit
               </button>
               <button type="reset" class="btn btn-secondary btn-block" (click)="resButton()">
@@ -49,7 +49,7 @@
               </button>
             </div>
             <span>Or</span>
-             <p><a class="text-decoration-none" style="cursor: pointer;" (click)="goToReegistration()">Create an Account</a> </p>
+             <p><a class="text-decoration-none" style="cursor: pointer; color: teal;" (click)="goToReegistration()">Create an Account</a> </p>
 
 
           </form>
